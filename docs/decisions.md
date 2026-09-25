@@ -66,3 +66,17 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 - **Decision:** sources with an open license question have a worker that raises `SourceNotApproved` and logs a skipped run, rather than being absent.
 - **Reason:** `/health/ingest` then shows *why* a source is idle, with the question number. An absent worker is indistinguishable from a forgotten one.
 - **Alternative rejected:** commented-out schedule entries.
+
+## 2026-09-25 — House edge is computed against buyback, with platform_edge alongside
+- **Decision:** `house_edge = 1 − EV_buyback / price`; `platform_edge` (against the platform's own values) is reported next to it, and `EV_external` carries its probability coverage.
+- **Reason:** buyback is the only exit a pack buyer is guaranteed; the platform's value is a claim. Reporting all three with their oracles lets a reader see the gap instead of trusting one number.
+- **Alternative rejected:** a single "true EV" blending sources. Not reproducible by a stranger, which is the Phase 5 exit test.
+
+## 2026-09-25 — Staleness rejects; it never extrapolates
+- **Decision:** `compute_spread` returns a `Rejection` with the offending timestamp when any input is older than its configured max age. The backtest applies the same rule.
+- **Reason:** a stale floor is the most likely way to buy a card the platform no longer wants. Carrying the last value forward would hide exactly the risk the engine exists to expose. The backtest fixture had to be made realistic (daily floor observations) rather than the rule relaxed.
+- **Alternative rejected:** decaying confidence weights. More output, less auditability.
+
+## 2026-09-25 — Sort key treats a missing floor as −∞
+- **Decision:** an opportunity without a floor never outranks one with a floor, whatever its market margin.
+- **Reason:** the plan ranks by downside protection first; a market-only deal has no protection.
