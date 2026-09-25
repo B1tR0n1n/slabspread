@@ -1,0 +1,725 @@
+{
+ "filterNFtCard": [
+  {
+   "id": "202600000000",
+   "itemName": "1999 #002 Blastoise PSA 10 Game",
+   "nftAddress": "9rZ8UdpsjgGdYS6aHz1Kv1NGgfkmFWet18xDZHqdTMDF",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 1999,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Game",
+   "serial": "002",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 4900,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus0"
+   },
+   "gradingID": "62106976"
+  },
+  {
+   "id": "202600000001",
+   "itemName": "1999 #004 Charizard PSA 9 Game",
+   "nftAddress": "UqYzV256sKWAKCjWUQ9xyUuuoScQzYrbb4u3Zfxa8xdB",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 1999,
+   "grade": "MINT 9",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Game",
+   "serial": "004",
+   "insuredValue": "32",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 37,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus1"
+   },
+   "gradingID": "96078509"
+  },
+  {
+   "id": "202600000002",
+   "itemName": "1999 #015 Venusaur PSA 8 Game",
+   "nftAddress": "PwLEnVkKZ6K5VxFXFzhtYRmMVcCjaDKpuP4AQgnnU4p8",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 1999,
+   "grade": "NM-MT 8",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Game",
+   "serial": "015",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 654,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus2"
+   },
+   "gradingID": "86723887"
+  },
+  {
+   "id": "202600000003",
+   "itemName": "1999 #058 Pikachu CGC 10 Game",
+   "nftAddress": "wmGEza9TgZa8zTmD8NrP48UAigN8iBDiFjFTfx2FGuB6",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 1999,
+   "grade": "GEM MINT 10",
+   "gradeNum": null,
+   "gradingCompany": "CGC",
+   "set": "Pokemon Game",
+   "serial": "058",
+   "insuredValue": "600",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 4900,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus3"
+   },
+   "gradingID": "88090357"
+  },
+  {
+   "id": "202600000004",
+   "itemName": "1999 #085 Pokemon Center PSA 10 Game",
+   "nftAddress": "8N3pfoUQQJAWrXC77ztMSt6eo7TRjPbv6xeUX1HKB2eJ",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 1999,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Game",
+   "serial": "085",
+   "insuredValue": "32",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 1300,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus4"
+   },
+   "gradingID": "45749089"
+  },
+  {
+   "id": "202600000005",
+   "itemName": "2021 #182 Vaporeon Vmax PSA 9 SWSH Black Star Promos",
+   "nftAddress": "wZzPRnTuzMW4bbE9m8YtxfSu5DTxviYmd5Ym6nM9mSmX",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2021,
+   "grade": "MINT 9",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon SWSH Black Star Promos",
+   "serial": "182",
+   "insuredValue": "32",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 165,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus5"
+   },
+   "gradingID": "52284267"
+  },
+  {
+   "id": "202600000006",
+   "itemName": "2021 #183 Jolteon Vmax PSA 8 SWSH Black Star Promos",
+   "nftAddress": "aT3rYKG3HMuk3McBAYyNXcn7urM5fTgsEgZxhDAoJvc4",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2021,
+   "grade": "NM-MT 8",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon SWSH Black Star Promos",
+   "serial": "183",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 654,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus6"
+   },
+   "gradingID": "66886475"
+  },
+  {
+   "id": "202600000007",
+   "itemName": "2023 #199 Charizard ex CGC 10 151",
+   "nftAddress": "W7vLPMm3eBQUKvr3fG6K921ts7RzmHdN5D6YWeRgEvD6",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2023,
+   "grade": "GEM MINT 10",
+   "gradeNum": null,
+   "gradingCompany": "CGC",
+   "set": "Pokemon 151",
+   "serial": "199",
+   "insuredValue": "32",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 1300,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus7"
+   },
+   "gradingID": "80400787"
+  },
+  {
+   "id": "202600000008",
+   "itemName": "2023 #129 Magikarp PSA 10 151",
+   "nftAddress": "DYsy7q4MzepyN3s9x8uP3pT4qr7ajCgyP3CyW7VaS23s",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2023,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon 151",
+   "serial": "129",
+   "insuredValue": "150",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 37,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus8"
+   },
+   "gradingID": "60384423"
+  },
+  {
+   "id": "202600000009",
+   "itemName": "2023 #006 Charizard PSA 9 151",
+   "nftAddress": "ic4w4j5TcAUVfhbQPKFHuy7G5jCwreWm8dX8DTiyqZQu",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2023,
+   "grade": "MINT 9",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon 151",
+   "serial": "006",
+   "insuredValue": "600",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 1300,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus9"
+   },
+   "gradingID": "47323521"
+  },
+  {
+   "id": "202600000010",
+   "itemName": "2024 #051 Pikachu PSA 8 Tef EN-Temporal Forces",
+   "nftAddress": "74okJBHoxDokjAJd1Qt33RwU9BQ1Kid6wCMnZrdRLG1Y",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2024,
+   "grade": "NM-MT 8",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Tef EN-Temporal Forces",
+   "serial": "051",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 37,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus10"
+   },
+   "gradingID": "46915635"
+  },
+  {
+   "id": "202600000011",
+   "itemName": "2024 #218 Iron Leaves ex CGC 10 Tef EN-Temporal Forces",
+   "nftAddress": "LbjEFJWd1xw2hjasPE82LnXvAMEpXWKqspZtPZCFiFVC",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2024,
+   "grade": "GEM MINT 10",
+   "gradeNum": null,
+   "gradingCompany": "CGC",
+   "set": "Pokemon Tef EN-Temporal Forces",
+   "serial": "218",
+   "insuredValue": "150",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 1300,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus11"
+   },
+   "gradingID": "97473072"
+  },
+  {
+   "id": "202600000012",
+   "itemName": "2016 #011 Charizard PSA 10 XY Evolutions",
+   "nftAddress": "oafL44fvFfzrt91QS2w49UqTLAS5A9btK1Mvyw41XFyM",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2016,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon XY Evolutions",
+   "serial": "011",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 37,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus12"
+   },
+   "gradingID": "96480776"
+  },
+  {
+   "id": "202600000013",
+   "itemName": "2016 #002 Blastoise PSA 9 XY Evolutions",
+   "nftAddress": "jyyPzv7qm3akLUY6DsXGFyAvQGGiG2hcmXdW3K1G5xZL",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2016,
+   "grade": "MINT 9",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon XY Evolutions",
+   "serial": "002",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 165,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus13"
+   },
+   "gradingID": "64480253"
+  },
+  {
+   "id": "202600000014",
+   "itemName": "2000 #009 Lugia PSA 8 Neo Genesis",
+   "nftAddress": "LTUqW38uuw5jvuemLSGnbnEJJw2o893uETEBvtLNo9j8",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2000,
+   "grade": "NM-MT 8",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Neo Genesis",
+   "serial": "009",
+   "insuredValue": "4500",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 654,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus14"
+   },
+   "gradingID": "63901562"
+  },
+  {
+   "id": "202600000015",
+   "itemName": "1999 #058 Pikachu PSA 10 Game",
+   "nftAddress": "vKUuU9MCdtB41HcjnDDq3PArgMUHty432mwNUycXgXLg",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 1999,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Game",
+   "serial": "058",
+   "insuredValue": "32",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 165,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus15"
+   },
+   "gradingID": "76033487"
+  },
+  {
+   "id": "202600000016",
+   "itemName": "1999 #085 Pokemon Center PSA 10 Game",
+   "nftAddress": "FsZ9Z4SzQjQ4PZoZWSZrVxxdqCyQWgTAYdFmsznVvpzR",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 1999,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Game",
+   "serial": "085",
+   "insuredValue": "600",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 70,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus16"
+   },
+   "gradingID": "69122183"
+  },
+  {
+   "id": "202600000017",
+   "itemName": "2023 #129 Magikarp PSA 10 151",
+   "nftAddress": "5zg6xuq94oToCRPYjWuCZXcQ3JnGv5WeGCwGrj8iiai4",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2023,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon 151",
+   "serial": "129",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 165,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus17"
+   },
+   "gradingID": "51556067"
+  },
+  {
+   "id": "202600000018",
+   "itemName": "2024 #051 Pikachu PSA 10 Tef EN-Temporal Forces",
+   "nftAddress": "ZqK2iXPoB5KfLX955W8QVqu8a9c7pwcmGZx5qCsX6fXn",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2024,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Tef EN-Temporal Forces",
+   "serial": "051",
+   "insuredValue": "150",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 1300,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus18"
+   },
+   "gradingID": "86092448"
+  },
+  {
+   "id": "202600000019",
+   "itemName": "2002 #107 Shining Charizard PSA 10 Neo Destiny",
+   "nftAddress": "2xFFH7CNxdiPTdNWkqwJnKeRS6tKd1rAQEEXZruJDDLG",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2002,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Neo Destiny",
+   "serial": "107",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 654,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus19"
+   },
+   "gradingID": "96676547"
+  },
+  {
+   "id": "202600000020",
+   "itemName": "2002 #107 ShiningCharizard CGC 10 Neo Destiny",
+   "nftAddress": "CBmDW5TwDL6JNdc8PUwfemoUGW27A9eMeRwH6A1XBq9b",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2002,
+   "grade": "GEM MINT 10",
+   "gradeNum": null,
+   "gradingCompany": "CGC",
+   "set": "Pokemon Neo Destiny",
+   "serial": "107",
+   "insuredValue": "600",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 165,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus20"
+   }
+  },
+  {
+   "id": "202600000021",
+   "itemName": "2003 #H6 CrystalCharizard PSA 10 Skyridge",
+   "nftAddress": "cpq47zmp85ziG92CRYKrtUsk73ruKf9w5eu7ZQcNJFAj",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2003,
+   "grade": "GEM-MT 10",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Skyridge",
+   "serial": "H6",
+   "insuredValue": "1200",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 4900,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus21"
+   }
+  },
+  {
+   "id": "202600000022",
+   "itemName": "2010 #089 Umbreon Prime PSA 9 HS Undaunted",
+   "nftAddress": "nQZR7uzp2sLYRghX9wsRscxHja5TA9gdZsxj1HCrQDfC",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2010,
+   "grade": "MINT 9",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon HS Undaunted",
+   "serial": "089",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 1300,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus22"
+   }
+  },
+  {
+   "id": "202600000023",
+   "itemName": "2019 #SV49 CharizardGX PSA 8 Hidden Fates",
+   "nftAddress": "uWayoG2j553VYM3B5smaBQS4VxPntzArLgKFhJ4Nz6t9",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2019,
+   "grade": "NM-MT 8",
+   "gradeNum": null,
+   "gradingCompany": "PSA",
+   "set": "Pokemon Hidden Fates",
+   "serial": "SV49",
+   "insuredValue": "600",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 1300,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus23"
+   }
+  },
+  {
+   "id": "202600000024",
+   "itemName": "2020 #074 CharizardVmax CGC 10 Champions Path",
+   "nftAddress": "ExLRPNYn2wVYZHTSTNTe4VptbbCC1dAFDGPjadJ9MRUG",
+   "category": "Pokemon",
+   "type": "Card",
+   "year": 2020,
+   "grade": "GEM MINT 10",
+   "gradeNum": null,
+   "gradingCompany": "CGC",
+   "set": "Pokemon Champions Path",
+   "serial": "074",
+   "insuredValue": "60",
+   "blockchain": "Solana",
+   "listing": {
+    "createdAt": "2026-07-31T03:36:22.354Z",
+    "currency": "USDC",
+    "price": 4900,
+    "marketplace": "CC"
+   },
+   "offers": [],
+   "owner": {
+    "wallet": "EofCkTaFXUjdwpQdbTnjMsZD1nqjGTenUGFsfEdkraYN"
+   },
+   "images": {
+    "front": "https://d1xpxki1g4htqu.cloudfront.net/corpus24"
+   }
+  }
+ ],
+ "findTotal": 25
+}

@@ -1,0 +1,51 @@
+{
+  "collection_name": "Graded Cards",
+  "name": "1999 Pokemon Game #2 Blastoise - Holo (PSA 8 NM-MT)",
+  "description": "---\n\n# Bring your IRL cards onchain\n\nTokenize your card for free on [Courtyard.io](https://courtyard.io/?utm_source=card-description&utm_medium=opensea).\n\nKeep it vaulted, sell with a click, or burn this NFT to have the identical physical item shipped anywhere in the world, whenever you want. [Learn more](https://courtyard.io/about/?utm_source=card-description&utm_medium=opensea).\n\n---\n\n# Proof of Integrity\n\nThe token ID of this NFT is cryptographically derived from the fingerprint of the matching physical item (\"Pokemon | PSA 66499345 | 1999 Pokemon Game 2 Blastoise | 8 NM-MT\"). [Learn more](https://docs.courtyard.io/courtyard/technology/proof-of-integrity/?utm_source=card-description&utm_medium=opensea).\n\nBy purchasing, selling or owning this NFT, you agree to Courtyard.io's [Terms & Asset Management Services Agreement](https://courtyard.io/nft-terms/?utm_source=card-description&utm_medium=opensea).",
+  "external_url": "https://courtyard.io/asset/3f82622f30dd093d8686d4345bf701e2486eae2bd29a6d2ec eedf8daaec5bd8f",
+  "image": "https://static.courtyard.io/graded-cards-renders/PSA%2066499345/nft_image.jpg",
+  "animation_url": "https://static.courtyard.io/graded-cards-renders/PSA%2066499345/nft_animation.mp4",
+  "video": "https://static.courtyard.io/graded-cards-renders/PSA%2066499345/nft_animation.mp4",
+  "token_info": {
+    "token_id": "28726077222572370237223419992242905820335237414880435749025633080341558574479",
+    "contract_address": "0x251BE3A17Af4892035C37ebf5890F4a4D889dcAD",
+    "chain": "polygon",
+    "proof_of_integrity": {
+      "fingerprint": "Pokemon | PSA 66499345 | 1999 Pokemon Game 2 Blastoise | 8 NM-MT",
+      "salt": 3373928663038152128,
+      "hex_proof": "0x3f82622f30dd093d8686d4345bf701e2486eae2bd29a6d2eceedf8daaec5bd8f"
+    }
+  },
+  "reveal_state": {
+    "revealed": true,
+    "reveal_animation": "https://api.courtyard.io/configs/vending-machine/pkmn-platinum-pack/resources/pack_opening.mp4",
+    "sealed_pack_image": "https://api.courtyard.io/configs/vending-machine/pkmn-platinum-pack/resources/sealed_pack.png",
+    "sealed_pack_animation": "https://api.courtyard.io/configs/vending-machine/pkmn-platinum-pack/resources/sealed_pack.mp4"
+  },
+  "item_info": {
+    "original_owner": "",
+    "asset_pictures": [
+      "https://static.courtyard.io/graded-cards-scans/PSA%2066499345/slab_front.jpg",
+      "https://static.courtyard.io/graded-cards-scans/PSA%2066499345/slab_back.jpg"
+    ],
+    "storage": {
+      "vaulted": true,
+      "insured": true,
+      "location": "Courtyard US"
+    }
+  },
+  "attributes": [
+    { "trait_type": "Grader", "value": "PSA" },
+    { "trait_type": "Serial", "value": "66499345" },
+    { "trait_type": "Grade", "value": "8 NM-MT" },
+    { "trait_type": "Category", "value": "Pokemon" },
+    { "trait_type": "Year", "value": "1999" },
+    { "trait_type": "Set", "value": "Pokemon Game" },
+    { "trait_type": "Title/Subject", "value": "Blastoise" },
+    { "trait_type": "Language", "value": "English" },
+    { "trait_type": "Card Number", "value": "2" },
+    { "value": "Holo" },
+    { "trait_type": "Event", "value": "Pokemon Platinum Pack" }
+  ],
+  "product_type": "GRADED_CARD"
+}

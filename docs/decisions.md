@@ -31,3 +31,23 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 - **Decision:** the four per-topic research reports are committed verbatim alongside the synthesis.
 - **Reason:** they carry every URL and provenance mark; the synthesis would otherwise be unauditable, and the §10 second pass needs the blocked-host lists.
 - **Alternative rejected:** synthesis only. Loses the evidence trail the plan explicitly asks for.
+
+## 2026-09-25 — Variant is part of the canonical key; asymmetric variant info yields a candidate
+- **Decision:** `canonical_key` includes a variant slot drawn from a fixed vocabulary (`holo`, `full art`, `1st edition`…). A record with no variant token does not canonically equal one with a token; the pair surfaces as a fuzzy candidate for a human.
+- **Reason:** Collector Crypt rows carry no variant field; Courtyard puts variants in untyped attributes. Treating "Blastoise" and "Blastoise – Holo" as the same card would be right for Base Set and wrong for sets that print both. The cost of a false merge (a wrong spread) is higher than the cost of a review click.
+- **Alternative rejected:** dropping variant from the key. Simpler, more recall, silently wrong on holo/non-holo sets.
+
+## 2026-09-25 — Python 3.11 floor, 3.12 in the container image
+- **Decision:** `requires-python >= 3.11`; Dockerfile uses 3.12.
+- **Reason:** the plan says 3.12; the build environment has 3.11 and the code needs nothing newer. Pinning to 3.12 would make the test suite unrunnable here for no gain.
+- **Alternative rejected:** installing 3.12 in the environment. Extra moving part for zero code difference.
+
+## 2026-09-25 — Tests run on SQLite; production on Postgres via `SLABSPREAD_DATABASE_URL`
+- **Decision:** the test suite uses an in-memory SQLite engine; migrations are written with `render_as_batch=True` so they apply to both.
+- **Reason:** the plan requires tests to be hermetic. The one Supabase project on the account (`cortex`) belongs to another system and is not touched; SlabSpread gets its own project when Phase 2 ingestion needs persistence.
+- **Alternative rejected:** Postgres-in-Docker for tests. Correct but slower, and nothing in Phase 1 uses Postgres-only features.
+
+## 2026-09-25 — The public-site generator will be `sitegen/`, not `site/`
+- **Decision:** the plan's `site/` directory is renamed `sitegen/` when Phase 5 creates it.
+- **Reason:** a top-level Python package called `site` shadows the standard-library `site` module that the interpreter imports at startup. It would break every Python process run from the repo root.
+- **Alternative rejected:** keeping `site/` as a non-package directory. Too easy for someone to add an `__init__.py` later.

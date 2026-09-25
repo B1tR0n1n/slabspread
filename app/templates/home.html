@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block body %}
+<p>Phase 1. {% if has_pending %}There are <a href="/admin/matches">fuzzy matches waiting for a verdict</a>.{% else %}No pending matches.{% endif %}</p>
+{% endblock %}

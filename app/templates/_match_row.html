@@ -1,0 +1,15 @@
+{% set mc = p.mc if p is defined else mc %}{% set left = p.left if p is defined else left %}{% set right = p.right if p is defined else right %}
+<tr id="mc-{{ mc.id }}">
+  <td class="conf">{{ '%.2f' % mc.confidence }}</td>
+  <td>{{ left.title if left else '?' }}<br><code>{{ left.source_id if left else '' }} · {{ left.external_id if left else '' }}</code></td>
+  <td>{{ right.title if right else '?' }}<br><code>{{ right.source_id if right else '' }} · {{ right.external_id if right else '' }}</code></td>
+  <td><code>{{ mc.method }} {{ mc.explanation }}</code></td>
+  <td>
+    {% if mc.verdict.value == 'pending' %}
+    <form hx-post="/admin/matches/{{ mc.id }}" hx-target="#mc-{{ mc.id }}" hx-swap="outerHTML" style="display:inline">
+      <button class="ok" name="verdict" value="accepted">accept</button>
+      <button class="bad" name="verdict" value="rejected">reject</button>
+    </form>
+    {% else %}<span class="dim">{{ mc.verdict.value }}</span>{% endif %}
+  </td>
+</tr>

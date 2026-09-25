@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Match review · SlabSpread{% endblock %}
+{% block body %}
+<p class="tabs">{% for v in verdicts %}<a href="/admin/matches?verdict={{ v.value }}" class="{{ 'on' if v.value == verdict }}">{{ v.value }}</a>{% endfor %}</p>
+<p class="dim">Fuzzy pairs are never trusted automatically. Accepting unifies the two listings' card reference; rejecting records that a human looked.</p>
+<table>
+<thead><tr><th>conf</th><th>left</th><th>right</th><th>why</th><th></th></tr></thead>
+<tbody>
+{% for p in pairs %}{% include "_match_row.html" %}{% else %}
+<tr><td colspan="5" class="dim">nothing {{ verdict }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
