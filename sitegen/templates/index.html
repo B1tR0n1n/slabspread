@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}House Edge Index · {{ site_name }}{% endblock %}
+{% block description %}House edge of graded-card pack platforms, per pack tier, computed from published odds against the platform's own buyback — updated on a schedule, fully reproducible.{% endblock %}
+{% block path %}{% endblock %}
+{% block body %}
+<h1>House Edge Index</h1>
+<p>For each pack a platform sells, the expected buyback value of a pull against the price of the pack: <code>house_edge = 1 − Σ pᵢ × buybackᵢ / price</code>. Negative means the guaranteed buyback is worth more than the pack; positive is what the house keeps. Tier values are the midpoints of the platform's published value bands; buyback is the platform's stated percentage of that. Full definitions and a worked example: <a href="{{ base_url }}/methodology.html">methodology</a>.</p>
+{% if latest %}
+<table>
+<thead><tr><th>platform</th><th>pack</th><th class="num">price</th><th class="num">EV (buyback)</th><th class="num">house edge</th><th class="num">EV (platform value)</th><th>odds as of</th><th>how obtained</th><th></th></tr></thead>
+<tbody>
+{% for p in latest %}
+<tr>
+  <td>{{ p.platform }}{% if affiliate_links.get(p.platform) %} <a href="{{ affiliate_links[p.platform] }}" rel="sponsored noopener" target="_blank">visit ↗</a>{% endif %}</td>
+  <td>{{ p.pack_name }}</td>
+  <td class="num">{{ p.ev.pack_price }}</td>
+  <td class="num">{{ p.ev.ev_buyback }}</td>
+  <td class="num {{ 'ok' if p.ev.house_edge < 0 else 'bad' }}">{{ (p.ev.house_edge * 100) | round(2) }}%</td>
+  <td class="num">{{ p.ev.ev_platform }}</td>
+  <td>{{ p.as_of.strftime('%Y-%m-%d') }}</td>
+  <td><code>{{ p.provenance }}</code></td>
+  <td><details><summary>inputs</summary>
+    <table><thead><tr><th>tier</th><th class="num">p</th><th class="num">band midpoint</th><th class="num">buyback</th><th class="num">p × buyback</th></tr></thead><tbody>
+    {% for t in p.tiers %}<tr><td>{{ t.name }}</td><td class="num">{{ t.probability }}</td><td class="num">{{ t.platform_value }}</td><td class="num">{{ t.buyback_value }}</td><td class="num">{{ (t.probability * t.buyback_value) | round(4) }}</td></tr>{% endfor %}
+    </tbody></table>
+    {% for w in p.ev.warnings %}<div class="dim">⚠ {{ w }}</div>{% endfor %}
+  </details></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<h2>Over time</h2>
+<canvas id="chart" height="120"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-date-fns/3.0.0/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script>
+const series = {{ series_json | safe }};
+const palette = ['#7aa2f7','#f7c96b','#c678dd','#56b6c2','#3ddc97','#ff6b6b'];
+new Chart(document.getElementById('chart'), { type: 'line',
+  data: { datasets: Object.entries(series).map(([k, v], i) => ({ label: k, data: v, borderColor: palette[i % palette.length], pointRadius: 2, stepped: true })) },
+  options: { parsing: false, scales: { x: { type: 'time' }, y: { ticks: { callback: v => (v * 100).toFixed(0) + '%' } } }, plugins: { legend: { labels: { color: '#8b93a7' } } } } });
+</script>
+{% else %}
+<p class="dim">No published odds have been ingested yet. The index populates once a platform's odds source is approved (see methodology, "Limitations").</p>
+{% endif %}
+{% endblock %}

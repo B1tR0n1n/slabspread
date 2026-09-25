@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Valuation Gap · {{ site_name }}{% endblock %}
+{% block description %}How vault platforms' stated card values compare, in aggregate, to real on-chain sales of the same cards.{% endblock %}
+{% block path %}valuation-gap.html{% endblock %}
+{% block body %}
+<h1>Valuation Gap</h1>
+<p>For every card with both a platform-stated value and at least three real sales in the last 30 days, we take the ratio <code>platform value ÷ median real sale</code>. This page shows the distribution of that ratio per platform — never an individual card's value. A median above 1.00 means the platform values its inventory above what the same cards actually trade for. Platforms with fewer than five such cards are omitted.</p>
+{% if gaps %}
+<table>
+<thead><tr><th>platform</th><th class="num">cards</th><th class="num">median ratio</th><th class="num">p25</th><th class="num">p75</th><th class="num">share valued above real sales</th></tr></thead>
+<tbody>
+{% for g in gaps %}
+<tr><td>{{ g.platform }}</td><td class="num">{{ g.n }}</td><td class="num {{ 'bad' if g.median_ratio > 1 else 'ok' }}">{{ g.median_ratio }}</td><td class="num">{{ g.p25_ratio }}</td><td class="num">{{ g.p75_ratio }}</td><td class="num">{{ (g.share_above_external * 100) | round(1) }}%</td></tr>
+{% endfor %}
+</tbody>
+</table>
+{% else %}
+<p class="dim">Not enough overlapping data yet: this report needs cards with both a platform value and three or more real sales in the window.</p>
+{% endif %}
+{% endblock %}

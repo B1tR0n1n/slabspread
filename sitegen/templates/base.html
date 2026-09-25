@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site_name }}{% endblock %}</title>
+<meta name="description" content="{% block description %}Independent, reproducible analytics on vaulted graded-card platforms.{% endblock %}">
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ self.description() }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ base_url }}/{% block path %}{% endblock %}">
+<meta property="og:site_name" content="{{ site_name }}">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="{{ base_url }}/{{ self.path() }}">
+<style>
+:root { --bg:#0f1115; --panel:#171a21; --line:#262b36; --fg:#e6e8ee; --dim:#8b93a7; --ok:#3ddc97; --bad:#ff6b6b; --acc:#7aa2f7; --warn:#f7c96b }
+* { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace }
+header, main, footer { max-width:1100px; margin:0 auto; padding:16px }
+header { display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; border-bottom:1px solid var(--line) } header a { color:var(--acc); text-decoration:none }
+.notice { background:var(--panel); border:1px solid var(--warn); padding:10px 12px; margin:12px 0; font-size:13px }
+.notice.affiliate { border-color:var(--acc) }
+table { width:100%; border-collapse:collapse; margin:12px 0 } th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top } th { color:var(--dim); font-weight:normal }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums } .ok { color:var(--ok) } .bad { color:var(--bad) } .dim { color:var(--dim) }
+code, pre { color:var(--dim); font-size:13px; white-space:pre-wrap } details summary { cursor:pointer; color:var(--dim) }
+footer { color:var(--dim); font-size:12px; border-top:1px solid var(--line); margin-top:32px }
+.prose h1, .prose h2, .prose h3 { margin-top:1.4em } .prose table { font-size:13px }
+</style>
+{{ analytics | safe }}
+</head>
+<body>
+<header><strong><a href="{{ base_url }}/">{{ site_name }}</a></strong> <a href="{{ base_url }}/">House Edge Index</a> <a href="{{ base_url }}/valuation-gap.html">Valuation Gap</a> <a href="{{ base_url }}/methodology.html">Methodology</a></header>
+<main>
+{% if has_affiliate %}<div class="notice affiliate"><strong>Disclosure:</strong> some links on this page are referral links. If you sign up or buy through them we may receive credit or a commission at no cost to you. This does not change what we publish; every number here is reproducible from the <a href="{{ base_url }}/methodology.html">methodology</a>.</div>{% endif %}
+{% if pack_content %}<div class="notice"><strong>18+.</strong> Pack products involve chance. This page reports the expected value and house edge of published odds so you can see what you are paying for. It is not a way to make money, and opening packs is not an investment.</div>{% endif %}
+{% block body %}{% endblock %}
+</main>
+<footer>Nothing on this site is financial advice. Figures are derived analytics computed from public blockchain data and platforms' published odds under the stated <a href="{{ base_url }}/methodology.html">methodology</a>; raw values from licensed sources are never republished. Built {{ built_at }}.</footer>
+</body>
+</html>
