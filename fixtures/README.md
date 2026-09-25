@@ -22,3 +22,9 @@ plus `truth.json` naming which records are the same slab (cert) and the same car
 It exists so the Phase 1 exit test (≥95% cert identity, fuzzy candidates for the rest) is runnable offline.
 **It is not evidence about the platforms.** Replace with real captures as soon as a platform host is reachable;
 the test harness reads any file in `corpus/` with the same layout.
+
+## `rpc/` — JSON-RPC responses (synthetic, spec-shaped)
+Built by `tests/gen_rpc_fixtures.py`. Polygon log `data` is produced by the same ABI encoders the
+decoders are tested against; Solana transactions follow the documented `jsonParsed` layout. The
+Courtyard trade reuses the real tx hash / amount from Phase 0 (`0x71f546e3…`, 150 USDC) so the
+shape can be diffed against the real receipt later. **Not evidence about the platforms.**

@@ -208,3 +208,70 @@ class MatchCandidate(Base):
     verdict: Mapped[Verdict] = mapped_column(Enum(Verdict), default=Verdict.pending)
     decided_at: Mapped[datetime | None] = mapped_column(DateTime)
     created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())
+
+
+# --------------------------------------------------------------------------------------
+# Ingestion bookkeeping (plan §4)
+# --------------------------------------------------------------------------------------
+
+
+class RunStatus(enum.StrEnum):
+    ok = "ok"
+    error = "error"
+    skipped = "skipped"
+
+
+class IngestRun(Base):
+    """One execution of one worker. /health/ingest reads this table."""
+
+    __tablename__ = "ingest_runs"
+    __table_args__ = (Index("ix_ingest_runs_source_started", "source_key", "started_at"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    source_key: Mapped[str] = mapped_column(String(40))
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=_now)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime)
+    status: Mapped[RunStatus] = mapped_column(Enum(RunStatus), default=RunStatus.ok)
+    fetched: Mapped[int] = mapped_column(default=0)
+    inserted: Mapped[int] = mapped_column(default=0)
+    updated: Mapped[int] = mapped_column(default=0)
+    rejected: Mapped[int] = mapped_column(default=0)
+    error: Mapped[str | None] = mapped_column(String(2000))
+    raw_path: Mapped[str | None] = mapped_column(String(500))
+    notes: Mapped[dict | None] = mapped_column(JSON)
+
+
+class IngestCursor(Base):
+    """Where a worker resumes from (block number, signature, page token…)."""
+
+    __tablename__ = "ingest_cursors"
+
+    source_key: Mapped[str] = mapped_column(String(40), primary_key=True)
+    cursor: Mapped[str] = mapped_column(String(200))
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=_now, onupdate=_now)
+
+
+class OnchainEvent(Base):
+    """Immutable ledger of decoded chain events. `sales` and pack flows derive from here."""
+
+    __tablename__ = "onchain_events"
+    __table_args__ = (
+        UniqueConstraint("chain", "tx_hash", "log_index", name="uq_onchain_event"),
+        Index("ix_onchain_kind_ts", "source_key", "kind", "occurred_at"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    source_key: Mapped[str] = mapped_column(String(40))
+    chain: Mapped[str] = mapped_column(String(20))
+    tx_hash: Mapped[str] = mapped_column(String(120))
+    log_index: Mapped[int] = mapped_column(default=0)
+    block: Mapped[int | None]
+    occurred_at: Mapped[datetime] = mapped_column(DateTime)
+    # trade | mint | pack_purchase | buyback | transfer
+    kind: Mapped[str] = mapped_column(String(30))
+    token_ref: Mapped[str | None] = mapped_column(String(120))  # tokenId / mint address
+    counterparty: Mapped[str | None] = mapped_column(String(120))
+    amount: Mapped[Decimal | None] = mapped_column(Numeric(18, 6))
+    currency: Mapped[str | None] = mapped_column(String(16))
+    memo: Mapped[str | None] = mapped_column(String(300))
+    raw: Mapped[dict | None] = mapped_column(JSON)

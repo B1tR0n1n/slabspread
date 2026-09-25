@@ -7,7 +7,8 @@ Market intelligence for vaulted graded trading cards. Three lanes — Trade, Pub
 |---|---|
 | 0 — verification spike | First pass done; **reopened** for primary-source verification (Q1–Q9 in [`docs/phase0-findings.md`](docs/phase0-findings.md)). |
 | 1 — data model + card identity | **Built.** Exit test runs on a schema-faithful corpus; re-runs on real captures once a platform host is reachable. |
-| 2+ | Not started. |
+| 2 — ingestion workers | **Built** for the approved on-chain paths (Polygon events, Solana USDC flows) with replay, cursors, raw capture, `/health/ingest`. 48-hour soak pending RPC access. Gated sources refuse to run until their license question closes. |
+| 3+ | Not started. |
 
 ## Non-negotiables (short form)
 - Licensed or public data only. No scraping where terms forbid it; no login bypass; no eBay sold-data.
@@ -23,6 +24,7 @@ cp .env.example .env                      # SQLite by default
 pytest                                    # hermetic; fixtures only
 alembic upgrade head
 python -m ingest.replay                   # load fixtures/real + fixtures/corpus
+python -m ingest.scheduler                # workers on their intervals (needs RPC access)
 uvicorn app.main:app --reload             # http://127.0.0.1:8000/admin/matches
 ```
 
@@ -30,7 +32,8 @@ uvicorn app.main:app --reload             # http://127.0.0.1:8000/admin/matches
 ```
 app/        FastAPI + Jinja2/HTMX. Phase 1: /admin/matches (fuzzy-candidate review)
 engines/    pure functions. identity.py: cert → canonical key → fuzzy candidates
-ingest/     one module per source; normalize() now, fetch() in Phase 2; persist.py upserts
+ingest/     workers: base.py (rate limit, backoff, raw store, run ledger), chains/ (evm, solana RPC + decoders),
+            onchain_*.py (approved), gated.py (refuse until licensed), scheduler.py, replay.py
 models/     SQLAlchemy 2 — cards, slabs, sources, listings, sales, valuations, packs, pack_odds, match_candidates
 migrations/ Alembic (batch mode; SQLite for tests, Postgres in production)
 fixtures/   real/ captured responses · corpus/ labeled 50-slab identity corpus (synthetic)

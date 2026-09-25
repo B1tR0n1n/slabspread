@@ -12,6 +12,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.db import get_session
+from ingest.base import recent_runs
+from ingest.gated import EXCLUDED_UNTIL_LICENSED
 from models import Listing, MatchCandidate, Slab, Verdict
 
 app = FastAPI(title="SlabSpread", docs_url=None, redoc_url=None)
@@ -80,3 +82,26 @@ def decide(request: Request, mc_id: int, verdict: str = Form(...), s: Session = 
 @app.get("/health")
 def health():
     return {"ok": True}
+
+
+@app.get("/health/ingest", response_class=HTMLResponse)
+def health_ingest(request: Request, s: Session = Depends(get_session)):
+    window = 20
+    rows = []
+    for key, runs in sorted(recent_runs(s, window).items()):
+        errors = sum(r.status.value == "error" for r in runs)
+        last_ok = next((r.finished_at for r in runs if r.status.value == "ok"), None)
+        latest = runs[0]
+        rows.append(
+            {
+                "key": key,
+                "last_ok": last_ok.strftime("%Y-%m-%d %H:%M:%S") if last_ok else None,
+                "last_status": latest.status.value,
+                "error_rate": errors / len(runs),
+                "counts": f"{latest.fetched} / {latest.inserted} / {latest.updated} / {latest.rejected}",
+                "note": (latest.error or "")[:160] if latest.status.value != "ok" else (latest.notes or {}),
+            }
+        )
+    return templates.TemplateResponse(
+        request, "health_ingest.html", {"rows": rows, "window": window, "excluded": EXCLUDED_UNTIL_LICENSED}
+    )

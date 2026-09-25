@@ -51,3 +51,18 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 - **Decision:** the plan's `site/` directory is renamed `sitegen/` when Phase 5 creates it.
 - **Reason:** a top-level Python package called `site` shadows the standard-library `site` module that the interpreter imports at startup. It would break every Python process run from the repo root.
 - **Alternative rejected:** keeping `site/` as a non-package directory. Too easy for someone to add an `__init__.py` later.
+
+## 2026-09-25 — Own the chain clients; no web3.py / solana-py
+- **Decision:** `ingest/chains/` holds ~200 lines of JSON-RPC + ABI decoding for exactly the events and transaction shapes we consume. `pycryptodome` supplies keccak.
+- **Reason:** the surface is tiny (getLogs, getTransaction, two event ABIs, jsonParsed token transfers) and the SDKs pull in large dependency trees that are hard to audit for a tool handling money decisions. Encoders live beside the decoders so fixtures are self-consistent.
+- **Alternative rejected:** web3.py + solana-py. Would be the right call if we needed signing or many contract ABIs; we need neither, and ground rule 2 forbids signing anyway.
+
+## 2026-09-25 — `onchain_events` is an immutable ledger; `sales` derives from it
+- **Decision:** every decoded chain event lands in `onchain_events` keyed by (chain, tx, log index). `sales` rows are derived from trade events; pack purchases and buybacks stay as event kinds.
+- **Reason:** the plan's replay exit test needs a deterministic ground truth. Deriving from a ledger makes "replay reproduces the same state" provable, and keeps buyback/pack flows (which are not card sales) out of the sales table.
+- **Alternative rejected:** writing sales directly from logs. Fewer tables, but re-deriving after a decoder fix would mean re-fetching the chain.
+
+## 2026-09-25 — Gated sources run as workers that record `skipped`
+- **Decision:** sources with an open license question have a worker that raises `SourceNotApproved` and logs a skipped run, rather than being absent.
+- **Reason:** `/health/ingest` then shows *why* a source is idle, with the question number. An absent worker is indistinguishable from a forgotten one.
+- **Alternative rejected:** commented-out schedule entries.

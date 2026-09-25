@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Ingest health · SlabSpread{% endblock %}
+{% block body %}
+<p class="dim">Last successful run and error rate per source (last {{ window }} runs). Gated sources show <em>skipped</em> with the open question that blocks them.</p>
+<table>
+<thead><tr><th>worker</th><th>last ok</th><th>last status</th><th>error rate</th><th>fetched / ins / upd / rej</th><th>note</th></tr></thead>
+<tbody>
+{% for row in rows %}
+<tr>
+  <td>{{ row.key }}</td>
+  <td>{{ row.last_ok or '—' }}</td>
+  <td class="{{ 'ok' if row.last_status == 'ok' else ('bad' if row.last_status == 'error' else 'dim') }}">{{ row.last_status }}</td>
+  <td>{{ '%.0f%%' % (row.error_rate * 100) }}</td>
+  <td>{{ row.counts }}</td>
+  <td><code>{{ row.note }}</code></td>
+</tr>
+{% else %}<tr><td colspan="6" class="dim">no runs yet</td></tr>{% endfor %}
+</tbody>
+</table>
+<p class="dim">Excluded until licensed: {% for k, why in excluded.items() %}<code>{{ k }}</code> ({{ why }}){{ ', ' if not loop.last }}{% endfor %}.</p>
+{% endblock %}
