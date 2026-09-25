@@ -44,7 +44,8 @@ models/     SQLAlchemy 2 — cards, slabs, sources, listings, sales, valuations,
 migrations/ Alembic (batch mode; SQLite for tests, Postgres in production)
 sitegen/    static public site generator (aggregate.py is pure)
 fixtures/   real/ captured responses · corpus/ 50-slab identity corpus · rpc/ RPC shapes (both synthetic)
-docs/       PLAN, phase0-findings, data-licenses, decisions, research/
+docs/       PLAN, phase0-findings, data-licenses, decisions, methodology, owner-runbook (your 7 steps),
+            launch-checklist, terms/privacy drafts, research/
 ```
 
 ## Identity in one paragraph
