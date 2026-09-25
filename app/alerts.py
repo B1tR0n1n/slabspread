@@ -10,6 +10,7 @@ from email.message import EmailMessage
 
 from sqlalchemy.orm import Session
 
+from app import paid
 from app.services import record_alerts
 from config import settings
 from models import Alert, Listing
@@ -58,5 +59,52 @@ def scan_and_deliver(s: Session, now: datetime | None = None, *, send=deliver) -
         except Exception as e:  # noqa: BLE001 — a mail outage must not lose the alert row
             log.exception("alert delivery failed")
             a.channel = f"failed:{type(e).__name__}"
+    if _paid_live(s):
+        for a in created:
+            paid.fan_out(s, a, now or datetime.utcnow())
     s.flush()
     return created
+
+
+def _paid_live(s: Session) -> bool:
+    try:
+        paid.launch_gate(s)
+        return True
+    except paid.LaunchBlocked:
+        return False
+
+
+def deliver_subscriber_alerts(s: Session, now: datetime | None = None, *, send=None) -> int:
+    """Send every SubscriberAlert whose stagger delay has elapsed. Returns the count sent."""
+    from models import Subscriber
+
+    now = now or datetime.utcnow()
+    sent = 0
+    for row in paid.due_deliveries(s, now):
+        a, sub = s.get(Alert, row.alert_id), s.get(Subscriber, row.subscriber_id)
+        listing = s.get(Listing, a.listing_id)
+        try:
+            row.channel = (send or _send_to)(sub.email, a, listing)
+            row.sent_at = now
+            sent += 1
+        except Exception as e:  # noqa: BLE001
+            log.exception("subscriber delivery failed")
+            row.channel = f"failed:{type(e).__name__}"
+    s.flush()
+    return sent
+
+
+def _send_to(to: str, a: Alert, listing: Listing) -> str:
+    subject, body = render(a, listing)
+    if not settings.smtp_host:
+        log.info("SUBSCRIBER ALERT to %s: %s", to, subject)
+        return "log"
+    msg = EmailMessage()
+    msg["Subject"], msg["From"], msg["To"] = subject, settings.alert_email_from or settings.smtp_user, to
+    msg.set_content(body)
+    with smtplib.SMTP(settings.smtp_host, settings.smtp_port, timeout=20) as smtp:
+        smtp.starttls()
+        if settings.smtp_user:
+            smtp.login(settings.smtp_user, settings.smtp_password)
+        smtp.send_message(msg)
+    return "email"

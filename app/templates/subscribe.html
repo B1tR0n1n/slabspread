@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Subscribe · SlabSpread</title>
+<style>body{background:#0f1115;color:#e6e8ee;font:14px ui-monospace,Menlo,monospace;display:grid;place-items:center;min-height:100vh;margin:0}
+form{background:#171a21;border:1px solid #262b36;padding:20px;width:420px}label{display:block;color:#8b93a7;margin:8px 0 2px}
+input,button{width:100%;box-sizing:border-box;background:#0f1115;color:#e6e8ee;border:1px solid #262b36;padding:6px;font:inherit}button{margin-top:12px;cursor:pointer}
+.notice{font-size:12px;color:#8b93a7;margin-top:12px}</style></head>
+<body>
+<form method="post" action="/subscribe">
+  <strong>SlabSpread alerts</strong>
+  <label>email</label><input name="email" type="email" required>
+  <label>alert me when floor margin ≥ (USD)</label><input name="floor_margin_min" type="number" step="1" value="10">
+  <label>games (comma-separated, blank = all)</label><input name="games" placeholder="pokemon, baseball">
+  <label>graders (comma-separated, blank = all)</label><input name="graders" placeholder="PSA, CGC">
+  <label><input type="checkbox" name="accept_terms" value="yes" required style="width:auto"> I have read the <a href="/terms">terms</a> and <a href="/privacy">privacy policy</a>, and I understand alerts are information, not advice, and that I place every order myself.</label>
+  <button>continue to payment (Stripe)</button>
+  <p class="notice">Alerts are capped per listing and staggered between subscribers so a single deal is not pointed at everyone at once. Nothing on this service is financial advice.</p>
+</form>
+</body></html>

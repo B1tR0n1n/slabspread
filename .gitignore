@@ -24,3 +24,4 @@ data/raw/
 .idea/
 .vscode/
 slabspread.db
+public/

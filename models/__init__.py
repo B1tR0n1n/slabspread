@@ -344,3 +344,45 @@ class Trade(Base):
         if self.exit_kind == ExitKind.open or self.exit_price is None:
             return None
         return Decimal(self.exit_price) - Decimal(self.exit_fees or 0) - self.total_cost
+
+
+# --------------------------------------------------------------------------------------
+# Phase 6: paid tier
+# --------------------------------------------------------------------------------------
+
+
+class SubStatus(enum.StrEnum):
+    pending = "pending"  # signed up, checkout not completed
+    active = "active"
+    past_due = "past_due"
+    canceled = "canceled"
+
+
+class Subscriber(Base):
+    __tablename__ = "subscribers"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    email: Mapped[str] = mapped_column(String(200), unique=True)
+    stripe_customer_id: Mapped[str | None] = mapped_column(String(80), unique=True)
+    stripe_subscription_id: Mapped[str | None] = mapped_column(String(80))
+    status: Mapped[SubStatus] = mapped_column(Enum(SubStatus), default=SubStatus.pending)
+    # Per-user preferences: floor-margin threshold and niches (games / graders) they care about.
+    floor_margin_min: Mapped[Decimal] = mapped_column(Numeric(14, 2), default=10)
+    games: Mapped[list | None] = mapped_column(JSON)  # e.g. ["pokemon"]; None = all
+    graders: Mapped[list | None] = mapped_column(JSON)  # e.g. ["PSA"]; None = all
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_now)
+    accepted_terms_at: Mapped[datetime | None] = mapped_column(DateTime)
+
+
+class SubscriberAlert(Base):
+    """Fan-out record: which subscriber was told about which alert, and when it was due."""
+
+    __tablename__ = "subscriber_alerts"
+    __table_args__ = (UniqueConstraint("subscriber_id", "alert_id", name="uq_sub_alert"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    subscriber_id: Mapped[int] = mapped_column(ForeignKey("subscribers.id"))
+    alert_id: Mapped[int] = mapped_column(ForeignKey("alerts.id"))
+    due_at: Mapped[datetime] = mapped_column(DateTime)
+    sent_at: Mapped[datetime | None] = mapped_column(DateTime)
+    channel: Mapped[str | None] = mapped_column(String(20))

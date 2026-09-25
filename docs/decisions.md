@@ -80,3 +80,18 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 ## 2026-09-25 — Sort key treats a missing floor as −∞
 - **Decision:** an opportunity without a floor never outranks one with a floor, whatever its market margin.
 - **Reason:** the plan ranks by downside protection first; a market-only deal has no protection.
+
+## 2026-09-25 — Owner auth: pluggable local / Supabase, never "off" outside debug
+- **Decision:** `app/auth.py` verifies either a local pbkdf2 hash or a Supabase Auth JWT (HS256, project secret, owner email enforced). `auth_mode=off` is refused unless `SLABSPREAD_DEBUG=1`.
+- **Reason:** the plan names Supabase Auth, but provisioning a Supabase project is the owner's billable decision; local mode makes the dashboard usable on day one and the test suite hermetic. Refusing `off` in production closes the obvious footgun.
+- **Alternative rejected:** Supabase-only. Would block Phase 4's exit test on infrastructure.
+
+## 2026-09-25 — The paid tier's launch conditions are enforced in code, not in a doc
+- **Decision:** `launch_gate()` checks the calibrated-trade count from the ledger, the license and legal-review flags, and Stripe config; `/subscribe` returns 503 with the missing items until all pass.
+- **Reason:** plan §8 gates the Sell lane on evidence. A checklist in a document can be skipped; a 503 cannot.
+- **Alternative rejected:** a single `paid_tier_enabled` flag. Too easy to flip without the evidence.
+
+## 2026-09-25 — Fan-out rotates deterministically per listing
+- **Decision:** `engines/fanout.py` picks at most `per_listing_cap` eligible subscribers starting at an offset hashed from the listing key, staggered by a fixed delay.
+- **Reason:** plan §8 asks that subscribers not all be pointed at one listing. A hash offset spreads different listings across the subscriber base without needing state, and makes the assignment reproducible for support questions.
+- **Alternative rejected:** random selection. Not reproducible; a subscriber who complains "I never get alerts" cannot be answered.

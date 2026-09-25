@@ -13,7 +13,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 from starlette.middleware.sessions import SessionMiddleware
 
-from app import auth, ledger, services
+from app import auth, ledger, paid, services
 from app.db import get_session
 from config import settings
 from ingest.base import recent_runs
@@ -27,6 +27,37 @@ app.add_middleware(
 templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
 
 Owner = Depends(auth.require_owner)
+app.include_router(paid.router)
+DOCS = Path(__file__).resolve().parent.parent / "docs"
+
+
+@app.get("/terms", response_class=HTMLResponse)
+def terms(request: Request):
+    return templates.TemplateResponse(
+        request, "doc.html", {"title": "Terms of Service", "body": (DOCS / "terms.md").read_text()}
+    )
+
+
+@app.get("/privacy", response_class=HTMLResponse)
+def privacy(request: Request):
+    return templates.TemplateResponse(
+        request, "doc.html", {"title": "Privacy Policy", "body": (DOCS / "privacy.md").read_text()}
+    )
+
+
+@app.get("/subscribed", response_class=HTMLResponse)
+def subscribed(request: Request):
+    return templates.TemplateResponse(
+        request,
+        "doc.html",
+        {
+            "title": "Subscribed",
+            "body": (
+                "Thanks. Alerts begin once Stripe confirms the subscription. "
+                "Every alert is information; you place every order yourself."
+            ),
+        },
+    )
 
 
 def _parse_dt(v: str | None) -> datetime | None:

@@ -10,7 +10,7 @@ import logging
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-from app.alerts import scan_and_deliver
+from app.alerts import deliver_subscriber_alerts, scan_and_deliver
 from app.db import session_scope
 from config import settings
 from ingest import gated, onchain_courtyard, onchain_solana_flows
@@ -37,8 +37,16 @@ def run_alerts() -> None:
         scan_and_deliver(s)
 
 
+def run_subscriber_deliveries() -> None:
+    with session_scope() as s:
+        deliver_subscriber_alerts(s)
+
+
 def main() -> None:
     sched = BlockingScheduler()
+    sched.add_job(
+        run_subscriber_deliveries, "interval", seconds=60, id="subscriber_deliveries", max_instances=1
+    )
     sched.add_job(
         run_alerts, "interval", seconds=settings.schedules.get("alerts", 300), id="alerts", max_instances=1
     )
