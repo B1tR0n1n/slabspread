@@ -10,6 +10,7 @@ import logging
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 
+from app.alerts import scan_and_deliver
 from app.db import session_scope
 from config import settings
 from ingest import gated, onchain_courtyard, onchain_solana_flows
@@ -31,8 +32,16 @@ def run_once(key: str) -> None:
         run_worker(w, s, raw_store=RawStore())
 
 
+def run_alerts() -> None:
+    with session_scope() as s:
+        scan_and_deliver(s)
+
+
 def main() -> None:
     sched = BlockingScheduler()
+    sched.add_job(
+        run_alerts, "interval", seconds=settings.schedules.get("alerts", 300), id="alerts", max_instances=1
+    )
     for key in WORKERS:
         every = settings.schedules.get(key, 600)
         sched.add_job(run_once, "interval", seconds=every, args=[key], id=key, max_instances=1, coalesce=True)

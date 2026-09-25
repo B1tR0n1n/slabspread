@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Alerts · SlabSpread{% endblock %}
+{% block body %}
+<p class="dim">Alerts fire when floor margin ≥ {{ threshold }}. Each links to the listing and to a prefilled ledger entry. Nothing is bought automatically.</p>
+<table><thead><tr><th>when</th><th>listing</th><th class="num">all-in</th><th class="num">floor margin</th><th class="num">market margin</th><th>delivered</th><th></th></tr></thead><tbody>
+{% for a, l in rows %}
+<tr><td>{{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</td><td>{{ l.title }}<br>{% if l.url %}<a href="{{ l.url }}" rel="noopener" target="_blank">listing ↗</a>{% endif %} <a href="/cards/{{ a.card_id }}">card</a></td>
+<td class="num">{{ a.all_in_cost }}</td><td class="num ok">{{ a.floor_margin }}</td><td class="num">{{ a.market_margin if a.market_margin is not none else '—' }}</td>
+<td>{{ a.channel or 'pending' }}</td><td><a href="/ledger/new?from_alert={{ a.id }}"><button class="ok">I bought it → ledger</button></a></td></tr>
+{% else %}<tr><td colspan="7" class="dim">no alerts yet</td></tr>{% endfor %}
+</tbody></table>
+{% endblock %}

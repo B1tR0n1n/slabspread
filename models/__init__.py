@@ -275,3 +275,72 @@ class OnchainEvent(Base):
     currency: Mapped[str | None] = mapped_column(String(16))
     memo: Mapped[str | None] = mapped_column(String(300))
     raw: Mapped[dict | None] = mapped_column(JSON)
+
+
+# --------------------------------------------------------------------------------------
+# Phase 4: alerts and the trade ledger
+# --------------------------------------------------------------------------------------
+
+
+class Alert(Base):
+    """A spread opportunity that crossed the owner's threshold. Links to the listing; never buys."""
+
+    __tablename__ = "alerts"
+    __table_args__ = (Index("ix_alerts_listing_created", "listing_id", "created_at"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    listing_id: Mapped[int] = mapped_column(ForeignKey("listings.id"))
+    card_id: Mapped[int | None] = mapped_column(ForeignKey("cards.id"))
+    floor_margin: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
+    market_margin: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
+    all_in_cost: Mapped[Decimal] = mapped_column(Numeric(14, 2))
+    calculation: Mapped[dict | None] = mapped_column(JSON)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_now)
+    delivered_at: Mapped[datetime | None] = mapped_column(DateTime)
+    channel: Mapped[str | None] = mapped_column(String(20))  # email | log
+
+
+class ExitKind(enum.StrEnum):
+    open = "open"
+    buyback = "buyback"
+    sale = "sale"
+
+
+class Trade(Base):
+    """One round trip: buy → vault intake → exit. Realized P&L is derived, never typed in."""
+
+    __tablename__ = "trades"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    card_id: Mapped[int | None] = mapped_column(ForeignKey("cards.id"))
+    alert_id: Mapped[int | None] = mapped_column(ForeignKey("alerts.id"))
+    listing_ref: Mapped[str | None] = mapped_column(String(200))
+    source_key: Mapped[str | None] = mapped_column(String(40))
+    description: Mapped[str] = mapped_column(String(300))
+
+    bought_at: Mapped[datetime] = mapped_column(DateTime)
+    buy_price: Mapped[Decimal] = mapped_column(Numeric(14, 2))
+    buy_fees: Mapped[Decimal] = mapped_column(Numeric(14, 2), default=0)  # shipping, tax, platform fees
+    intake_at: Mapped[datetime | None] = mapped_column(DateTime)
+    intake_cost: Mapped[Decimal] = mapped_column(Numeric(14, 2), default=0)
+
+    exit_kind: Mapped[ExitKind] = mapped_column(Enum(ExitKind), default=ExitKind.open)
+    exit_at: Mapped[datetime | None] = mapped_column(DateTime)
+    exit_price: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
+    exit_fees: Mapped[Decimal] = mapped_column(Numeric(14, 2), default=0)
+
+    # What the engine said at decision time — the calibration signal.
+    predicted_floor_margin: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
+    predicted_market_margin: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
+    notes: Mapped[str | None] = mapped_column(String(2000))
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_now)
+
+    @property
+    def total_cost(self) -> Decimal:
+        return Decimal(self.buy_price) + Decimal(self.buy_fees or 0) + Decimal(self.intake_cost or 0)
+
+    @property
+    def realized_pnl(self) -> Decimal | None:
+        if self.exit_kind == ExitKind.open or self.exit_price is None:
+            return None
+        return Decimal(self.exit_price) - Decimal(self.exit_fees or 0) - self.total_cost

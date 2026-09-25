@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}New trade · SlabSpread{% endblock %}
+{% block body %}
+<form method="post" action="/ledger" class="panel" style="max-width:640px">
+  <strong>Record a purchase</strong> <span class="dim">— {% if pre.alert_id %}prefilled from alert #{{ pre.alert_id }}; edit what differs{% else %}manual entry{% endif %}</span>
+  <input type="hidden" name="alert_id" value="{{ pre.alert_id or '' }}">
+  <input type="hidden" name="card_id" value="{{ pre.card_id or '' }}">
+  <input type="hidden" name="predicted_floor_margin" value="{{ pre.predicted_floor_margin or '' }}">
+  <input type="hidden" name="predicted_market_margin" value="{{ pre.predicted_market_margin or '' }}">
+  <label>description</label><input name="description" value="{{ pre.description or '' }}" required style="width:100%">
+  <div class="grid">
+    <div><label>bought at</label><input name="bought_at" type="datetime-local" value="{{ pre.bought_at }}" required></div>
+    <div><label>source</label><input name="source_key" value="{{ pre.source_key or '' }}"></div>
+    <div><label>listing ref</label><input name="listing_ref" value="{{ pre.listing_ref or '' }}"></div>
+    <div><label>buy price</label><input name="buy_price" type="number" step="0.01" value="{{ pre.buy_price or '' }}" required></div>
+    <div><label>buy fees (shipping, tax, platform)</label><input name="buy_fees" type="number" step="0.01" value="{{ pre.buy_fees or '0' }}"></div>
+    <div><label>vault intake cost</label><input name="intake_cost" type="number" step="0.01" value="{{ pre.intake_cost or '0' }}"></div>
+    <div><label>intake at (optional)</label><input name="intake_at" type="datetime-local"></div>
+  </div>
+  <label>notes</label><textarea name="notes" rows="2" style="width:100%"></textarea>
+  <p><button class="ok">save trade</button> <a href="/ledger">cancel</a></p>
+</form>
+{% endblock %}

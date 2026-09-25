@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Opportunities · SlabSpread{% endblock %}
+{% block body %}
+<p class="dim">Ranked by floor margin (downside-protected first), then market margin. Every row expands to its full calculation.
+{% if has_pending %}<a href="/admin/matches">Fuzzy matches are waiting for a verdict.</a>{% endif %}</p>
+<details><summary>assumptions in force</summary><code>shipping {{ cfg.shipping }} · tax {{ cfg.sales_tax_rate }} · intake {{ cfg.vault_intake_cost }} · grading (raw) {{ cfg.grading_cost }} · platform fee {{ cfg.platform_fee_rate }} · min sales {{ cfg.min_sales }} · window {{ cfg.sales_window.days }}d · max age ask {{ cfg.max_age_ask }} floor {{ cfg.max_age_floor }}</code>
+{% if rejected %}<br><code>rejected: {{ rejected }}</code>{% endif %}</details>
+<table>
+<thead><tr><th>card</th><th>source</th><th class="num">ask</th><th class="num">all-in</th><th class="num">floor</th><th class="num">floor margin</th><th class="num">market</th><th class="num">market margin</th><th></th></tr></thead>
+<tbody>
+{% for r in rows %}
+<tr>
+  <td><a href="/cards/{{ r.card.id }}">{{ r.card.display_name }}</a><br><code>{{ r.card.canonical_key }}</code></td>
+  <td>{{ r.source_key }}<br><code>{{ r.listing.external_id[:18] }}</code></td>
+  <td class="num">{{ r.listing.ask_price }}</td>
+  <td class="num">{{ r.opp.all_in_cost }}</td>
+  <td class="num">{{ r.opp.exit_floor if r.opp.exit_floor is not none else '—' }}<br><code>{{ r.opp.calculation.floor.oracle if r.opp.calculation.floor else '' }}</code></td>
+  <td class="num {{ 'ok' if r.opp.floor_margin is not none and r.opp.floor_margin > 0 else 'dim' }}">{{ r.opp.floor_margin if r.opp.floor_margin is not none else '—' }}</td>
+  <td class="num">{{ r.opp.exit_market if r.opp.exit_market is not none else '—' }}</td>
+  <td class="num {{ 'ok' if r.opp.market_margin is not none and r.opp.market_margin > 0 else 'dim' }}">{{ r.opp.market_margin if r.opp.market_margin is not none else '—' }}</td>
+  <td>{% if r.listing.url %}<a href="{{ r.listing.url }}" rel="noopener" target="_blank">listing ↗</a><br>{% endif %}<details><summary>calc</summary><pre>{{ r.opp.calculation | tojson(indent=1) }}</pre></details></td>
+</tr>
+{% else %}<tr><td colspan="9" class="dim">no opportunities pass the filters right now{% if rejected %} — see rejected counts above{% endif %}</td></tr>{% endfor %}
+</tbody>
+</table>
+{% endblock %}

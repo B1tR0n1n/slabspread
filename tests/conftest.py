@@ -1,4 +1,8 @@
 import json
+import os
+
+os.environ.setdefault("SLABSPREAD_AUTH_MODE", "off")
+os.environ.setdefault("SLABSPREAD_DEBUG", "1")
 from pathlib import Path
 
 import pytest

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ card.display_name }} · SlabSpread{% endblock %}
+{% block body %}
+<h2 style="margin:0 0 4px">{{ card.display_name }}</h2>
+<code>{{ card.canonical_key }}</code>
+{% if floor %}<p>Guaranteed exit now: <strong class="ok">{{ floor.value }}</strong> <code>{{ floor.oracle }} · as of {{ floor.as_of }}</code></p>{% else %}<p class="dim">No buyback floor known for this card.</p>{% endif %}
+<div class="panel"><canvas id="chart" height="110"></canvas></div>
+<div class="grid">
+<div class="panel"><strong>Listings</strong>
+<table><thead><tr><th>source</th><th class="num">ask</th><th>status</th><th>seen</th></tr></thead><tbody>
+{% for l, k in listings %}<tr><td>{{ k }}<br><code>{{ l.external_id[:20] }}</code></td><td class="num">{{ l.ask_price }} {{ l.currency }}</td><td>{{ l.status.value }}</td><td>{{ l.last_seen.strftime('%Y-%m-%d %H:%M') }}</td></tr>{% else %}<tr><td colspan="4" class="dim">none</td></tr>{% endfor %}
+</tbody></table></div>
+<div class="panel"><strong>Sales</strong>
+<table><thead><tr><th>source</th><th class="num">price</th><th>at</th></tr></thead><tbody>
+{% for sl, k in sales|reverse %}<tr><td>{{ k }}<br><code>{{ sl.external_id[:20] }}</code></td><td class="num">{{ sl.price }} {{ sl.currency }}</td><td>{{ sl.sold_at.strftime('%Y-%m-%d %H:%M') }}</td></tr>{% else %}<tr><td colspan="3" class="dim">none</td></tr>{% endfor %}
+</tbody></table></div>
+<div class="panel"><strong>Valuations</strong>
+<table><thead><tr><th>oracle</th><th class="num">value</th><th>as of</th></tr></thead><tbody>
+{% for v, k in valuations|reverse %}<tr><td>{{ k }}:{{ v.value_type.value }}</td><td class="num">{{ v.value }}</td><td>{{ v.as_of.strftime('%Y-%m-%d %H:%M') }}</td></tr>{% else %}<tr><td colspan="3" class="dim">none</td></tr>{% endfor %}
+</tbody></table></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script>
+const data = {{ chart | tojson }};
+const bySrc = {};
+for (const p of data.valuations) (bySrc[p.src] ||= []).push({x: p.x, y: p.y});
+const palette = ['#7aa2f7','#f7c96b','#c678dd','#56b6c2'];
+new Chart(document.getElementById('chart'), {
+  type: 'line',
+  data: { datasets: [
+    { label: 'sales', data: data.sales.map(p => ({x: p.x, y: p.y})), showLine: false, pointRadius: 4, borderColor: '#3ddc97', backgroundColor: '#3ddc97' },
+    ...Object.entries(bySrc).map(([k, v], i) => ({ label: k, data: v, stepped: true, borderColor: palette[i % palette.length], pointRadius: 2 }))
+  ]},
+  options: { parsing: false, scales: { x: { type: 'time' } }, plugins: { legend: { labels: { color: '#8b93a7' } } } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-date-fns/3.0.0/chartjs-adapter-date-fns.bundle.min.js"></script>
+{% endblock %}

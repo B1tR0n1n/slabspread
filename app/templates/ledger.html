@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Ledger · SlabSpread{% endblock %}
+{% block body %}
+<p><a href="/ledger/new"><button class="ok">new trade</button></a> <a href="/ledger/export.csv"><button>export CSV (taxes)</button></a></p>
+<div class="grid">
+<div class="panel"><strong>Monthly realized P&amp;L</strong>
+<table><thead><tr><th>month</th><th class="num">closed</th><th class="num">open</th><th class="num">cost</th><th class="num">realized P&amp;L</th></tr></thead><tbody>
+{% for m in months %}<tr><td>{{ m.month }}</td><td class="num">{{ m.closed }}</td><td class="num">{{ m.open }}</td><td class="num">{{ m.cost }}</td><td class="num {{ 'ok' if m.pnl > 0 else ('bad' if m.pnl < 0 else '') }}">{{ m.pnl }}</td></tr>{% else %}<tr><td colspan="5" class="dim">no trades</td></tr>{% endfor %}
+</tbody></table></div>
+<div class="panel"><strong>Calibration</strong> <span class="dim">— realized P&amp;L vs the engine's predicted floor margin, closed trades only</span>
+{% if calib.n %}<p>n={{ calib.n }} · met prediction {{ calib.met_prediction }} ({{ calib.hit_rate }}) · mean error {{ calib.mean_error }} · worst {{ calib.worst }} · best {{ calib.best }}</p>
+{% else %}<p class="dim">no closed trades with a prediction yet</p>{% endif %}</div>
+</div>
+<table><thead><tr><th>bought</th><th>description</th><th class="num">buy</th><th class="num">fees</th><th class="num">intake</th><th class="num">total cost</th><th>exit</th><th class="num">exit price</th><th class="num">realized</th><th class="num">predicted floor</th><th></th></tr></thead>
+<tbody>{% for t in trades %}{% include "_trade_row.html" %}{% else %}<tr><td colspan="11" class="dim">no trades yet</td></tr>{% endfor %}</tbody></table>
+{% endblock %}

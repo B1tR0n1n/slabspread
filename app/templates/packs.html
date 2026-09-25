@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Pack edges · SlabSpread{% endblock %}
+{% block body %}
+<p class="dim">House edge = 1 − EV<sub>buyback</sub> / price. Tier value = published band midpoint; buyback = midpoint × the platform's buyback %. Lowest edge first.</p>
+<table><thead><tr><th>platform</th><th>pack</th><th class="num">price</th><th class="num">EV buyback</th><th class="num">house edge</th><th class="num">EV platform</th><th class="num">platform edge</th><th>odds as of</th><th>provenance</th><th></th></tr></thead><tbody>
+{% for r in rows %}
+<tr><td>{{ r.source }}</td><td>{{ r.pack.name }}<br><code>{{ r.pack.slug }}</code></td><td class="num">{{ r.pack.price }}</td><td class="num">{{ r.ev.ev_buyback }}</td>
+<td class="num {{ 'ok' if r.ev.house_edge < 0 else 'bad' }}">{{ r.ev.house_edge }}</td><td class="num">{{ r.ev.ev_platform }}</td><td class="num">{{ r.ev.platform_edge }}</td>
+<td>{{ r.as_of.strftime('%Y-%m-%d %H:%M') }}</td><td><code>{{ r.provenance }}</code></td>
+<td><details><summary>calc</summary><pre>{{ r.ev.calculation | tojson(indent=1) }}</pre>{% for w in r.ev.warnings %}<span class="warn">⚠ {{ w }}</span><br>{% endfor %}</details></td></tr>
+{% else %}<tr><td colspan="10" class="dim">no pack odds ingested yet (platform_odds worker is gated on Q1)</td></tr>{% endfor %}
+</tbody></table>
+{% endblock %}

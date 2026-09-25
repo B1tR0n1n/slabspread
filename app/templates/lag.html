@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Lag alerts · SlabSpread{% endblock %}
+{% block body %}
+<p class="dim">Real prices fell ≥ {{ cfg.drop_pct }} over {{ cfg.real_window.days }} days while the platform value moved ≤ {{ cfg.flat_tolerance_pct }} for {{ cfg.flat_hours }} h. Informational; whether any action is appropriate and within platform terms is your call.</p>
+<table><thead><tr><th>card</th><th class="num">real change</th><th class="num">platform range</th><th>flat since</th><th>detail</th></tr></thead><tbody>
+{% for card, a in alerts %}
+<tr><td><a href="/cards/{{ card.id }}">{{ card.display_name }}</a></td><td class="num bad">{{ a.real_change_pct }}</td><td class="num">{{ a.platform_change_pct }}</td><td>{{ a.flat_since }}</td><td><details><summary>why</summary><pre>{{ a.explanation | tojson(indent=1) }}</pre></details></td></tr>
+{% else %}<tr><td colspan="5" class="dim">no lag detected</td></tr>{% endfor %}
+</tbody></table>
+{% endblock %}

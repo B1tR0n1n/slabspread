@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Sign in · SlabSpread</title>
+<style>body{background:#0f1115;color:#e6e8ee;font:14px ui-monospace,Menlo,monospace;display:grid;place-items:center;height:100vh;margin:0}
+form,div.box{background:#171a21;border:1px solid #262b36;padding:20px;width:320px}label{display:block;color:#8b93a7;margin:8px 0 2px}
+input,button{width:100%;box-sizing:border-box;background:#0f1115;color:#e6e8ee;border:1px solid #262b36;padding:6px;font:inherit}button{margin-top:12px;cursor:pointer}</style></head>
+<body>
+{% if mode == 'local' %}
+<form method="post" action="/login">
+  <strong>SlabSpread</strong> <span style="color:#8b93a7">owner sign-in</span>
+  <input type="hidden" name="next" value="{{ next }}">
+  <label>email</label><input name="email" type="email" required autofocus>
+  <label>password</label><input name="password" type="password" required>
+  <button>sign in</button>
+</form>
+{% elif mode == 'supabase' %}
+<div class="box" id="box">
+  <strong>SlabSpread</strong> <span style="color:#8b93a7">owner sign-in (Supabase)</span>
+  <label>email</label><input id="email" type="email" required autofocus>
+  <label>password</label><input id="pw" type="password" required>
+  <button id="go">sign in</button>
+  <p id="msg" style="color:#ff6b6b"></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+const sb = supabase.createClient({{ supabase_url|tojson }}, {{ anon_key|tojson }});
+document.getElementById('go').onclick = async () => {
+  const { data, error } = await sb.auth.signInWithPassword({ email: email.value, password: pw.value });
+  if (error) { msg.textContent = error.message; return; }
+  const r = await fetch('/login/token', { method: 'POST', body: new URLSearchParams({ access_token: data.session.access_token }) });
+  if (r.ok) location.href = {{ next|tojson }}; else msg.textContent = 'rejected: ' + (await r.text());
+};
+</script>
+{% else %}
+<div class="box">auth is off (debug)</div>
+{% endif %}
+</body></html>
