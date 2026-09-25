@@ -3,7 +3,7 @@
 Market intelligence for vaulted graded trading cards. Three lanes — Trade, Publish, Sell — one codebase. The full spec is [`docs/PLAN.md`](docs/PLAN.md); read §0 (ground rules) before anything else.
 
 ## Status
-**Phase 0 — verification spike.** No product code yet. See [`docs/phase0-findings.md`](docs/phase0-findings.md).
+**Phase 0 — verification spike, first pass done; reopened for primary-source verification (Q1–Q9).** No product code yet. See [`docs/phase0-findings.md`](docs/phase0-findings.md).
 
 ## Non-negotiables (short form)
 - Licensed or public data only. No scraping where terms forbid it; no login bypass; no eBay sold-data.
