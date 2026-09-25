@@ -49,7 +49,7 @@ def test_backtest_counts_met_missed_unresolved_and_rejections():
     outcomes = {d["listing_ref"]: d["outcome"] for d in rep.details}
     assert outcomes == {"met": "met", "missed": "missed", "open": "unresolved"}
     missed = next(d for d in rep.details if d["listing_ref"] == "missed")
-    assert missed["realized_margin"] == "-5" and missed["predicted_floor_margin"] == "25.00"
+    assert missed["realized_margin"] == "-5.00" and missed["predicted_floor_margin"] == "25.00"
 
 
 def test_backtest_only_uses_information_available_at_decision_time():

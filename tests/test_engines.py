@@ -47,11 +47,6 @@ def test_exit_market_median_net_of_fee_and_liquidity_gate():
     # median(180,200,260)=200 ; net of 6% = 188.00
     net, detail = spread.exit_market(sales, _cfg(), T0)
     assert net == D("188.00") and detail["median"] == "200"
-    assert (
-        spread.exit_market(sales[:2], _cfg(), T0)
-        == (None, pytest.approx(detail) | {"reason": "insufficient_liquidity"})
-        or True
-    )
     none, why = spread.exit_market(sales[:2], _cfg(), T0)
     assert none is None and why["reason"] == "insufficient_liquidity"
     # window excludes old sales
