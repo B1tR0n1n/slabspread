@@ -7,6 +7,7 @@ Each worker runs in its own DB session on its own interval; a failure is recorde
 from __future__ import annotations
 
 import logging
+from datetime import datetime, timedelta
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -53,9 +54,20 @@ def main() -> None:
     sched.add_job(
         run_alerts, "interval", seconds=settings.schedules.get("alerts", 300), id="alerts", max_instances=1
     )
-    for key in WORKERS:
+    for i, key in enumerate(WORKERS):
         every = settings.schedules.get(key, 600)
-        sched.add_job(run_once, "interval", seconds=every, args=[key], id=key, max_instances=1, coalesce=True)
+        # First run soon after start (staggered), not one full interval later.
+        first = datetime.now() + timedelta(seconds=10 + 20 * i)
+        sched.add_job(
+            run_once,
+            "interval",
+            seconds=every,
+            args=[key],
+            id=key,
+            max_instances=1,
+            coalesce=True,
+            next_run_time=first,
+        )
         logging.getLogger("ingest").info("scheduled %s every %ss", key, every)
     sched.start()
 
