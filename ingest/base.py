@@ -189,7 +189,9 @@ def run_worker(
     """
     run = IngestRun(source_key=worker.key, started_at=datetime.utcnow())
     session.add(run)
-    session.flush()
+    # Commit the run row on its own so no write transaction is open while fetch() runs —
+    # a long fetch would otherwise hold SQLite's write lock and starve the other workers.
+    session.commit()
     raw_store = raw_store or RawStore()
     own_http = http is None
     http = http or httpx.Client(timeout=30)
@@ -239,7 +241,7 @@ def run_worker(
         log.exception("%s failed", worker.key)
     finally:
         run.finished_at = datetime.utcnow()
-        session.flush()
+        session.commit()
         if own_http:
             http.close()
     return run
