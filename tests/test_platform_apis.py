@@ -92,6 +92,8 @@ def test_cc_gacha_odds_worker_measures_pool_and_keeps_stated_ev(session, tmp_pat
     assert run.status == RunStatus.ok, run.error
     n_packs = session.scalar(select(func.count(Pack.id)))
     assert n_packs == run.inserted and n_packs >= 50 and run.notes["pools_sampled"] == 4
+    empty = [m["code"] for m in doc["machines"] if sum((m.get("stock") or {}).values()) == 0]
+    assert empty and all(session.scalar(select(Pack).where(Pack.slug == c)) is None for c in empty)
     boss = session.scalar(select(Pack).where(Pack.slug == "pokemon_3000"))
     assert boss.price == D("3000") and boss.buyback_pct == D("0.93")
     odds = {o.tier: o for o in session.scalars(select(PackOdds).where(PackOdds.pack_id == boss.id))}

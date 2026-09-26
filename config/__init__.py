@@ -118,7 +118,7 @@ class Settings(BaseSettings):
     collectorcrypt_sample_pools: bool = (
         True  # measure each tier's public prize pool (≈8 paged calls per machine)
     )
-    collectorcrypt_pool_max_pages: int = 25  # 100 cards per page; largest tiers seen ≈ 4,300 cards
+    collectorcrypt_pool_max_pages: int = 60  # 100 cards per page; largest tier seen ≈ 4,300 cards
     # Q2: docs invite tooling, ToS demands *written* consent — off until the owner has it.
     phygitals_api_enabled: bool = False
     phygitals_pages_per_run: int = 2

@@ -204,7 +204,7 @@ URL and timestamp, and the full reports are in `docs/research/fetch_*.md`. Marks
 | `onchain_collectorcrypt` | 19 flows from 40 signatures: pack purchases $25–$100 with `cc-`/`slabz-`/`jupiter-` memos, buybacks with `:buyback`. Decoder correct on first run. |
 | `onchain_phygitals` | 6 buybacks with Core asset refs after fixing plain-`transfer` mint resolution; 34/40 signatures at the wallet are failed transactions (bot traffic), correctly skipped. |
 | `cc_marketplace` (API) | 100 live rows; ≥ 50 cert-bearing (`gradingID`), one promo without set or cert refused. |
-| `cc_gacha_odds` (API) | 87 machines with tier odds, insured-value bands and buyback %. |
+| `cc_gacha_odds` (API) | 87 machines; full prize pools walked for 68 (≈700 requests, 15 min at ≤2/s). Our uniform-draw EV over the full pool matches the platform's stated EV at a median ratio of **1.0000** (min 0.966 on incomplete walks). **House edge (buyback basis): quartiles 5.2% / 6.1% / 8.1%, worst ≈13.5% on $25 machines.** Machines with no inventory are excluded. |
 
 ## Scope after the fetch pass
 

@@ -139,6 +139,8 @@ class CCGachaOddsWorker:
             odds, ranges = m.get("odds") or {}, m.get("tierRanges") or {}
             if not odds or not m.get("price"):
                 continue
+            if sum((m.get("stock") or {}).values()) == 0:
+                continue  # no inventory: nothing to value, and a band midpoint would be fiction
             tiers = []
             pools = (raw.get("pools") or {}).get(m["code"], {})
             for tier, p in odds.items():
