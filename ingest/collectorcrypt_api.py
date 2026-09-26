@@ -27,6 +27,9 @@ from models import Pack, PackOdds, ValueType
 
 MARKETPLACE_URL = "https://api.collectorcrypt.com/marketplace"
 MACHINES_URL = "https://gacha.collectorcrypt.com/api/machines"
+POOL_URL = (
+    "https://gacha.collectorcrypt.com/api/getNfts"  # ?code=&rarity= → the tier's prize pool (paged, ~40)
+)
 
 
 def _headers() -> dict[str, str]:
@@ -100,8 +103,26 @@ class CCGachaOddsWorker:
     def fetch(self, ctx: Context) -> dict:
         _gate()
         doc = _get(ctx, MACHINES_URL)
-        ctx.notes.update({"machines": len(doc.get("machines", []))})
-        return {"fetched_at": datetime.utcnow().isoformat(), **doc}
+        pools: dict[str, dict[str, list]] = {}
+        if settings.collectorcrypt_sample_pools:
+            for m in doc.get("machines", []):
+                for tier in m.get("odds") or {}:
+                    try:
+                        pool = _get(ctx, POOL_URL, {"code": m["code"], "rarity": tier})
+                    except Exception:  # noqa: BLE001 — a missing pool degrades to band midpoint
+                        continue
+                    pools.setdefault(m["code"], {})[tier] = [
+                        {
+                            "nft_address": n.get("nft_address"),
+                            "insured_value": n.get("insured_value"),
+                            "rarity": n.get("rarity"),
+                        }
+                        for n in pool.get("nfts", [])
+                    ]
+        ctx.notes.update(
+            {"machines": len(doc.get("machines", [])), "pools_sampled": sum(len(v) for v in pools.values())}
+        )
+        return {"fetched_at": datetime.utcnow().isoformat(), "pools": pools, **doc}
 
     def next_cursor(self, raw: dict) -> str | None:
         return None
@@ -114,14 +135,20 @@ class CCGachaOddsWorker:
             if not odds or not m.get("price"):
                 continue
             tiers = []
+            pools = (raw.get("pools") or {}).get(m["code"], {})
             for tier, p in odds.items():
                 rng = ranges.get(tier) or {}
+                vals = [
+                    Decimal(str(n["insured_value"])) for n in pools.get(tier, []) if n.get("insured_value")
+                ]
                 tiers.append(
                     {
                         "tier": tier,
                         "probability": Decimal(str(p)),
                         "value_low": Decimal(str(rng["start"])) if "start" in rng else None,
                         "value_high": Decimal(str(rng["end"])) if "end" in rng else None,
+                        "value_mean": (sum(vals) / len(vals)).quantize(Decimal("0.01")) if vals else None,
+                        "sample_n": len(vals) or None,
                     }
                 )
             out.append(
@@ -133,7 +160,9 @@ class CCGachaOddsWorker:
                     "as_of": as_of,
                     "tiers": tiers,
                     "public": m.get("public", True),
-                    "ev_stated": m.get("ev"),
+                    "stated_ev": Decimal(str(m["ev"])).quantize(Decimal("0.01"))
+                    if m.get("ev") is not None
+                    else None,
                 }
             )
         return out
@@ -175,6 +204,9 @@ def upsert_pack_odds(
                     probability=t["probability"],
                     value_low=t["value_low"],
                     value_high=t["value_high"],
+                    value_mean=t.get("value_mean"),
+                    sample_n=t.get("sample_n"),
+                    stated_ev=r.get("stated_ev"),
                     as_of=r["as_of"],
                     provenance=provenance,
                 )

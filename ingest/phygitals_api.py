@@ -82,7 +82,9 @@ class PhygitalsPacksWorker:
                     "buyback_pct": Decimal(str(p.get("buyback_percent", 0.85))),
                     "as_of": as_of,
                     "tiers": tiers,
-                    "ev_stated": p.get("ev"),
+                    "stated_ev": Decimal(str(p["ev"])).quantize(Decimal("0.01"))
+                    if p.get("ev") is not None
+                    else None,
                 }
             )
         return out

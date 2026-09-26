@@ -181,6 +181,12 @@ class PackOdds(Base):
     as_of: Mapped[datetime] = mapped_column(DateTime)
     # How we obtained it: "api_json", "onchain", "manual_snapshot". Never "scrape".
     provenance: Mapped[str] = mapped_column(String(30))
+    # Our own measurement of the tier's value from the public prize pool (mean insured value of
+    # `sample_n` cards), when the platform exposes it. Preferred over the band midpoint.
+    value_mean: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
+    sample_n: Mapped[int | None]
+    # The platform's own stated expected value for the pack at this snapshot, if it publishes one.
+    stated_ev: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
 
 
 class Verdict(enum.StrEnum):

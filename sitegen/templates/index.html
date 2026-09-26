@@ -4,10 +4,10 @@
 {% block path %}{% endblock %}
 {% block body %}
 <h1>House Edge Index</h1>
-<p>For each pack a platform sells, the expected buyback value of a pull against the price of the pack: <code>house_edge = 1 − Σ pᵢ × buybackᵢ / price</code>. Negative means the guaranteed buyback is worth more than the pack; positive is what the house keeps. Tier values are the midpoints of the platform's published value bands; buyback is the platform's stated percentage of that. Full definitions and a worked example: <a href="{{ base_url }}/methodology.html">methodology</a>.</p>
+<p>For each pack a platform sells, the expected buyback value of a pull against the price of the pack: <code>house_edge = 1 − Σ pᵢ × buybackᵢ / price</code>. Negative means the guaranteed buyback is worth more than the pack; positive is what the house keeps. Tier values are measured from the platform's public prize pool where it exposes one (mean insured value of the sampled cards, sample size shown), otherwise the midpoint of the published value band; buyback is the platform's stated percentage of that. Where a platform publishes its own EV it is shown beside ours, labelled as its number. Full definitions and a worked example: <a href="{{ base_url }}/methodology.html">methodology</a>.</p>
 {% if latest %}
 <table>
-<thead><tr><th>platform</th><th>pack</th><th class="num">price</th><th class="num">EV (buyback)</th><th class="num">house edge</th><th class="num">EV (platform value)</th><th>odds as of</th><th>how obtained</th><th></th></tr></thead>
+<thead><tr><th>platform</th><th>pack</th><th class="num">price</th><th class="num">EV (buyback)</th><th class="num">house edge</th><th class="num">EV (platform value)</th><th class="num">platform's stated EV</th><th>valuation method</th><th>odds as of</th><th>how obtained</th><th></th></tr></thead>
 <tbody>
 {% for p in latest %}
 <tr>
@@ -17,10 +17,12 @@
   <td class="num">{{ p.ev.ev_buyback }}</td>
   <td class="num {{ 'ok' if p.ev.house_edge < 0 else 'bad' }}">{{ (p.ev.house_edge * 100) | round(2) }}%</td>
   <td class="num">{{ p.ev.ev_platform }}</td>
+  <td class="num">{{ p.ev.stated_ev if p.ev.stated_ev is not none else '—' }}{% if p.ev.stated_edge is not none %} <span class="dim">(edge {{ (p.ev.stated_edge * 100) | round(2) }}%)</span>{% endif %}</td>
+  <td><code>{{ p.tiers[0].method }}{% if p.tiers[0].sample_n %} · n={{ p.tiers | map(attribute='sample_n') | sum }}{% endif %}</code></td>
   <td>{{ p.as_of.strftime('%Y-%m-%d') }}</td>
   <td><code>{{ p.provenance }}</code></td>
   <td><details><summary>inputs</summary>
-    <table><thead><tr><th>tier</th><th class="num">p</th><th class="num">band midpoint</th><th class="num">buyback</th><th class="num">p × buyback</th></tr></thead><tbody>
+    <table><thead><tr><th>tier</th><th class="num">p</th><th class="num">tier value</th><th class="num">buyback</th><th class="num">p × buyback</th></tr></thead><tbody>
     {% for t in p.tiers %}<tr><td>{{ t.name }}</td><td class="num">{{ t.probability }}</td><td class="num">{{ t.platform_value }}</td><td class="num">{{ t.buyback_value }}</td><td class="num">{{ (t.probability * t.buyback_value) | round(4) }}</td></tr>{% endfor %}
     </tbody></table>
     {% for w in p.ev.warnings %}<div class="dim">⚠ {{ w }}</div>{% endfor %}

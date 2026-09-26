@@ -26,6 +26,9 @@ class OddsRow:
     value_low: Decimal | None
     value_high: Decimal | None
     provenance: str
+    value_mean: Decimal | None = None
+    sample_n: int | None = None
+    stated_ev: Decimal | None = None
 
 
 @dataclass(frozen=True)
@@ -49,15 +52,18 @@ def house_edge_series(rows: list[OddsRow]) -> list[EdgePoint]:
     for (platform, slug, as_of), grp in sorted(groups.items(), key=lambda kv: kv[0]):
         tiers = []
         for r in grp:
-            if r.value_low is None:
-                continue
-            mid = pack_ev.band_midpoint(r.value_low, r.value_high)
-            tiers.append(
-                pack_ev.Tier(r.tier, r.probability, mid, (mid * r.buyback_pct).quantize(Decimal("0.01")))
-            )
+            t = pack_ev.tier_from_snapshot(
+                r.tier, r.probability, value_low=r.value_low, value_high=r.value_high,
+                value_mean=r.value_mean, sample_n=r.sample_n, buyback_pct=r.buyback_pct,
+            )  # fmt: skip
+            if t:
+                tiers.append(t)
         if not tiers:
             continue
-        ev = pack_ev.compute_pack_ev(grp[0].pack_price, tiers)
+        stated = next((r.stated_ev for r in grp if r.stated_ev is not None), None)
+        ev = pack_ev.compute_pack_ev(
+            grp[0].pack_price, tiers, stated_ev=stated, buyback_pct=grp[0].buyback_pct
+        )
         out.append(EdgePoint(platform, slug, grp[0].pack_name, as_of, grp[0].provenance, ev, tuple(tiers)))
     return out
 

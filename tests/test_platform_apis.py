@@ -20,14 +20,23 @@ from models import Listing, Pack, PackOdds, RunStatus, Slab, Valuation
 
 
 def _transport(routes: dict[str, object]) -> httpx.MockTransport:
+    """Route by URL prefix; a callable value receives the query params."""
+
     def handler(req: httpx.Request) -> httpx.Response:
         assert req.headers.get("user-agent"), "platforms require a User-Agent"
-        for prefix, doc in routes.items():
+        for prefix, doc in sorted(routes.items(), key=lambda kv: -len(kv[0])):
             if str(req.url).startswith(prefix):
-                return httpx.Response(200, json=doc)
+                body = doc(dict(req.url.params)) if callable(doc) else doc
+                return httpx.Response(200, json=body) if body is not None else httpx.Response(404)
         return httpx.Response(404)
 
     return httpx.MockTransport(handler)
+
+
+def _pool(params: dict):
+    if params.get("code") != "pokemon_3000":
+        return None  # other machines: no pool → band midpoint fallback
+    return load(f"real/collectorcrypt/gacha_pool/pokemon_3000_{params['rarity']}.json")
 
 
 def test_cc_marketplace_worker_creates_slabs_with_real_certs(session, tmp_path, monkeypatch):
@@ -60,35 +69,49 @@ def test_cc_marketplace_worker_creates_slabs_with_real_certs(session, tmp_path, 
     assert run2.inserted == 0 and session.scalar(select(func.count(Listing.id))) == len(rows) - run.rejected
 
 
-def test_cc_gacha_odds_worker_and_pack_edges(session, tmp_path, monkeypatch):
+def test_cc_gacha_odds_worker_measures_pool_and_keeps_stated_ev(session, tmp_path, monkeypatch):
     monkeypatch.setattr(settings, "collectorcrypt_api_enabled", True)
     doc = load("real/collectorcrypt/gacha_machines_live.json")
-    with httpx.Client(transport=_transport({collectorcrypt_api.MACHINES_URL: doc})) as http:
+    routes = {collectorcrypt_api.MACHINES_URL: doc, collectorcrypt_api.POOL_URL: _pool}
+    with httpx.Client(transport=_transport(routes)) as http:
         run = run_worker(
             collectorcrypt_api.gacha_odds_worker(), session, raw_store=RawStore(tmp_path), http=http
         )
     assert run.status == RunStatus.ok, run.error
     n_packs = session.scalar(select(func.count(Pack.id)))
-    assert n_packs == run.inserted and n_packs >= 50
+    assert n_packs == run.inserted and n_packs >= 50 and run.notes["pools_sampled"] == 4
     boss = session.scalar(select(Pack).where(Pack.slug == "pokemon_3000"))
     assert boss.price == D("3000") and boss.buyback_pct == D("0.93")
-    odds = session.scalars(select(PackOdds).where(PackOdds.pack_id == boss.id)).all()
-    assert {o.tier: (o.probability, o.value_low, o.value_high) for o in odds}["epic"] == (
+    odds = {o.tier: o for o in session.scalars(select(PackOdds).where(PackOdds.pack_id == boss.id))}
+    assert (odds["epic"].probability, odds["epic"].value_low, odds["epic"].value_high) == (
         D("0.01"),
         D("15000"),
         D("303001"),
     )
-    edges = services.pack_edges(session)
+    assert odds["epic"].sample_n == 23 and odds["common"].sample_n == 40
+    assert odds["common"].stated_ev == D("3031.82")
+
+    edges = {e["pack"].slug: e for e in services.pack_edges(session)}
     assert len(edges) == n_packs
-    row = next(e for e in edges if e["pack"].slug == "pokemon_3000")
-    # hand check: midpoints 2250/4500/10500/159000.5 → ×0.93 buyback; EV_buyback = Σ p·buyback
-    ev_bb = sum(
-        D(p) * (D(m) * D("0.93")).quantize(D("0.01"))
-        for p, m in [("0.75", "2250"), ("0.2", "4500"), ("0.04", "10500"), ("0.01", "159000.5")]
+    ev = edges["pokemon_3000"]["ev"]
+    # measured from the pool sample (hand-computed from the fixtures): 2799.68 / 4829.88 / 8693.75 / 44639.13
+    means = {"common": D("2799.68"), "uncommon": D("4829.88"), "rare": D("8693.75"), "epic": D("44639.13")}
+    probs = {"common": D("0.75"), "uncommon": D("0.2"), "rare": D("0.04"), "epic": D("0.01")}
+    ev_platform = sum(probs[t] * means[t] for t in probs)
+    ev_buyback = sum(probs[t] * (means[t] * D("0.93")).quantize(D("0.01")) for t in probs)
+    assert ev.ev_platform == ev_platform.quantize(D("0.0001")) and ev.ev_buyback == ev_buyback.quantize(
+        D("0.0001")
     )
-    assert row["ev"].ev_buyback == ev_bb.quantize(D("0.0001"))
-    assert row["provenance"] == "api_json"
-    # second snapshot at a later time adds rows; same as_of is idempotent
+    assert ev.house_edge == (1 - ev_buyback / D("3000")).quantize(D("0.0001"))
+    assert ev.stated_ev == D("3031.8200") and ev.stated_edge == (
+        1 - D("0.93") * D("3031.82") / D("3000")
+    ).quantize(D("0.0001"))
+    assert all(t["method"] == "pool_sample" for t in ev.calculation["tiers"]) and not ev.warnings
+    # a machine without a pool sample falls back to the band midpoint, and says so
+    other = next(e for slug, e in edges.items() if slug != "pokemon_3000")
+    assert all(t["method"] == "band_midpoint" for t in other["ev"].calculation["tiers"])
+    assert edges["pokemon_3000"]["provenance"] == "api_json"
+    # replay → idempotent
     run2 = run_worker(
         collectorcrypt_api.gacha_odds_worker(),
         session,

@@ -224,17 +224,21 @@ def pack_edges(s: Session) -> list[dict]:
         )
         tiers = []
         for o in snapshot:
-            if o.value_low is None:
-                continue
-            mid = pack_ev.band_midpoint(
-                Decimal(o.value_low), Decimal(o.value_high) if o.value_high is not None else None
+            t = pack_ev.tier_from_snapshot(
+                o.tier,
+                Decimal(o.probability),
+                value_low=o.value_low,
+                value_high=o.value_high,
+                value_mean=o.value_mean,
+                sample_n=o.sample_n,
+                buyback_pct=pct,
             )
-            tiers.append(
-                pack_ev.Tier(o.tier, Decimal(o.probability), mid, (mid * pct).quantize(Decimal("0.01")))
-            )
+            if t:
+                tiers.append(t)
         if not tiers:
             continue
-        ev = pack_ev.compute_pack_ev(Decimal(pack.price), tiers)
+        stated = next((Decimal(o.stated_ev) for o in snapshot if o.stated_ev is not None), None)
+        ev = pack_ev.compute_pack_ev(Decimal(pack.price), tiers, stated_ev=stated, buyback_pct=pct)
         out.append(
             {
                 "pack": pack,

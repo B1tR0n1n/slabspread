@@ -126,3 +126,8 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 ## 2026-09-26 — eBay: identity via getItem, not search
 - **Decision (for the future `ebay_browse` worker):** search with `conditionIds:{2750}` and the three card categories, then call `getItem` per candidate to read `conditionDescriptors` (grader, grade, cert). Budget calls accordingly; display nothing older than 6 hours.
 - **Reason:** the Browse OpenAPI schema confirms `ItemSummary` has no descriptors.
+
+## 2026-09-26 — Pack tier value: measured pool sample first, band midpoint second, stated EV beside
+- **Decision:** `PackOdds` stores `value_mean`/`sample_n` from the platform's public prize pool and `stated_ev` from the platform. `tier_from_snapshot` prefers the measured mean; the midpoint is the fallback; the stated EV is displayed, labelled, and never used in our house edge.
+- **Reason:** the first live Collector Crypt run produced a −88% "house edge" on $250 machines — the band midpoint of a wide top tier (15,000–303,001) is not a value, it's a bound. Sampling the real pool gave 3,860 for the $3,000 machine against the platform's stated 3,032 and the midpoint's 4,598. A reader must be able to see which of those a number rests on.
+- **Alternative rejected:** adopting the platform's stated EV as ours. It is not reproducible; the methodology page promises reproducibility.

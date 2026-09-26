@@ -33,7 +33,7 @@ class Settings(BaseSettings):
             2,
         ),  # public mainnet-beta allows ~40 req/10 s per method per IP; three workers share it
         "courtyard_metadata": (1.0, 2),
-        "collectorcrypt_api": (0.5, 1),  # published limit is 300/min; we use ~30/min
+        "collectorcrypt_api": (2.0, 2),  # published limit is 300/min; we use ≤120/min (pool sampling)
         "phygitals_api": (0.5, 1),
     }
     max_retries: int = 5
@@ -115,6 +115,7 @@ class Settings(BaseSettings):
     collectorcrypt_api_key: str = ""  # optional bearer key from support@collectorcrypt.com (raises limits)
     collectorcrypt_step: int = 100
     collectorcrypt_pages_per_run: int = 3
+    collectorcrypt_sample_pools: bool = True  # sample each tier's public prize pool (~4 calls per machine)
     # Q2: docs invite tooling, ToS demands *written* consent — off until the owner has it.
     phygitals_api_enabled: bool = False
     phygitals_pages_per_run: int = 2

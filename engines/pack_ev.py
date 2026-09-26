@@ -26,6 +26,8 @@ class Tier:
     platform_value: Decimal  # platform's stated value for the tier (mean of eligible cards)
     buyback_value: Decimal  # what the platform will pay to take it back
     external_value: Decimal | None = None  # licensed / on-chain comp, if any
+    method: str = "band_midpoint"  # how platform_value was obtained: band_midpoint | pool_sample | stated
+    sample_n: int | None = None
 
 
 @dataclass(frozen=True)
@@ -38,6 +40,8 @@ class PackEV:
     house_edge: Decimal  # 1 - ev_buyback / price
     platform_edge: Decimal  # 1 - ev_platform / price  (what the platform's own numbers imply)
     fmv_divergence: Decimal | None  # ev_platform / ev_external - 1, on covered mass
+    stated_ev: Decimal | None  # the platform's own published EV, if any (its oracle, not ours)
+    stated_edge: Decimal | None  # 1 - buyback_pct × stated_ev / price
     probability_sum: Decimal
     warnings: tuple[str, ...]
     calculation: dict
@@ -53,7 +57,12 @@ def band_midpoint(low: Decimal, high: Decimal | None) -> Decimal:
 
 
 def compute_pack_ev(
-    pack_price: Decimal, tiers: list[Tier], *, tolerance: Decimal = Decimal("0.001")
+    pack_price: Decimal,
+    tiers: list[Tier],
+    *,
+    tolerance: Decimal = Decimal("0.001"),
+    stated_ev: Decimal | None = None,
+    buyback_pct: Decimal | None = None,
 ) -> PackEV:
     if pack_price <= 0:
         raise ValueError("pack_price must be positive")
@@ -76,6 +85,12 @@ def compute_pack_ev(
         divergence = (ev_platform_covered / ev_external - 1).quantize(FOUR, rounding=ROUND_HALF_UP)
 
     q = lambda x: x.quantize(FOUR, rounding=ROUND_HALF_UP)  # noqa: E731
+    stated_edge = None
+    if stated_ev is not None and buyback_pct is not None:
+        stated_edge = q(1 - buyback_pct * stated_ev / pack_price)
+    methods = {t.method for t in tiers}
+    if len(methods) > 1:
+        warnings.append(f"mixed tier valuation methods: {sorted(methods)}")
     return PackEV(
         pack_price=pack_price,
         ev_platform=q(ev_platform),
@@ -85,6 +100,8 @@ def compute_pack_ev(
         house_edge=q(1 - ev_buyback / pack_price),
         platform_edge=q(1 - ev_platform / pack_price),
         fmv_divergence=divergence,
+        stated_ev=q(stated_ev) if stated_ev is not None else None,
+        stated_edge=stated_edge,
         probability_sum=p_sum,
         warnings=tuple(warnings),
         calculation={
@@ -96,10 +113,43 @@ def compute_pack_ev(
                     "platform_value": str(t.platform_value),
                     "buyback_value": str(t.buyback_value),
                     "external_value": str(t.external_value) if t.external_value is not None else None,
+                    "method": t.method,
+                    "sample_n": t.sample_n,
                     "p_x_buyback": str(q(t.probability * t.buyback_value)),
                 }
                 for t in tiers
             ],
             "formula": "house_edge = 1 - Σ p_i·buyback_i / pack_price",
+            "stated_ev": str(stated_ev) if stated_ev is not None else None,
         },
+    )
+
+
+def tier_from_snapshot(
+    name: str,
+    probability: Decimal,
+    *,
+    value_low: Decimal | None,
+    value_high: Decimal | None,
+    value_mean: Decimal | None,
+    sample_n: int | None,
+    buyback_pct: Decimal,
+) -> Tier | None:
+    """One rule for turning a stored odds row into a Tier: measured pool mean first, else band."""
+    if value_mean is not None:
+        value, method = Decimal(value_mean).quantize(CENT, rounding=ROUND_HALF_UP), "pool_sample"
+    elif value_low is not None:
+        value, method = (
+            band_midpoint(Decimal(value_low), Decimal(value_high) if value_high is not None else None),
+            "band_midpoint",
+        )
+    else:
+        return None
+    return Tier(
+        name,
+        probability,
+        value,
+        (value * buyback_pct).quantize(CENT, rounding=ROUND_HALF_UP),
+        method=method,
+        sample_n=sample_n,
     )
