@@ -36,6 +36,13 @@ because the container's egress policy denies every platform, vendor and RPC host
 
 ---
 
+## 1b. Optional: a Solana RPC key
+
+The public `api.mainnet-beta.solana.com` endpoint allows ~40 requests per 10 s per method per IP and
+returns 429 under the soak's load. A free Helius key (https://dev.helius.xyz, 1M credits/month)
+removes that ceiling: set `SLABSPREAD_SOLANA_RPC_URL=https://mainnet.helius-rpc.com/?api-key=…`.
+Polygon's public node has been fine at our rate.
+
 ## 2. A Postgres database (Supabase)
 
 **Why:** tests run on SQLite; the dashboard, ledger, workers and site need a persistent DB.

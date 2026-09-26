@@ -3,7 +3,7 @@
 import httpx
 import pytest
 
-from ingest.base import RateLimiter, RawStore, SourceNotApproved, run_worker, with_backoff
+from ingest.base import RateLimiter, RawStore, SourceNotApproved, limiter_for, run_worker, with_backoff
 from ingest.gated import GatedWorker
 from models import IngestRun, RunStatus
 
@@ -106,3 +106,22 @@ def test_worker_exception_is_contained(session, tmp_path):
 
 def test_source_not_approved_is_a_runtime_error():
     assert issubclass(SourceNotApproved, RuntimeError)
+
+
+def test_limiters_are_shared_per_key():
+    assert limiter_for("solana_rpc") is limiter_for("solana_rpc")
+    assert limiter_for("solana_rpc") is not limiter_for("polygon_rpc")
+
+
+def test_backoff_honours_retry_after():
+    resp = httpx.Response(429, request=httpx.Request("GET", "http://x"), headers={"retry-after": "7"})
+    calls, slept = [], []
+
+    def fn():
+        calls.append(1)
+        if len(calls) == 1:
+            raise httpx.HTTPStatusError("429", request=resp.request, response=resp)
+        return "ok"
+
+    assert with_backoff(fn, retries=2, base=1.0, sleep=slept.append, rng=lambda: 0.1) == "ok"
+    assert slept == [7.0]

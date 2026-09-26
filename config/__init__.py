@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     }
     max_retries: int = 5
     backoff_base_s: float = 1.0
-    backoff_max_s: float = 60.0
+    backoff_max_s: float = 120.0
 
     # Schedules (seconds between runs) per worker key.
     schedules: dict[str, int] = {

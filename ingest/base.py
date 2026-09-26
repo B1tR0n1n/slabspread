@@ -68,9 +68,15 @@ class RateLimiter:
         return waited
 
 
+_LIMITERS: dict[str, RateLimiter] = {}
+
+
 def limiter_for(key: str) -> RateLimiter:
-    rate, burst = settings.rate_limits.get(key, (1.0, 1))
-    return RateLimiter(rate, burst)
+    """One bucket per key per process: workers that share an upstream share its budget."""
+    if key not in _LIMITERS:
+        rate, burst = settings.rate_limits.get(key, (1.0, 1))
+        _LIMITERS[key] = RateLimiter(rate, burst)
+    return _LIMITERS[key]
 
 
 RETRYABLE = (httpx.TransportError, httpx.TimeoutException)
@@ -93,15 +99,19 @@ def with_backoff(
     cap = settings.backoff_max_s if cap is None else cap
     attempt = 0
     while True:
+        retry_after = 0.0
         try:
             return fn()
         except httpx.HTTPStatusError as e:
             if e.response.status_code not in retry_status or attempt >= retries:
                 raise
+            ra = e.response.headers.get("retry-after")
+            if ra and ra.isdigit():
+                retry_after = float(ra)
         except retry_on:
             if attempt >= retries:
                 raise
-        delay = min(cap, base * (2**attempt)) * rng()
+        delay = max(retry_after, min(cap, base * (2**attempt)) * rng())
         log.warning("retry %d after %.2fs", attempt + 1, delay)
         sleep(delay)
         attempt += 1
