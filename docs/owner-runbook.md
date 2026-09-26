@@ -43,6 +43,13 @@ returns 429 under the soak's load. A free Helius key (https://dev.helius.xyz, 1M
 removes that ceiling: set `SLABSPREAD_SOLANA_RPC_URL=https://mainnet.helius-rpc.com/?api-key=…`.
 Polygon's public node has been fine at our rate.
 
+## 1c. Running the workers for real
+
+`scripts/soak.sh start|status|stop` runs the scheduler against a local SQLite soak DB (what the
+build environment uses). For the real thing, on any always-on host with the `.env` from steps 2–3:
+`docker compose --profile workers up -d` (workers container) and `docker compose up -d web`.
+The cloud build container suspends when idle, so anything long-running belongs on your host.
+
 ## 2. A Postgres database (Supabase)
 
 **Why:** tests run on SQLite; the dashboard, ledger, workers and site need a persistent DB.
