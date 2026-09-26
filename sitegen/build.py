@@ -68,6 +68,7 @@ def odds_rows(s: Session) -> list[OddsRow]:
                 provenance=o.provenance,
                 value_mean=Decimal(o.value_mean) if o.value_mean is not None else None,
                 sample_n=o.sample_n,
+                pool_size=o.pool_size,
                 stated_ev=Decimal(o.stated_ev) if o.stated_ev is not None else None,
             )
         )

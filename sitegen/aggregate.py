@@ -29,6 +29,7 @@ class OddsRow:
     value_mean: Decimal | None = None
     sample_n: int | None = None
     stated_ev: Decimal | None = None
+    pool_size: int | None = None
 
 
 @dataclass(frozen=True)
@@ -55,6 +56,7 @@ def house_edge_series(rows: list[OddsRow]) -> list[EdgePoint]:
             t = pack_ev.tier_from_snapshot(
                 r.tier, r.probability, value_low=r.value_low, value_high=r.value_high,
                 value_mean=r.value_mean, sample_n=r.sample_n, buyback_pct=r.buyback_pct,
+                pool_size=r.pool_size,
             )  # fmt: skip
             if t:
                 tiers.append(t)

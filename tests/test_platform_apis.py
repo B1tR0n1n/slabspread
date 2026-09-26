@@ -33,10 +33,22 @@ def _transport(routes: dict[str, object]) -> httpx.MockTransport:
     return httpx.MockTransport(handler)
 
 
+FULL_POOL = load("real/collectorcrypt/gacha_pool/pokemon_3000_full_pool_values.json")
+
+
 def _pool(params: dict):
+    """Serve the real full pool (values captured 2026-09-26) in 100-card pages, value-desc like the API."""
     if params.get("code") != "pokemon_3000":
         return None  # other machines: no pool → band midpoint fallback
-    return load(f"real/collectorcrypt/gacha_pool/pokemon_3000_{params['rarity']}.json")
+    vals = sorted(FULL_POOL[params["rarity"]], reverse=True)
+    page, limit = int(params.get("page", 1)), int(params.get("limit", 40))
+    chunk = vals[(page - 1) * limit : page * limit]
+    return {
+        "nfts": [{"nft_address": f"{params['rarity']}{i}", "insured_value": v} for i, v in enumerate(chunk)],
+        "page": page,
+        "limit": limit,
+        "hasMore": page * limit < len(vals),
+    }
 
 
 def test_cc_marketplace_worker_creates_slabs_with_real_certs(session, tmp_path, monkeypatch):
@@ -88,14 +100,14 @@ def test_cc_gacha_odds_worker_measures_pool_and_keeps_stated_ev(session, tmp_pat
         D("15000"),
         D("303001"),
     )
-    assert odds["epic"].sample_n == 23 and odds["common"].sample_n == 40
+    assert odds["epic"].sample_n == 23 and odds["common"].sample_n == 439 and odds["common"].pool_size == 440
     assert odds["common"].stated_ev == D("3031.82")
 
     edges = {e["pack"].slug: e for e in services.pack_edges(session)}
     assert len(edges) == n_packs
     ev = edges["pokemon_3000"]["ev"]
-    # measured from the pool sample (hand-computed from the fixtures): 2799.68 / 4829.88 / 8693.75 / 44639.13
-    means = {"common": D("2799.68"), "uncommon": D("4829.88"), "rare": D("8693.75"), "epic": D("44639.13")}
+    # measured from the full pool (hand-computed from the fixture): 1980.30 / 3784.75 / 8565.48 / 44639.13
+    means = {"common": D("1980.30"), "uncommon": D("3784.75"), "rare": D("8565.48"), "epic": D("44639.13")}
     probs = {"common": D("0.75"), "uncommon": D("0.2"), "rare": D("0.04"), "epic": D("0.01")}
     ev_platform = sum(probs[t] * means[t] for t in probs)
     ev_buyback = sum(probs[t] * (means[t] * D("0.93")).quantize(D("0.01")) for t in probs)
@@ -106,7 +118,16 @@ def test_cc_gacha_odds_worker_measures_pool_and_keeps_stated_ev(session, tmp_pat
     assert ev.stated_ev == D("3031.8200") and ev.stated_edge == (
         1 - D("0.93") * D("3031.82") / D("3000")
     ).quantize(D("0.0001"))
-    assert all(t["method"] == "pool_sample" for t in ev.calculation["tiers"]) and not ev.warnings
+    # our measurement reproduces the platform's stated EV to 0.02% (one common card short of the pool)
+    assert abs(ev.ev_platform / ev.stated_ev - 1) < D("0.001")
+    methods = {t["name"]: t["method"] for t in ev.calculation["tiers"]}
+    assert methods == {
+        "common": "pool_sample",
+        "uncommon": "pool_full",
+        "rare": "pool_full",
+        "epic": "pool_full",
+    }
+    assert any("mixed tier valuation methods" in w for w in ev.warnings)
     # a machine without a pool sample falls back to the band midpoint, and says so
     other = next(e for slug, e in edges.items() if slug != "pokemon_3000")
     assert all(t["method"] == "band_midpoint" for t in other["ev"].calculation["tiers"])

@@ -107,18 +107,23 @@ class CCGachaOddsWorker:
         if settings.collectorcrypt_sample_pools:
             for m in doc.get("machines", []):
                 for tier in m.get("odds") or {}:
-                    try:
-                        pool = _get(ctx, POOL_URL, {"code": m["code"], "rarity": tier})
-                    except Exception:  # noqa: BLE001 — a missing pool degrades to band midpoint
-                        continue
-                    pools.setdefault(m["code"], {})[tier] = [
-                        {
-                            "nft_address": n.get("nft_address"),
-                            "insured_value": n.get("insured_value"),
-                            "rarity": n.get("rarity"),
-                        }
-                        for n in pool.get("nfts", [])
-                    ]
+                    cards, page = [], 1
+                    while page <= settings.collectorcrypt_pool_max_pages:
+                        try:
+                            pool = _get(
+                                ctx, POOL_URL, {"code": m["code"], "rarity": tier, "page": page, "limit": 100}
+                            )
+                        except Exception:  # noqa: BLE001 — a missing pool degrades to band midpoint
+                            break
+                        cards += [
+                            {"nft_address": n.get("nft_address"), "insured_value": n.get("insured_value")}
+                            for n in pool.get("nfts", [])
+                        ]
+                        if not pool.get("hasMore"):
+                            break
+                        page += 1
+                    if cards:
+                        pools.setdefault(m["code"], {})[tier] = cards
         ctx.notes.update(
             {"machines": len(doc.get("machines", [])), "pools_sampled": sum(len(v) for v in pools.values())}
         )
@@ -149,6 +154,7 @@ class CCGachaOddsWorker:
                         "value_high": Decimal(str(rng["end"])) if "end" in rng else None,
                         "value_mean": (sum(vals) / len(vals)).quantize(Decimal("0.01")) if vals else None,
                         "sample_n": len(vals) or None,
+                        "pool_size": (m.get("stock") or {}).get(tier),
                     }
                 )
             out.append(
@@ -206,6 +212,7 @@ def upsert_pack_odds(
                     value_high=t["value_high"],
                     value_mean=t.get("value_mean"),
                     sample_n=t.get("sample_n"),
+                    pool_size=t.get("pool_size"),
                     stated_ev=r.get("stated_ev"),
                     as_of=r["as_of"],
                     provenance=provenance,

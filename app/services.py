@@ -232,6 +232,7 @@ def pack_edges(s: Session) -> list[dict]:
                 value_mean=o.value_mean,
                 sample_n=o.sample_n,
                 buyback_pct=pct,
+                pool_size=o.pool_size,
             )
             if t:
                 tiers.append(t)

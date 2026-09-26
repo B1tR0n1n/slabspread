@@ -131,3 +131,8 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 - **Decision:** `PackOdds` stores `value_mean`/`sample_n` from the platform's public prize pool and `stated_ev` from the platform. `tier_from_snapshot` prefers the measured mean; the midpoint is the fallback; the stated EV is displayed, labelled, and never used in our house edge.
 - **Reason:** the first live Collector Crypt run produced a −88% "house edge" on $250 machines — the band midpoint of a wide top tier (15,000–303,001) is not a value, it's a bound. Sampling the real pool gave 3,860 for the $3,000 machine against the platform's stated 3,032 and the midpoint's 4,598. A reader must be able to see which of those a number rests on.
 - **Alternative rejected:** adopting the platform's stated EV as ours. It is not reproducible; the methodology page promises reproducibility.
+
+## 2026-09-26 — Walk the whole prize pool; label anything less as a sample and an upper bound
+- **Decision:** the gacha worker pages through every tier's pool (`page`/`limit=100`, `hasMore`) and stores the count against the platform's stock; `pool_full` only when they match.
+- **Reason:** the endpoint serves cards value-descending, so a 40-card sample gave a $50 pack a −97% "house edge". The full pool reproduced the platform's stated EV to 0.02% — our first independent validation of a platform number, and the strongest evidence yet that "rigor is the product" can be delivered.
+- **Cost:** ≈700 requests per run at ≤2/s against a published 300/min limit; scheduled hourly.

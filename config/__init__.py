@@ -46,7 +46,7 @@ class Settings(BaseSettings):
         "onchain_collectorcrypt": 300,
         "onchain_phygitals": 300,
         "cc_marketplace": 600,
-        "cc_gacha_odds": 1800,
+        "cc_gacha_odds": 3600,  # ≈700 requests per run at ≤2/s
         "phygitals_packs": 1800,
         "phygitals_listings": 600,
         "alerts": 300,
@@ -115,7 +115,10 @@ class Settings(BaseSettings):
     collectorcrypt_api_key: str = ""  # optional bearer key from support@collectorcrypt.com (raises limits)
     collectorcrypt_step: int = 100
     collectorcrypt_pages_per_run: int = 3
-    collectorcrypt_sample_pools: bool = True  # sample each tier's public prize pool (~4 calls per machine)
+    collectorcrypt_sample_pools: bool = (
+        True  # measure each tier's public prize pool (≈8 paged calls per machine)
+    )
+    collectorcrypt_pool_max_pages: int = 25  # 100 cards per page; largest tiers seen ≈ 4,300 cards
     # Q2: docs invite tooling, ToS demands *written* consent — off until the owner has it.
     phygitals_api_enabled: bool = False
     phygitals_pages_per_run: int = 2

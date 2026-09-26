@@ -134,10 +134,16 @@ def tier_from_snapshot(
     value_mean: Decimal | None,
     sample_n: int | None,
     buyback_pct: Decimal,
+    pool_size: int | None = None,
 ) -> Tier | None:
-    """One rule for turning a stored odds row into a Tier: measured pool mean first, else band."""
+    """One rule for turning a stored odds row into a Tier: measured pool mean first, else band.
+    `pool_full` when every card in the tier was measured, `pool_sample` otherwise."""
     if value_mean is not None:
-        value, method = Decimal(value_mean).quantize(CENT, rounding=ROUND_HALF_UP), "pool_sample"
+        full = pool_size is not None and sample_n is not None and sample_n >= pool_size
+        value, method = (
+            Decimal(value_mean).quantize(CENT, rounding=ROUND_HALF_UP),
+            ("pool_full" if full else "pool_sample"),
+        )
     elif value_low is not None:
         value, method = (
             band_midpoint(Decimal(value_low), Decimal(value_high) if value_high is not None else None),

@@ -185,6 +185,7 @@ class PackOdds(Base):
     # `sample_n` cards), when the platform exposes it. Preferred over the band midpoint.
     value_mean: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
     sample_n: Mapped[int | None]
+    pool_size: Mapped[int | None]  # platform-reported tier stock; sample_n == pool_size → full pool measured
     # The platform's own stated expected value for the pack at this snapshot, if it publishes one.
     stated_ev: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
 
