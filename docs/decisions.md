@@ -136,3 +136,7 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 - **Decision:** the gacha worker pages through every tier's pool (`page`/`limit=100`, `hasMore`) and stores the count against the platform's stock; `pool_full` only when they match.
 - **Reason:** the endpoint serves cards value-descending, so a 40-card sample gave a $50 pack a −97% "house edge". The full pool reproduced the platform's stated EV to 0.02% — our first independent validation of a platform number, and the strongest evidence yet that "rigor is the product" can be delivered.
 - **Cost:** ≈700 requests per run at ≤2/s against a published 300/min limit; scheduled hourly.
+
+## 2026-09-26 — The 48-hour soak is the owner's to run; the container proved 3 hours
+- **Decision:** stop restarting the scheduler in the build container every three hours and record the soak as 3 h continuous + slices. The exit-test criterion transfers to the first 48 h on the owner's host.
+- **Reason:** the container suspends within minutes of the session idling; ten-minute slices every three hours are not a soak, and calling them one would be false. Three continuous hours at 1.3% transient error rate, with every failure root-caused, is what the environment can honestly show.

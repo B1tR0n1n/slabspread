@@ -7,7 +7,7 @@ Market intelligence for vaulted graded trading cards. Three lanes — Trade, Pub
 |---|---|
 | 0 — verification spike | **Done.** Primary sources fetched and quoted 2026-09-26; Q1–Q3, Q7–Q9 resolved, Q4–Q6 need owner action ([`docs/phase0-findings.md`](docs/phase0-findings.md)). |
 | 1 — data model + card identity | **Built.** Exit test runs on a schema-faithful corpus; re-runs on real captures once a platform host is reachable. |
-| 2 — ingestion workers | **Built** for the approved on-chain paths (Polygon events, Solana USDC flows) with replay, cursors, raw capture, `/health/ingest`. 48-hour soak pending RPC access. Gated sources refuse to run until their license question closes. |
+| 2 — ingestion workers | **Built** for the approved on-chain paths (Polygon events, Solana USDC flows) with replay, cursors, raw capture, `/health/ingest`. Live on real RPCs; 3 h continuous in-container soak (157 runs, 2 transient errors), 48 h run belongs on the owner's host. Gated sources refuse to run until their license question closes. |
 | 3 — engines | **Built.** Spread, pack EV, lag detector, backtest — pure functions with hand-computed tests; formulas in [`docs/methodology.md`](docs/methodology.md). |
 | 4 — private dashboard + ledger | **Built.** Owner auth (local or Supabase), ranked opportunities with full calculations, card detail + chart, lag alerts, pack edges, email/log alerts, trade ledger with realized P&L, CSV export and calibration. |
 | 5 — public site | **Built.** `python -m sitegen.build` → House Edge Index, Valuation Gap, Methodology, sitemap; disclosures, 18+ notice, not-financial-advice footer. |

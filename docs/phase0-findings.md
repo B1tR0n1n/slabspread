@@ -206,15 +206,25 @@ URL and timestamp, and the full reports are in `docs/research/fetch_*.md`. Marks
 | `cc_marketplace` (API) | 100 live rows; ≥ 50 cert-bearing (`gradingID`), one promo without set or cert refused. |
 | `cc_gacha_odds` (API) | 87 machines; full prize pools walked for 68 (≈700 requests, 15 min at ≤2/s). Our uniform-draw EV over the full pool matches the platform's stated EV at a median ratio of **1.0000** (min 0.966 on incomplete walks). **House edge (buyback basis): quartiles 5.2% / 6.1% / 8.1%, worst ≈13.5% on $25 machines.** Machines with no inventory are excluded. |
 
-## Soak (Phase 2 exit test, 48 h) — running in slices
+## Soak (Phase 2 exit test, 48 h) — result
 
-The scheduler soak started 2026-09-26 01:20 UTC on the final code. Through hour 3: 150 runs, one
-error (the head-race fixed at 02:10), zero lock errors after the run-row fix, 17,215 on-chain events,
-498 listings, 83 packs with two hourly odds snapshots. The build container is suspended when the
-session idles and background processes do not survive it (the scheduler was found stopped at 04:18
-with a clean log and restarted with a fresh process table). Cursors are persisted, so chain coverage
-is continuous across restarts; the three-hourly check-ins restart the scheduler. A continuous 48-hour
-run without those gaps needs the owner's host: `docker compose --profile workers up`.
+**Continuous in-container run: 3 h 02 m** (2026-09-26 01:20–04:18 UTC), then slices between idle
+periods; the build container is suspended within minutes of the session idling, so a 48-hour run is
+not achievable here and further restarts were stopped rather than counted as a soak.
+
+| Metric | Value |
+|---|---|
+| Runs | 157 across 7 workers (3 on-chain, 2 Collector Crypt API, 2 Phygitals API gated → `skipped`) |
+| Errors | 2 (1.3%): `eth_getLogs` "invalid block range" from a load-balanced node ahead of its peer — fixed by trailing the head 5 blocks; one `413` from the public Solana endpoint on the first page after a 3-hour gap — transient, retried by design |
+| Lock errors after the run-row fix | 0 |
+| Data | 17,517 on-chain events (Courtyard 13,997 · Collector Crypt 1,783 · Phygitals 1,737), 509 live listings with cert numbers, 83 packs, 3 hourly odds snapshots with full prize pools |
+| Replay | stored payloads reproduce DB state (test suite); cursors persisted across every restart with no coverage gap |
+
+What the soak found and fixed, in order: SQLite write-lock starvation from a transaction held open
+during a 15-minute fetch; per-worker rate limiters double-spending one IP's budget; a head race
+between public-node backends; a duplicate/misconfigured scheduler from operator error (now
+`scripts/soak.sh`). The 48-hour criterion is met only when run on the owner's host:
+`docker compose --profile workers up -d`; the first 48 hours there are the exit test.
 
 ## Scope after the fetch pass
 
