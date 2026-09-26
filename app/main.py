@@ -16,7 +16,9 @@ from starlette.middleware.sessions import SessionMiddleware
 from app import auth, ledger, paid, services
 from app.db import get_session
 from config import settings
+from engines.odds_text import parse_odds_line
 from ingest.base import recent_runs
+from ingest.collectorcrypt_api import upsert_pack_odds
 from ingest.gated import EXCLUDED_UNTIL_LICENSED
 from models import Alert, ExitKind, Listing, MatchCandidate, Slab, Trade, Verdict
 
@@ -318,6 +320,64 @@ def decide(
             left.card_id = right.card_id = keep
     s.flush()
     return templates.TemplateResponse(request, "_match_row.html", {**_pair(s, mc), "done": True})
+
+
+# --------------------------------------------------------------------------------------
+# Admin: manual odds snapshot (platforms whose terms bar automated access)
+# --------------------------------------------------------------------------------------
+
+
+@app.get("/admin/odds", response_class=HTMLResponse)
+def odds_form(request: Request, who: str = Owner):
+    return templates.TemplateResponse(request, "odds_manual.html", {"form": {}, "error": None, "saved": None})
+
+
+@app.post("/admin/odds", response_class=HTMLResponse)
+def odds_save(
+    request: Request,
+    source_key: str = Form(...),
+    slug: str = Form(...),
+    name: str = Form(...),
+    price: Decimal = Form(...),
+    buyback_pct: Decimal = Form(...),
+    odds_text: str = Form(...),
+    s: Session = Depends(get_session),
+    who: str = Owner,
+):
+    form = dict(
+        source_key=source_key, slug=slug, name=name, price=price, buyback_pct=buyback_pct, odds_text=odds_text
+    )
+    try:
+        bands = parse_odds_line(odds_text)
+    except ValueError as e:
+        return templates.TemplateResponse(
+            request, "odds_manual.html", {"form": form, "error": str(e), "saved": None}
+        )
+    now = datetime.utcnow()
+    upsert_pack_odds(
+        s,
+        source_key.strip(),
+        source_key.strip().title(),
+        [
+            {
+                "slug": slug.strip(),
+                "name": name.strip(),
+                "price": price,
+                "buyback_pct": buyback_pct,
+                "as_of": now,
+                "tiers": [
+                    {"tier": b.label, "probability": b.probability, "value_low": b.low, "value_high": b.high}
+                    for b in bands
+                ],
+            }
+        ],
+        provenance="manual_snapshot",
+    )
+    return templates.TemplateResponse(
+        request,
+        "odds_manual.html",
+        {"form": form, "error": None, "saved": f"{slug} @ {now:%Y-%m-%d %H:%M} UTC"},
+    )
 
 
 # --------------------------------------------------------------------------------------

@@ -12,7 +12,7 @@ from __future__ import annotations
 import re
 from decimal import Decimal
 
-from engines.identity import NormalizedSlab, normalize_grader, parse_grade
+from engines.identity import NormalizedSlab, infer_game_from_set, normalize_grader, parse_grade
 
 SOURCE_KEY = "phygitals"
 
@@ -38,7 +38,7 @@ def normalize_listing(row: dict) -> tuple[NormalizedSlab, Decimal | None]:
         source=SOURCE_KEY,
         external_id=str(row.get("address") or row.get("slug")),
         title=title,
-        game=meta.get("Type"),
+        game=meta.get("Type") or infer_game_from_set(meta.get("Set") or p.get("set")),
         set_name=meta.get("Set") or p.get("set"),
         number=p.get("number"),
         name=meta.get("Name") or p.get("name"),

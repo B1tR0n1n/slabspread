@@ -5,7 +5,7 @@ Market intelligence for vaulted graded trading cards. Three lanes — Trade, Pub
 ## Status
 | Phase | State |
 |---|---|
-| 0 — verification spike | First pass done; **reopened** for primary-source verification (Q1–Q9 in [`docs/phase0-findings.md`](docs/phase0-findings.md)). |
+| 0 — verification spike | **Done.** Primary sources fetched and quoted 2026-09-26; Q1–Q3, Q7–Q9 resolved, Q4–Q6 need owner action ([`docs/phase0-findings.md`](docs/phase0-findings.md)). |
 | 1 — data model + card identity | **Built.** Exit test runs on a schema-faithful corpus; re-runs on real captures once a platform host is reachable. |
 | 2 — ingestion workers | **Built** for the approved on-chain paths (Polygon events, Solana USDC flows) with replay, cursors, raw capture, `/health/ingest`. 48-hour soak pending RPC access. Gated sources refuse to run until their license question closes. |
 | 3 — engines | **Built.** Spread, pack EV, lag detector, backtest — pure functions with hand-computed tests; formulas in [`docs/methodology.md`](docs/methodology.md). |

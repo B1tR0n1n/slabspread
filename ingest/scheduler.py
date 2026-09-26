@@ -13,7 +13,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from app.alerts import deliver_subscriber_alerts, scan_and_deliver
 from app.db import session_scope
 from config import settings
-from ingest import gated, onchain_courtyard, onchain_solana_flows
+from ingest import collectorcrypt_api, onchain_courtyard, onchain_solana_flows, phygitals_api
 from ingest.base import RawStore, run_worker
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
@@ -22,7 +22,10 @@ WORKERS = {
     "onchain_courtyard": onchain_courtyard.worker,
     "onchain_collectorcrypt": onchain_solana_flows.collectorcrypt_worker,
     "onchain_phygitals": onchain_solana_flows.phygitals_worker,
-    "platform_odds": gated.platform_odds_worker,
+    "cc_marketplace": collectorcrypt_api.marketplace_worker,
+    "cc_gacha_odds": collectorcrypt_api.gacha_odds_worker,
+    "phygitals_packs": phygitals_api.packs_worker,
+    "phygitals_listings": phygitals_api.listings_worker,
 }
 
 

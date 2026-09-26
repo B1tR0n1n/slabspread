@@ -104,3 +104,25 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 ## 2026-09-26 — Solana parser resolves mints from token-balance metadata
 - **Decision:** plain `transfer` instructions (no inline mint) are classified by looking up the source/destination token account's mint in `pre/postTokenBalances`; Metaplex Core instructions contribute the asset address as the NFT reference.
 - **Reason:** Phygitals' real buybacks are plain transfers plus a Core move; the first live run found zero flows until this was fixed. Collector Crypt's `transferChecked` path was already correct on live data.
+
+## 2026-09-26 — Collector Crypt public API: approved for private reads and derived analytics
+- **Decision:** `collectorcrypt_api_enabled` defaults on. Workers identify themselves with a User-Agent, run at ~30/min against a published 300/min limit, and send a bearer key when the owner has one.
+- **Reason:** the docs site says marketplace endpoints "need no credential", publishes per-IP limits and a key-request address — the platform intentionally makes the data available (its own ToS §4.6(iii) exception). The ToS's commercial-exploitation clauses still bind the *public* and *paid* lanes, which is why raw values stay private and Phase 6's license gate remains.
+- **Alternative rejected:** treating ToS §4.6(iv) as covering the documented API. It names "the Website"; the docs contradict that reading and are the more specific statement.
+
+## 2026-09-26 — Phygitals API built but off until written consent
+- **Decision:** worker exists and is tested against live shapes; `phygitals_api_enabled` defaults off.
+- **Reason:** the ToS says *written* consent for automated tools; the API docs' invitation is strong but not that. One email resolves it; guessing would not.
+
+## 2026-09-26 — Courtyard: on-chain only; odds by manual snapshot
+- **Decision:** no worker touches `api.courtyard.io`. Pack odds enter through `/admin/odds`, where the owner pastes the published odds line; provenance `manual_snapshot`.
+- **Reason:** ToS §14.8/§14.11 and a live 403 on the metadata endpoint. The odds line is a public statement on a public page; reading it by hand and recording it is analysis, not automated access.
+- **Consequence:** Courtyard sales are keyed by token id with no card identity until a sanctioned metadata path exists (OpenSea's API under its own terms is the candidate; owner-run).
+
+## 2026-09-26 — Game inferred from set vocabulary when a source omits it
+- **Decision:** `infer_game_from_set` maps a known Pokémon set list to `pokemon`; unknown sets stay game-less and are rejected.
+- **Reason:** live Phygitals listings carry only a `Title`. Rejecting every row would be useless; guessing "pokemon" for everything would be wrong for their One Piece and sports inventory.
+
+## 2026-09-26 — eBay: identity via getItem, not search
+- **Decision (for the future `ebay_browse` worker):** search with `conditionIds:{2750}` and the three card categories, then call `getItem` per candidate to read `conditionDescriptors` (grader, grade, cert). Budget calls accordingly; display nothing older than 6 hours.
+- **Reason:** the Browse OpenAPI schema confirms `ItemSummary` has no descriptors.

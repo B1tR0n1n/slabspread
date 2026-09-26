@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Manual odds snapshot · SlabSpread{% endblock %}
+{% block body %}
+<form method="post" action="/admin/odds" class="panel" style="max-width:720px">
+  <strong>Record published pack odds by hand</strong>
+  <p class="dim">For platforms whose terms bar automated access (Courtyard, ToS §14.8). Open the pack page in your browser, copy the odds line, paste it here. Stored with provenance <code>manual_snapshot</code> and today's timestamp.</p>
+  {% if error %}<p class="bad">{{ error }}</p>{% endif %}
+  {% if saved %}<p class="ok">saved {{ saved }}</p>{% endif %}
+  <div class="grid">
+    <div><label>platform key</label><input name="source_key" value="{{ form.source_key or 'courtyard' }}" required></div>
+    <div><label>pack slug</label><input name="slug" value="{{ form.slug or '' }}" placeholder="pkmn-starter-pack" required></div>
+    <div><label>pack name</label><input name="name" value="{{ form.name or '' }}" placeholder="Pokémon Starter Pack" required></div>
+    <div><label>price (USD)</label><input name="price" type="number" step="0.01" value="{{ form.price or '' }}" required></div>
+    <div><label>buyback % of FMV (0–1)</label><input name="buyback_pct" type="number" step="0.01" value="{{ form.buyback_pct or '0.90' }}" required></div>
+  </div>
+  <label>odds line (as published)</label>
+  <textarea name="odds_text" rows="3" style="width:100%" required>{{ form.odds_text or '' }}</textarea>
+  <p class="dim">Example: <code>45% $5-25 | 53% 25-50 | 1% $50-100 | 0.5% $100-200 | 0.5% Grail $200+</code>. Open-ended bands ("$200+") are valued at their floor.</p>
+  <p><button class="ok">save snapshot</button> <a href="/packs">pack edges</a></p>
+</form>
+{% endblock %}

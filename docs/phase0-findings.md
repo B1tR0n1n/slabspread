@@ -172,3 +172,42 @@ FTC: material connections (including credits and points) must be disclosed clear
 > every item answered or explicitly marked "no legitimate path — excluded"
 
 All eight items are answered at the level the environment allowed, and exclusions are explicit. **Not met** in spirit: the plan asks for evidence with saved sample responses, and `fixtures/phase0/` is empty because no primary host was reachable. Phase 1 may start on the on-chain path; the spike is reopened for the §10 pass.
+
+---
+
+# Fetch pass — 2026-09-26
+
+Network access was granted and the spike re-run against primary sources. Three researchers fetched
+~100 pages and API responses; every page is saved verbatim under `fixtures/phase0/<host>/` with
+URL and timestamp, and the full reports are in `docs/research/fetch_*.md`. Marks below are now
+**FETCH** unless stated. Live RPC runs are also in: see "Live chain results".
+
+## Open questions — resolved
+
+| # | Question | Answer | Evidence |
+|---|---|---|---|
+| **Q1** | Collector Crypt ToS / API key | **Approved for documented public reads.** The ToS (arweave PDF, rev. 2026-06-09) §4.6(iv) bars "any robot, spider, or other automatic device … to access the Website", and (viii)/(xi) bar commercial exploitation and building a competing service; it never mentions the API. The docs site separately states "Marketplace endpoints need no credential", publishes per-IP rate limits (300/min), requires a `User-Agent`, and tells third parties how to request a key (`support@collectorcrypt.com`). `GET /marketplace` rows carry `gradingID` (cert). `x-api-key` is required only on gacha `/api/v1/machines` and `/api/v1/stock`; `/api/machines` answers without one. | `fixtures/phase0/arweave.net/…`, `docs.collectorcrypt.com/{marketplace-api,gacha-api}.md`, `api.collectorcrypt.com/marketplace-step5.json`, `gacha.collectorcrypt.com/api-machines.json` |
+| **Q2** | Phygitals API permission | **Built, gated off.** ToS §11: "Using bots, scripts, or automated tools to interact with the Service without Phygitals' prior written consent" is prohibited; the API docs say pack/marketplace GETs "do not require a key" and list "Bots, scripts, custom tooling" and "price-comparison tooling" as intended uses. The docs are an invitation; the ToS names *written* consent. Worker runs only after `SLABSPREAD_PHYGITALS_API_ENABLED` — owner emails `hello@phygitals.com`. Listings carry no cert; metadata is often just `Title`. | `docs.phygitals.com/terms-of-service.md`, `phygitals.mintlify.app/public-api*.md`, `api.phygitals.com/*.json` |
+| **Q3** | Courtyard FMV / metadata path | **No legitimate automated path — excluded.** ToS §14.8 bars "any robot, spider, crawler, scraper, script … not authorized by us"; §14.11 bars bypassing automated-access controls; one plain request to the tokenURI returned **403**. No developer or partner page exists (`llms.txt` index checked). Courtyard is an **on-chain sales/mint source only**. Odds are published as an FMV-bucket line in each pack's public config JSON; they enter via the owner's manual snapshot form (`/admin/odds`), never a worker. | `docs.courtyard.io/terms-of-service.md`, `api.courtyard.io/token-metadata.md`, `api.courtyard.io/configs-vending-machine-*.md` |
+| **Q4** | PriceCharting license | **Confirmed internal-use only; commercial license needed.** "The API and CSV data are licensed for internal use only. Sharing our price data with a third party, or making it available within an application or service used by others, requires a commercial license and express written permission." Rate: 1 call/s. Field→grade map recorded (manual-only-price = PSA 10, etc.). SportsCardsPro: Cloudflare-blocked, unverified. Scrydex terms grant nothing by implication. **JustTCG** §7.1 explicitly permits end-user display, derived analytics and caching on paid tiers — the cleanest license found. | `www.pricecharting.com/*.md`, `scrydex.com/*.md`, `justtcg.com/*.md` |
+| **Q5** | PSA agreement / limits | **Partly.** OAuth2 password grant; endpoints and fields confirmed from `swagger.json` (`TotalPopulation`, `PopulationHigher` present). Rate limit **not documented anywhere public**; the End User Agreement is behind the sign-in (`app.collectors.com`). Owner action stands. | `api.psacard.com/publicapi-swagger-json.md`, `www.psacard.com/*.md` |
+| **Q6** | eBay Browse details | **Design change.** `item_summary/search` does **not** return `conditionDescriptors`; only `getItem` does (for the three card categories). Graded filter is `filter=conditionIds:{2750}`; descriptor IDs recorded (PSA=275010, Grade 10=275020…). Production Buy API is "intended for eBay partners only", applied for through EPN, no guarantee. License: displayed listing info ≤ 6 h old, other content ≤ 24 h, delete when no longer displayed, no co-mingling with non-eBay content in public display, no derived category-level averages without written permission. EPN: disclosure "unavoidable … as close to the promotional contents as possible"; collectibles 3%, $550 cap. | `www.developer.ebay.com/*.md` (the `developer.` host 403s; `www.` serves the same pages), `partnernetwork.ebay.com/*.md` |
+| **Q7** | Referral rules | **Courtyard: public affiliate links not allowed** — "only for personal and non-commercial purposes … only with people you know". Phygitals' guideline page is a near-clone. Collector Crypt: no referral terms reachable. Affiliate income for the Publish lane: **none from vault platforms.** | `docs.courtyard.io/referral-program-rules.md` |
+| **Q8** | Magic Eden API terms | **Unreachable** (Cloudflare challenge). ToS PDF: scraping listings without consent is a material breach; API users must follow separate API terms. Not needed: on-chain + CC API cover sale history. **Dropped.** | `magiceden.io/terms-of-service.md` |
+| **Q9** | Phygitals collection addresses | Confirmed indirectly: live listings carry `collection_address` `BSG6Dy…` and Core assets move in the same transactions as the buyback USDC. | live worker run |
+
+## Live chain results (first runs, 2026-09-26)
+
+| Worker | Result |
+|---|---|
+| `onchain_courtyard` | 2,723 events from 2,000 blocks (~50 min): 1,728 `TradeExecuted` (median $23.86, max $12,267), 1,015 mints ($15/$25/$50). All USDC. Incremental run: 20 events in 1.4 s. Required: address-filtered `eth_getLogs` in chunks of 4 (registry role members), batched timestamps. |
+| `onchain_collectorcrypt` | 19 flows from 40 signatures: pack purchases $25–$100 with `cc-`/`slabz-`/`jupiter-` memos, buybacks with `:buyback`. Decoder correct on first run. |
+| `onchain_phygitals` | 6 buybacks with Core asset refs after fixing plain-`transfer` mint resolution; 34/40 signatures at the wallet are failed transactions (bot traffic), correctly skipped. |
+| `cc_marketplace` (API) | 100 live rows; ≥ 50 cert-bearing (`gradingID`), one promo without set or cert refused. |
+| `cc_gacha_odds` (API) | 87 machines with tier odds, insured-value bands and buyback %. |
+
+## Scope after the fetch pass
+
+- **Trade lane:** Collector Crypt is fully served (floors from `insuredValue × instantBuyback`, cert identity, sales/buybacks on-chain). Courtyard contributes sales and mint volume keyed by token id, no floors. Phygitals joins when written consent lands.
+- **Publish lane:** House Edge Index has an automated source (CC) and a manual one (Courtyard); Phygitals gated. Affiliate links: none from vault platforms; eBay EPN only if production access is granted.
+- **Exit tests:** Phase 1 now runs on 100 real Collector Crypt slabs (single source with certs; the second cert-bearing source awaits PSA/eBay). Phase 2's replay test holds on live payloads; the 48-hour soak is running.

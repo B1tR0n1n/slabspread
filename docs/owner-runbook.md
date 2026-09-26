@@ -188,6 +188,14 @@ public site; external comps in the lag detector.
 
 ## 7. Platform permissions (Q1 Collector Crypt · Q2 Phygitals · Q3 Courtyard)
 
+**Status after the 2026-09-26 fetch pass:** Q1 resolved — Collector Crypt's documented public API is
+on by default; optionally email `support@collectorcrypt.com` for a `ccsk_` key (higher limits) and, before
+the paid tier, written confirmation for commercial derived use. Q2 — email `hello@phygitals.com` quoting
+their API docs' "price-comparison tooling" line and ask for written consent under ToS §11; then set
+`SLABSPREAD_PHYGITALS_API_ENABLED=true`. Q3 resolved — no automated path; use `/admin/odds` for odds and
+see step 8 for card identity. Full quotes in `docs/phase0-findings.md` ("Fetch pass").
+
+
 **Why:** on-chain data is already approved. These are about each platform's *own* API and values.
 
 **Q1 — Collector Crypt.** Read https://collectorcrypt.com/terms-of-service (or the link in their
@@ -217,6 +225,13 @@ public site. Q2 → Phygitals listings and odds. Q3 → Courtyard card metadata 
 
 ---
 
+## 8. Courtyard card identity via OpenSea (optional)
+
+Courtyard's tokenURI is off-limits, so its 1,700+ daily trades are keyed by token id only. OpenSea's
+API exposes the same metadata under OpenSea's own terms. Create an API key at https://docs.opensea.io
+(developer account), read their API terms for caching/display, set `SLABSPREAD_OPENSEA_API_KEY`, and
+tell me — I'll write the enrichment worker against your first response.
+
 ## After any of these
 
 Tell me which one landed. Each maps to a specific next action on my side:
@@ -229,4 +244,5 @@ Tell me which one landed. Each maps to a specific next action on my side:
 | 4 | write `ingest/ebay_browse.py` against your first real response |
 | 5 | write `ingest/psa_cert.py` against the saved response |
 | 6 | write `ingest/price_api.py` for the vendor you licensed |
-| 7 | flip the gate(s), run the newly approved worker, extend the exit tests |
+| 7 | flip the Phygitals gate, run its workers live, extend the exit tests |
+| 8 | write `ingest/opensea_courtyard.py` for Courtyard card identity |

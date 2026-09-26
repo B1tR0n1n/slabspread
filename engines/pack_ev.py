@@ -43,9 +43,12 @@ class PackEV:
     calculation: dict
 
 
-def band_midpoint(low: Decimal, high: Decimal) -> Decimal:
+def band_midpoint(low: Decimal, high: Decimal | None) -> Decimal:
     """When a platform publishes a value *band* per tier rather than a value, the midpoint is
-    the most defensible single number — and it is named as such in the output."""
+    the most defensible single number — and it is named as such in the output. An open-ended
+    band ("$200+") is valued at its floor: the conservative choice, and the only bounded one."""
+    if high is None:
+        return Decimal(low).quantize(CENT, rounding=ROUND_HALF_UP)
     return ((low + high) / 2).quantize(CENT, rounding=ROUND_HALF_UP)
 
 

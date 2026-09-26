@@ -49,7 +49,7 @@ def house_edge_series(rows: list[OddsRow]) -> list[EdgePoint]:
     for (platform, slug, as_of), grp in sorted(groups.items(), key=lambda kv: kv[0]):
         tiers = []
         for r in grp:
-            if r.value_low is None or r.value_high is None:
+            if r.value_low is None:
                 continue
             mid = pack_ev.band_midpoint(r.value_low, r.value_high)
             tiers.append(

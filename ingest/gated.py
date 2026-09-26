@@ -40,20 +40,14 @@ class GatedWorker:
         return None
 
 
-def platform_odds_worker() -> GatedWorker:
+def platform_odds_worker() -> GatedWorker:  # kept for tests; scheduler uses the real workers now
     return GatedWorker("platform_odds", "collectorcrypt_api_enabled", "Q1")
-
-
-def courtyard_metadata_worker() -> GatedWorker:
-    return GatedWorker("courtyard_metadata", "courtyard_metadata_enabled", "Q3")
-
-
-def phygitals_api_worker() -> GatedWorker:
-    return GatedWorker("phygitals_api", "phygitals_api_enabled", "Q2")
 
 
 # Not even gated: excluded outright until the owner completes an application/contract.
 EXCLUDED_UNTIL_LICENSED = {
+    "courtyard_metadata": "api.courtyard.io returns 403 and ToS §14.8 bars unauthorised automation (Q3) — "
+    "Courtyard is an on-chain sales/mint source only; odds via /admin/odds manual snapshot",
     "ebay_browse": "production Buy API approval + EPN (Q6)",
     "price_api": "commercial license with the chosen vendor (Q4)",
     "psa_cert": "PSA End User Agreement read and token issued (Q5)",

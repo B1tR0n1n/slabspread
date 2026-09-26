@@ -22,15 +22,19 @@ class Settings(BaseSettings):
     polygon_log_chunk_blocks: int = 2000  # eth_getLogs range per call; most public RPCs cap here
     polygon_address_chunk: int = 4  # public nodes block eth_getLogs with long address lists
     polygon_backfill_blocks: int = 43_200  # ~1 day of Polygon blocks scanned on the very first run
-    solana_sig_page: int = 1000
+    solana_sig_page: int = 100  # getTransaction per signature; keep runs under the interval
 
     # Per-source token buckets: requests per second and burst. JSON in env, e.g.
     #   SLABSPREAD_RATE_LIMITS='{"polygon_rpc": [5, 10]}'
     rate_limits: dict[str, tuple[float, int]] = {
         "polygon_rpc": (4.0, 8),
-        "solana_rpc": (4.0, 8),
+        "solana_rpc": (
+            2.0,
+            2,
+        ),  # public mainnet-beta allows ~40 req/10 s per method per IP; three workers share it
         "courtyard_metadata": (1.0, 2),
-        "collectorcrypt_api": (0.5, 1),
+        "collectorcrypt_api": (0.5, 1),  # published limit is 300/min; we use ~30/min
+        "phygitals_api": (0.5, 1),
     }
     max_retries: int = 5
     backoff_base_s: float = 1.0
@@ -41,7 +45,10 @@ class Settings(BaseSettings):
         "onchain_courtyard": 300,
         "onchain_collectorcrypt": 300,
         "onchain_phygitals": 300,
-        "platform_odds": 1800,
+        "cc_marketplace": 600,
+        "cc_gacha_odds": 1800,
+        "phygitals_packs": 1800,
+        "phygitals_listings": 600,
         "alerts": 300,
     }
 
@@ -103,8 +110,15 @@ class Settings(BaseSettings):
     launch_min_calibrated_trades: int = 30  # ledger evidence required before selling alerts
     fanout_per_listing_cap: int = 5  # max subscribers alerted about one listing
     fanout_stagger_seconds: int = 90
-    collectorcrypt_api_enabled: bool = False  # api.collectorcrypt.com / gacha API (Q1)
-    phygitals_api_enabled: bool = False  # api.phygitals.com (Q2)
+    # Q1 resolved 2026-09-26: documented public API, published rate limits, no credential needed.
+    collectorcrypt_api_enabled: bool = True
+    collectorcrypt_api_key: str = ""  # optional bearer key from support@collectorcrypt.com (raises limits)
+    collectorcrypt_step: int = 100
+    collectorcrypt_pages_per_run: int = 3
+    # Q2: docs invite tooling, ToS demands *written* consent — off until the owner has it.
+    phygitals_api_enabled: bool = False
+    phygitals_pages_per_run: int = 2
+    user_agent: str = "SlabSpread/0.1 (owner-run analytics; contact via repo)"
 
 
 settings = Settings()

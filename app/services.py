@@ -224,9 +224,11 @@ def pack_edges(s: Session) -> list[dict]:
         )
         tiers = []
         for o in snapshot:
-            if o.value_low is None or o.value_high is None:
+            if o.value_low is None:
                 continue
-            mid = pack_ev.band_midpoint(Decimal(o.value_low), Decimal(o.value_high))
+            mid = pack_ev.band_midpoint(
+                Decimal(o.value_low), Decimal(o.value_high) if o.value_high is not None else None
+            )
             tiers.append(
                 pack_ev.Tier(o.tier, Decimal(o.probability), mid, (mid * pct).quantize(Decimal("0.01")))
             )

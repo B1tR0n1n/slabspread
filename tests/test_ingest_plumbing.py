@@ -76,11 +76,11 @@ def test_raw_store_roundtrip(tmp_path):
 
 def test_gated_worker_records_skipped_run(session, tmp_path):
     run = run_worker(
-        GatedWorker("platform_odds", "collectorcrypt_api_enabled", "Q1"),
+        GatedWorker("phygitals_api", "phygitals_api_enabled", "Q2"),
         session,
         raw_store=RawStore(tmp_path),
     )
-    assert run.status == RunStatus.skipped and "Q1" in run.error
+    assert run.status == RunStatus.skipped and "Q2" in run.error
     assert session.get(IngestRun, run.id).finished_at is not None
 
 
