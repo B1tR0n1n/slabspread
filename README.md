@@ -27,7 +27,8 @@ cp .env.example .env                      # SQLite by default
 pytest                                    # hermetic; fixtures only
 alembic upgrade head
 python -m ingest.replay                   # load fixtures/real + fixtures/corpus
-python -m ingest.scheduler                # workers on their intervals (needs RPC access)
+python -m ingest.scheduler                # workers on their intervals
+scripts/soak.sh start | status | stop      # scheduler as a soak: own DB, PID file, explicit env
 python -m app.auth 'a password'          # hash for SLABSPREAD_OWNER_PASSWORD_HASH
 uvicorn app.main:app --reload             # http://127.0.0.1:8000  (dashboard; /login)
 python -m sitegen.build                   # public site → public/
