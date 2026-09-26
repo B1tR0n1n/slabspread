@@ -75,6 +75,9 @@ def _sol_tx(
     src_owner: str,
     dst_owner: str,
     nft_mint: str | None,
+    *,
+    plain_transfer: bool = False,
+    core_asset: str | None = None,
 ) -> dict:
     keys = [
         src_owner,
@@ -82,9 +85,22 @@ def _sol_tx(
         "SrcUsdcAta1111111111111111111111111111111111",
         "DstUsdcAta1111111111111111111111111111111111",
     ]
-    instructions = [
-        {"programId": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr", "program": "spl-memo", "parsed": memo},
-        {
+    if plain_transfer:  # real Phygitals shape: no mint inline; mint comes from token balances
+        usdc_ins = {
+            "program": "spl-token",
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "parsed": {
+                "type": "transfer",
+                "info": {
+                    "authority": src_owner,
+                    "source": keys[2],
+                    "destination": keys[3],
+                    "amount": str(amount),
+                },
+            },
+        }
+    else:
+        usdc_ins = {
             "program": "spl-token",
             "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
             "parsed": {
@@ -97,8 +113,24 @@ def _sol_tx(
                     "tokenAmount": {"amount": str(amount), "decimals": 6, "uiAmount": amount / 1e6},
                 },
             },
-        },
-    ]
+        }
+    instructions = [usdc_ins]
+    if memo:
+        instructions.insert(
+            0,
+            {
+                "programId": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+                "program": "spl-memo",
+                "parsed": memo,
+            },
+        )
+    if core_asset:
+        instructions.append(
+            {
+                "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                "accounts": [core_asset, dst_owner, src_owner],
+            }
+        )
     if nft_mint:
         instructions.append(
             {
@@ -174,7 +206,9 @@ def phygitals() -> dict:
     wallet = "62Q9eeDY3eM8A5CnprBGYMPShdBjAzdpBdr71QHsS8dS"
     player = "DNMKGBRxpsGoNjt8iycrB5G2UXWsnqhJdd4MQeV2KPoi"
     txs = [
-        _sol_tx("phySigOpen1", 300_100_001, 1780970000, "", 10_000_000, player, wallet, None),
+        _sol_tx(
+            "phySigOpen1", 300_100_001, 1780970000, "", 10_000_000, player, wallet, None, plain_transfer=True
+        ),
         _sol_tx(
             "phySigBuyback1",
             300_100_020,
@@ -183,8 +217,10 @@ def phygitals() -> dict:
             8_500_000,
             wallet,
             player,
-            "6sRw5SiUSNu79Nvv2XFjVSJuHJE26X8HTDerV6TWJvQ",
-        ),
+            None,
+            plain_transfer=True,
+            core_asset="6sRw5SiUSNu79Nvv2XFjVSJuHJE26X8HTDerV6TWJvQ",
+        ),  # fmt: skip
     ]
     sigs = [
         {

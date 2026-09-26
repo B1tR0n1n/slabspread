@@ -1,0 +1,615 @@
+# Fixture: https://help.courtyard.io/en/articles/13854269-terms-of-service
+Fetched: 2026-09-26T00:20:22Z
+
+Terms of Service | Help Center
+
+Skip to main content
+
+EnglishFrançais
+English
+
+EnglishFrançais
+English
+
+Search for articles...
+
+- All Collections
+
+- About Courtyard
+
+- Terms of Service
+
+# Terms of Service
+
+D
+
+Written by David
+ February 24, 2026
+
+Table of contents
+
+Last updated: December 23rd, 2024.
+
+## 
+1. Introduction
+
+The following terms and conditions (the “Ts&Cs”) constitute a legally binding agreement between you (referred to herein as “you”, “your”, or “User”) and Courtyard Inc., a Delaware Corporation with an office at 1550 Mission Street, Apartment 2911, 94103 San Francisco, California, USA (“Courtyard”, “we”, “us”, or “our”), governing your interaction with the Service (as defined below).
+
+Certain services or elements of the Service, including without limitation any Courtyard NFT (as defined below) or any Courtyard profile hosted on a social media platform (e.g., Facebook, Twitter, Discord, or Instagram), may be subject to additional or supplemental terms, as set forth in these Ts&Cs or in connection with such services or elements and as are herein incorporated by reference (“Supplemental Terms” and, collectively with these Ts&Cs, the “Agreement”). If these Ts&Cs are inconsistent with any Supplemental Terms, the Supplemental Terms shall control solely with respect to such Service.
+
+By browsing the website available at https://courtyard.io/ (the “Website”), offering for sale or selling an Asset (as defined below) through the Service, participating in the minting, purchase, acquisition, or sale of a Courtyard NFT (either directly from us or in a Secondary Sale), making a purchase from a third party using our payment gateway (a “Third-Party Purchase”), storing an Asset with or redeeming an Asset from Courtyard, participating in Courtyard’s Discord server or other social media properties, and/or using any of our other services (collectively, the “Service”), you expressly acknowledge and agree that you have read, understand, and agree to be bound by this Agreement. If you do not agree to the terms set forth in this Agreement, you must not access or use our Website or any Service, including to purchase any Courtyard NFT or to offer for sale, sell, store, or redeem any Asset.
+
+THE SERVICE INCLUDES A MARKETPLACE WHICH ALLOWS SELLERS (AS DEFINED HEREIN) TO OFFER TO SELL AND SELL ASSETS AND COURTYARD NFTS TO, AND BUYERS TO OFFER TO BUY AND BUY ASSETS AND COURTYARD NFTS FROM, ONE ANOTHER. ALL ASSETS AVAILABLE THROUGH THE MARKETPLACE ARE FURNISHED BY OR ON BEHALF OF SELLERS IN CONNECTION WITH SUCH SALES. YOU AGREE THAT, EXCEPT WHERE COURTYARD IS THE SELLER IN SUCH SALE, WE SHALL NOT BE A PARTY TO OR HAVE ANY RESPONSIBILITY OR LIABILITY FOR, ARISING OUT OF, RELATING TO, ASSOCIATED WITH OR RESULTING FROM ANY DISPUTES BETWEEN YOU AND ANY SELLER OF ANY ASSET IN RESPECT OF THE USE, MISUSE, PROVISION OR FAILURE TO PROVIDE ANY SUCH ASSET.
+
+PLEASE READ SECTION 22 OF THIS AGREEMENT CAREFULLY, AS IT CONTAINS AN ARBITRATION AGREEMENT WHICH WILL, WITH LIMITED EXCEPTIONS, REQUIRE DISPUTES BETWEEN US TO BE SUBMITTED TO BINDING AND FINAL ARBITRATION. UNLESS YOU OPT OUT OF THE ARBITRATION AGREEMENT: (1) YOU WILL ONLY BE PERMITTED TO PURSUE CLAIMS AND SEEK RELIEF AGAINST US ON AN INDIVIDUAL BASIS, NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS OR REPRESENTATIVE ACTION OR PROCEEDING; AND (2) YOU ARE AGREEING TO MANDATORY INDIVIDUAL ARBITRATION FOR THE RESOLUTION OF DISPUTES AND WAIVING YOUR RIGHT TO A JURY TRIAL ON YOUR CLAIMS.
+
+PLEASE BE AWARE THAT SECTION 9 OF THIS AGREEMENT, BELOW, CONTAINS YOUR OPT-IN CONSENT TO RECEIVE COMMUNICATIONS FROM US.
+
+THIS AGREEMENT IS IMPORTANT AND AFFECTS YOUR LEGAL RIGHTS, SO PLEASE READ CAREFULLY. BY CONNECTING YOUR WALLET (AS DEFINED BELOW) TO THE SERVICE, PURCHASING OR OFFERING TO PURCHASE COURTYARD NFTS THROUGH THE SERVICE, AND/OR OTHERWISE USING THE SERVICE, YOU AGREE TO BE BOUND BY THIS AGREEMENT AND ALL OF THE TERMS INCORPORATED HEREIN. If you do not agree to this Agreement, you may not access or use the Service or purchase any Courtyard NFTs.
+
+Please refer to our Privacy Policy for information about how we collect, use and share personal information about you. By submitting data through the Service, you expressly consent to the collection, use and disclosure of your personal data in accordance with the Privacy Policy.
+
+Courtyard reserves the right to change or modify this Agreement at any time and in our sole discretion. If we make changes to this Agreement, we will provide notice of such changes, such as by sending an email notification, providing notice through the Service or updating the “Last Updated” date at the beginning of these Ts&Cs. By continuing to access or use the Service at any point after such update, you confirm your acceptance of the revised Ts&Cs and all of the terms incorporated therein by reference. We encourage you to review this Agreement frequently to ensure that you understand the terms and conditions that apply when you access or use the Service. If you do not agree to the revised Agreement, you may not access or use the Service.
+
+## 2. Our Service
+
+- 
+
+From time to time, certain original NFTs (each, a “Courtyard NFT”) will be made available for purchase by Users through our Website. Each Courtyard NFT represents a certain individual asset as depicted in or otherwise corresponding to the artwork or listing information embodied by such Courtyard NFT (the “Asset”). Each Asset is owned by the individual or entity offering such Asset for sale (the “Seller”). When an individual (the “Initial Seller”) desires to offer an Asset for sale, the Initial Seller can use the Service to offer a Courtyard NFT depicting such Asset. Ownership of an Asset is transferred at sale of the corresponding Courtyard NFT from the Seller to the buyer of the Courtyard NFT (the “Buyer”).
+
+- 
+
+On or before the primary sale of a Courtyard NFT, the Seller will deliver the corresponding Asset to Courtyard for storage in connection with such Seller’s use of Courtyard’s Asset Management Services (as defined below). Upon purchase of a Courtyard NFT, the Buyer of such Courtyard NFT assumes the Seller’s rights and responsibilities under the Seller’s contract for Asset Management Services and may, subject to their ongoing compliance with this Agreement (including without limitation payment of the Courtyard Fee (as defined below)), either continue to engage the Asset Management Services with respect to such any Asset for which they own the corresponding Courtyard NFT, offer for sale and sell such Courtyard NFT (and the corresponding Asset) to a third party, and/or submit their Courtyard NFT to the Service in order to terminate the Asset Management Services and request delivery of the Asset.
+
+- 
+
+Except where explicitly set forth at point of sale, Courtyard is not the Seller of any Asset listed on the Service. While we may, in our discretion, help facilitate resolution of disputes through various programs, we have no control over the quality of Assets offered by Sellers on the Service. We cannot control or guarantee the truth or accuracy of a Seller’s listing, the ability of Sellers to sell Assets and/or Courtyard NFTs, the ability of Buyers to pay for Assets and/or Courtyard NFTs, or that a Buyer and Seller will actually complete a transaction with respect to Assets and/or Courtyard NFTs listed on the Marketplace. While Courtyard may provide pricing and guidance for Assets and/or Courtyard NFTs sold by Sellers on our Marketplace, such information is solely informational. We do not have control over the quality, timing, legality, failure to provide, or any aspect whatsoever of any Assets sold by Sellers, or of the integrity, responsibility, or any actions of any Users. Courtyard makes no representations about the suitability, reliability, timeliness or accuracy in public, private or offline interactions. When interacting with other Users you should exercise caution and common sense to protect your personal safety and property, just as you would when interacting offline with other persons whom you don’t know. NEITHER COURTYARD NOR ITS AFFILIATES OR LICENSORS IS RESPONSIBLE FOR THE CONDUCT, WHETHER ONLINE OR OFFLINE, OF ANY USER OF THE SERVICE. COURTYARD AND ITS AFFILIATES AND LICENSORS WILL NOT BE LIABLE FOR ANY CLAIM, INJURY OR DAMAGE ARISING IN CONNECTION WITH YOUR INTERACTIONS WITH OTHER USERS OF THE SERVICES OR YOUR USE OF OR INABILITY TO USE ANY ASSET PURCHASED THROUGH THE SERVICES.
+
+- 
+
+In order to access and use certain features of the Service, including without limitation to purchase a Courtyard NFT, you must connect to the Service a software-based digital wallet that allows you to purchase, store, and engage in transactions using cryptocurrency and non-fungible tokens (your “Wallet”). ANY TRANSACTIONS INITIATED THROUGH OUR SERVICE ARE EFFECTED BY THIRD-PARTY DIGITAL WALLET EXTENSIONS. BY USING OUR SERVICE YOU AGREE THAT SUCH TRANSACTIONS ARE GOVERNED BY THE TERMS OF SERVICE AND PRIVACY POLICY FOR THE APPLICABLE EXTENSIONS. You acknowledge and agree that certain information, including the public address of your Wallet and the transactions you conduct through that Wallet, may be publicly available and viewable on the applicable blockchain. Courtyard does not own, operate, or control any blockchain or Wallet. Courtyard is not an agent or intermediary of any User. Courtyard does not store or have access to or control over any Courtyard NFTs or any of a User’s private keys, passwords, Wallets, or other property. Courtyard is not capable of performing transactions or sending transaction messages on behalf of any Use. All transactions related to or initiated through the Service are effected and recorded solely through the interactions of the User with the respective blockchain, which is not under the control of or affiliated with Courtyard or the Service.
+
+## 3. Purchase and Sales of Courtyard NFTs
+
+- 
+
+All pricing and payment terms for Courtyard NFTs are as indicated at point of sale or otherwise on the Service, and any payment obligations you incur are binding at the time of purchase. You may not substitute any other currency, whether cryptocurrency or fiat currency, for the currency in which you have contracted to pay at the time of purchase. For clarity, no fluctuation in the value of any currency, whether cryptocurrency or otherwise, shall impact or excuse your obligations with respect to any purchase.
+
+- 
+
+We cannot, and expressly do not, guarantee that Courtyard NFTs will be available for purchase at the time you seek to purchase one.
+
+- 
+
+When you purchase a Courtyard NFT on our Website from an Initial Seller, such Courtyard NFT is minted directly into the Wallet through which you connected to the Website and initiated payment. When you purchase a Courtyard NFT from any then-current Seller after the Initial Seller, such Courtyard NFT is transferred directly from the Seller to you. Except where Courtyard is the Buyer or Seller of a Courtyard NFT, Courtyard does not hold custody of, nor take ownership or possession of, any Courtyard NFT. Courtyard NFTs can be transferred between Wallets on the Ethereum network (or any then-compatible blockchain or comparable third-party service).
+
+- 
+
+You are responsible for ensuring that your Wallet has a sufficient amount of funds to cover the full cost of your purchase, including without limitation (i) transaction fees imposed by a third-party payment processor, (ii) any Taxes (as defined below), and (iii) Gas Fees. “Gas Fees” are fees assessed in connection with the computing energy required to process and validate transactions on a blockchain, and may fluctuate in accordance with market conditions or activity on such blockchain. Courtyard does not receive and has no authority with respect to any Gas Fees applicable to any purchase you make.
+
+- 
+
+Any payments made to us via the Website will be effectuated through the underlying blockchain. We have no control over these payments or transactions initiated through your Wallet, nor do we have the ability to reverse any such payments or transactions. Courtyard may add or change any payment processing Service at any time. Such Service may be subject to additional terms or conditions. Whether a particular cryptocurrency is accepted as a payment method by Courtyard is subject to change at any time in Courtyard’s sole discretion. You acknowledge that Courtyard has no liability to you or to any third party for any claims or damages that may arise as a result of your payment not reaching us, including, but not limited to, instances where your purchase fails due to a processing error of your payment on the applicable blockchain or bridge extension. It is solely your responsibility to confirm that your payment for a Courtyard NFT has been accepted.
+
+- 
+
+If you have any issues with respect to your purchase of any Courtyard NFT, please contact us. We will do our best to resolve any issues in accordance with our then-current policies and procedures. You are solely responsible for determining and paying (or reimbursing for the payment of) any and all sales, use, value-added and other taxes, duties, and assessments (excluding taxes imposed on our net income) now or hereafter claimed or imposed by any tax or other governmental authority associated with your use of our Website or transactions of any Courtyard NFT (collectively, the “Taxes”). You will pay or reimburse us for all Taxes of any jurisdiction (whether national, federal, state, local, foreign or other), including value added taxes and other similar amounts as are now or hereafter may be imposed under the authority of any national, federal, state, local, foreign or other taxing jurisdiction; and will not be entitled to deduct the amount of any such Taxes or amounts levied in lieu thereof from payments (including, without limitation, Gas Fees) made pursuant to this Agreement.
+
+- 
+
+When you purchase or otherwise acquire a Courtyard NFT, you agree that you have read, understand, and agree to be bound by any terms and conditions applicable to the use and sale of that Courtyard NFT, including payment of the Courtyard Fee (regardless of whether such Courtyard Fee is enforced or supported by the third-party platform or marketplace that facilitates such sale). You further agree that you will bind any subsequent purchaser of the Courtyard NFT to such terms and conditions.
+
+- 
+
+By offering any Asset or Courtyard NFT on or through the Service, you hereby appoint Courtyard as your limited payments agent for the sole purpose of receiving, holding and settling payments due and owed to you arising out of such Asset or Courtyard NFT. Courtyard will process such payments and settle payments that are actually received by Courtyard, less any amounts owed to Courtyard, including taxes, fees and other obligations, and subject to the terms of this Agreement. You agree that a payment received by Courtyard, on your behalf, satisfies the payor’s obligation to make payment to you, regardless of whether Courtyard actually settles such payment to you. If Courtyard does not settle any such payments as described in this Agreement to you, you will have recourse only against Courtyard and not the payor, as payment is deemed made by the payor to you upon constructive or actual receipt of such payment by Courtyard.
+
+## 4. Initial Seller Agreement
+
+- 
+
+When an Initial Seller makes an Asset available for sale on the Service, they represent and warrant that (i) they are the owner of such Asset; (ii) they have all rights in and to the Asset necessary to make such Asset available on the Service and to mint a Courtyard NFT corresponding to such Asset; (iii) that they will not offer the Asset for sale on any other service or any marketplace for so long as the corresponding Courtyard NFT is available for sale; and (iv) that the Asset complies with Courtyard’s then-current Listing Guidelines.
+
+- 
+
+On or before the primary sale of a Courtyard NFT, the Initial Seller agrees to deliver the corresponding Asset to Courtyard for storage. The Initial Seller is solely responsible for any loss of or damage to any Asset prior to Courtyard’s confirmed receipt of the same. Each Initial Seller shall be entitled to receive a percentage of the Net Revenue received by Courtyard from the Asset Management Services provided by Courtyard with respect to Assets originally made available by such Initial Seller (the “Initial Seller Revenue Share”). “Net Revenue” means the total consideration received by Courtyard as a Courtyard Fee with respect to any such Asset (“Revenue”), less any fees as may be mutually agreed upon by the parties in writing.
+
+- 
+
+Each Initial Seller must provide Courtyard with a Wallet address supported by the Service in order to receive any cryptocurrency Net Revenue payable to such Initial Seller. Courtyard shall have no liability arising out of or relating to the Wallet address, payment processor information, or other banking or payment account information provided by you (e.g., any errors, circumstances, acts or omissions resulting in loss of funds). Courtyard reserves the right, but has no obligation, to confirm that the provenance and condition of each Asset received by Courtyard from an Initial Seller are as described by such Initial Seller. In the event that Courtyard reasonably determines that an Asset does not conform with the Initial Seller description and/or the Listing Guidelines, Courtyard shall return such Asset to the Initial Seller at the Initial Seller’s expense. If a Buyer has purchased a Courtyard NFT corresponding to any such Asset, Courtyard may cancel or refund such purchase in accordance with its then-current policies and procedures. For more information, please contact us at [email protected].
+
+- 
+
+You acknowledge and agree that you, and not Courtyard, are solely responsible for providing support to Buyers in connection with the sale of any Courtyard NFTs corresponding to your Assets. While Courtyard may in its sole discretion elect to provide technical support to its Users in connection with the sale of any Courtyard NFTs, Courtyard has no obligation to you to provide any such support.
+
+- 
+
+In the event of a dispute between you and any third party related to Courtyard NFTs or Assets made available by you, including without limitation any dispute between you and a Buyer, Seller, or payment services provider, Courtyard will not be a party to any such dispute. YOU ARE SOLELY RESPONSIBLE FOR DISPUTE RESOLUTION IN CONNECTION WITH YOUR ASSETS AND YOUR COURTYARD NFTS. You shall have no recourse against Courtyard in connection with any claims that arise from disputes between you and any third party arising from or related to your Assets or your Courtyard NFTs.
+
+- 
+
+Courtyard reserves the right to remove any Initial Seller from the Service and to terminate such Initial Seller’s ability to offer Assets through the Service at any time, with or without notice, (i) upon Courtyard’s reasonable belief that such Initial Seller has breached this Agreement; or (ii) in the event that Courtyard terminates the applicable Service.
+
+## 5. Asset Management Services
+
+- 
+
+Courtyard reserves the right to remove any Initial Seller from the Service and to terminate such Initial Seller’s ability to offer Assets through the Service at any time, with or without notice, (i) upon Courtyard’s reasonable belief that such Initial Seller has breached this Agreement; or (ii) in the event that Courtyard terminates the applicable Service. Asset Management ServicesOur Asset Management Services include the receipt of Assets from Initial Sellers, the storage of Assets on behalf of the then-current owner of the corresponding Courtyard NFT, the listing and relisting of Assets as Courtyard NFTs, and the shipment of Assets to the then-current owner of the corresponding Courtyard NFT upon redemption of such Courtyard NFT.
+
+- 
+
+Each purchase of a Courtyard NFT includes a fee payable to Courtyard for the Asset Management Services (the “Courtyard Fee”). The Courtyard Fee is a percentage of the total purchase price paid in the transaction, and shall be deducted from the amount paid by the Buyer and remitted to Courtyard.
+
+- 
+
+Courtyard represents that all Assets are and will remain in the constructive possession of Courtyard following the receipt of such Assets from the applicable Initial Seller of such Assets, until and unless such Assets are transferred to the then-current owner of the associated Courtyard NFT. Courtyard uses good faith efforts to maintain the integrity of each Asset subject to Asset Management Services, including through partnerships with best-in-class providers of asset storage and shipping services. Courtyard shall maintain an insurance policy covering such Assets sufficient to cover the fair market value of each such asset. Notwithstanding the foregoing, Courtyard shall not be liable to you for any loss, damage, or destruction of any Asset subject to the Asset Management Services except to the extent arising from Courtyard’s gross negligence or willful misconduct.
+
+- 
+
+When you sell any Courtyard NFT, you represent and warrant to and for the benefit of both Courtyard and the applicable Buyer that you have no outstanding liabilities with respect to any Asset Management Services, and you acknowledge and agree that you shall assign to the Buyer, and the Buyer shall assume by way of novation, your agreement with Courtyard for such Asset Management Services (the “Assumed Contract”). For the avoidance of doubt, the Assumed Contract excludes the Initial Seller Revenue Share, which shall remain at all times a contract between the Initial Seller and Courtyard. Courtyard shall, upon the sale of any Courtyard NFT in accordance with this Agreement and the receipt of the Courtyard Fee in connection with such transaction, release the Seller from the Assumed Contract.
+
+- 
+
+When you purchase any Courtyard NFT, you acknowledge and agree that (i) the Seller from which you purchased such Courtyard NFT is released from the Assumed Contract; (ii) by way of novation, you assume such Seller’s rights and are bound by and shall perform such Seller’s obligations and liabilities under the Assumed Contract; and (iii) you are entering into a binding legal agreement with Courtyard for the Asset Management Services with respect to such Asset. You may terminate the Assumed Contract at any time by (y) selling the corresponding Courtyard NFT, and assigning the Assumed Contract by way of novation to the Buyer of such Courtyard NFT; or (z) redeeming your Courtyard NFT for the underlying Asset.
+
+- 
+
+Following your purchase of a Courtyard NFT, you may request to receive the Asset associated with your Courtyard NFT through the Website or otherwise through the Service. As a precondition of any transfer of the associated Asset, Courtyard shall verify (i) your identity, (ii) your compliance with this Agreement and eligibility to use the Service; and (iii) your ownership of such Courtyard NFT. If Courtyard transfers such Asset to you, the associated Courtyard NFT shall be burned by Courtyard.
+
+- 
+
+Your redemption of a Courtyard NFT for an Asset may be subject to additional fees for such redemption, including without limitation Taxes and shipping and handling fees, in each case as determined in Courtyard’s discretion, as set forth on the Service, and as may be subject to change from time to time in Courtyard’s discretion.
+
+## 6. Third-Party Purchase Service
+
+- 
+
+You may be able to purchase one or more NFTs offered by third parties through a Third-Party Purchase enabled by Courtyard (the “Third-Party Purchase Service”). The Third-Party Purchase Service enables a third-party offeror (“Offeror”) to make original NFTs (each, an “Offeror NFT”) available for purchase by end users through such Offeror’s Website. Courtyard is not the seller or offeror of any Offeror NFT nor any physical assets associated therewith nor any artwork embodied thereby (collectively, the “Offeror Materials”). Courtyard reserves the right, but has no obligation, to review the Offeror Materials for authenticity, and Courtyard makes no representations or warranties to any person with respect to the Offeror Materials. You bear full responsibility for verifying the identity, legitimacy, and authenticity of any Offeror Materials that you purchase.
+
+- 
+
+You acknowledge and agree that any Third-Party Purchase that you make is a contract between the Offeror and you. Courtyard acts solely as a service provider to the Offeror in connection with any Third-Party Purchase, and does not transfer legal ownership of any Offeror NFT from the Offeror to you. You acknowledge and agree that Courtyard is not a party to any such Third-Party Purchase.
+
+- 
+
+You acknowledge and agree that, notwithstanding any conflicting terms provided by any Offeror, Courtyard has no obligation to facilitate any returns or refunds in connection with any Third-Party Purchase that takes place on or through the Third-Party Purchase Service.
+
+## 7. Secondary Marketplace Sales of Courtyard NFTs
+
+- 
+
+You may be able to sell, trade, or distribute your Courtyard NFTs on any compatible smart contract-enabled secondary marketplaces, platforms and exchanges operated by third parties where users can sell, purchase, transfer, list for auction and bid on NFTs (“Secondary Marketplaces”), in each case subject to such Secondary Marketplace’s then-current terms and functionality. Courtyard NFTs may not be compatible with all Secondary Marketplaces, and Courtyard makes no guarantee about the availability or functionality of any Secondary Marketplace.
+
+- 
+
+You acknowledge and agree that we are not a party to any agreement or transaction on any Secondary Marketplace (each, a “Secondary Sale”), whether or not a commission or fee is received by us in connection with such transaction. We are not liable for any loss incurred by you in connection with or otherwise arising from any Secondary Sale of a Courtyard NFT. Courtyard is not and shall not be a party to any transaction or dispute between any Seller of a Courtyard NFT and any Buyer of such Courtyard NFT, whether arising from any rights granted in that Courtyard NFT or otherwise.
+
+- 
+
+You acknowledge and agree that any sale of a Courtyard NFT via a Secondary Marketplace is subject to the Courtyard Fee, which such Courtyard Fee may be automatically deducted from the amount paid by the Buyer to the Seller. All Courtyard Fees are applied to the final sale price of the Courtyard NFT.
+
+## 8. User Agreements, Representations and Warranties
+
+- 
+
+You must be eighteen (18) years old or otherwise capable of forming a binding contract in your jurisdiction to use the Service. By using the Service, you agree (i) to provide accurate, current, and complete information about yourself as requested, (ii) to maintain and promptly update such information from time to time as necessary, (iii) to maintain the security of your Wallet and accept all risks of unauthorized access to your Wallet and to the information you provide to us, and (iv) to notify us immediately if you discover or otherwise suspect any security breaches related to the Service or your Wallet.
+
+- 
+
+You will not buy, sell, rent, or lease access to the Service without our written permission; or access or attempt to access the Service through unauthorized third party applications or clients.
+
+- 
+
+Courtyard may require you to provide additional information and documents from time to time, including without limitation at the request of any competent authority or in order to help Courtyard comply with applicable law, regulation, or policy, including laws related to anti-laundering (legalization) of incomes obtained by criminal means, or for counteracting financing of terrorism. Courtyard may also require you to provide additional information and documents in cases where it has reasons to believe that: (i) your Wallet or other means of access to the Service is being used for money laundering or for any other illegal activity; (ii) You have concealed or reported false identification information and other details; or (iii) transactions effected via your Wallet may have been effected in breach of this Agreement. In such cases, Courtyard, in its sole discretion, may pause or cancel your transactions until such requested additional information and documents have been reviewed by Courtyard and accepted as satisfying the requirements of applicable law, regulation, or policy. If you do not provide complete and accurate information and documents in response to such a request, Courtyard may refuse to provide any Courtyard NFT, Content (as defined below), product, service and/or further access to the Service to you.
+
+- 
+
+When you use the Service, you hereby represent and warrant, to and for the benefit of Courtyard, its affiliates and its and their respective representatives, as follows:
+
+- 
+
+Authority. You have all requisite capacity, power and authority to enter into, and perform your obligations under this Agreement, including to mint, sell, or buy any Courtyard NFTs, as applicable.
+
+- 
+
+Due Execution. This Agreement constitutes your legal, valid and binding obligation, enforceable against you in accordance with this Agreement.
+
+- 
+
+Accuracy of Information. All information provided to Courtyard and/or its third-party designees by you, including your address and social security number or tax ID number, is accurate and complete.
+
+- 
+
+Sanctions. You are not, and you will not authorize, enable, or permit any use of the Service by any person that is: (1) in, under the control of, or a national or resident of any jurisdiction subject to a U.S. trade embargo (currently, Cuba, Iran, North Korea, Syria, and the Crimea, Donetsk People’s Republic, and Luhansk People’s Republic regions of Ukraine); (2) identified on any export- or sanctions-related restricted party list, including but not limited to the U.S. Department of the Treasury’s Specially Designated Nationals and Blocked Persons List or the U.S. Department of Commerce’s Denied Persons List, Unveriﬁed List, or Entity List.
+
+- 
+
+Non-Contravention. This Agreement does not, and the performance of your obligations under this Agreement and your minting, listing, buying, or selling of any Courtyard NFTs, as applicable to your use of the Service, will not: (i) if you are an entity, conflict with or violate any of the charter documents of such entity or any resolution adopted by its equity holders or other persons having governance authority over the entity; (ii) contravene, conflict with or violate any right of any third party or any applicable legal requirement to which you or any of the assets owned or used by you, is subject; or (iii) result in any breach of or constitute a default (or an event that with notice or lapse of time or both would become a default) under any material contract or agreement to which you are a party, permit held by you or legal requirement applicable to you.
+
+- 
+
+Independent Investigation and Non-Reliance. You are sophisticated, experienced and knowledgeable in the minting or buying of non-fungible tokens and other cryptoassets. Additionally, you have conducted an independent investigation of the Service and the matters contemplated by this Agreement, have formed your own independent judgment regarding the benefits and risks of and necessary and desirable practices regarding the foregoing, and, in making the determination to mint, list, buy, or sell any Courtyard NFTs using or in connection with your use of the Service, you have relied solely on the results of such investigation and such independent judgement. Without limiting the generality of the foregoing, you understand, acknowledge and agree that the legal requirements pertaining to blockchain technologies and digital assets generally, including the Courtyard NFTs, are uncertain, and you have conducted an independent investigation of such potentially applicable legal requirements and the resulting risks and uncertainties, including the risk that one or more governmental entities or other persons may assert that any digital assets or cryptographic tokens (including the Courtyard NFTs) may constitute securities under applicable legal requirements. You hereby irrevocably disclaim and disavow reliance upon any statements or representations made by or on behalf of, or information made available by Courtyard in determining to enter into this Agreement, mint, list, buy, or sell any Courtyard NFTs, or otherwise use the Service.
+
+- 
+
+Litigation. There is no legal proceeding pending that relates to your activities relating to the minting of Courtyard NFTs or other NFT- or digital asset- trading or blockchain technology related activities.
+
+- 
+
+Compliance. You have not failed to comply with, and have not violated, any applicable legal requirement relating to any blockchain technologies. No investigation or review by any governmental entity is pending or, to your knowledge, has been threatened against or with respect to you, nor does any government order or action prohibit you or any of your representatives from engaging in or continuing any conduct, activity or practice relating to the Service.You must provide all equipment, including without limitation hardware and software, necessary to connect to the Service. You are solely responsible for any fees, including Internet connection or mobile fees, that you incur when accessing the Service.
+
+- 
+
+In the event of insolvency, bankruptcy, or the cessation of Courtyard’s business operations, we have established procedures to ensure the return of physical assets entrusted to us by our users. To initiate the return process, users are responsible for covering the cost of shipping and any associated taxes. This return process must be initiated within three months after the aforementioned events. We will implement a structured process to identify, segregate, and return these assets to their respective owners. Users will receive prompt notification and detailed instructions on how to reclaim their physical assets. Please note that Courtyard will not offer any monetary reimbursement or compensation, except for facilitating the return of the physical assets to the rightful owners.
+
+- 
+
+Auctions
+
+- 
+
+Verified Phone Number: To participate in Courtyard auctions, users must have a verified phone number attached to their account.
+
+- 
+
+Binding Bids: All bids placed on Courtyard auctions are binding and final. Users are responsible for ensuring they have sufficient funds to complete the purchase before placing a bid.
+
+- 
+
+Proof of Funds: Courtyard reserves the right to request proof of funds from any bidder at any time. Acceptable proof of funds includes:
+
+- 
+
+Proof of USDC in a wallet owned by the user.
+
+- 
+
+Proof of funds in a bank account owned by the user.
+
+- 
+
+Bid Revocation: Courtyard may revoke any bid placed by a user who is unable to provide satisfactory proof of funds upon request.
+
+- 
+
+Payment and Non-Payment: Successful bidders are required to pay for their winning bids within 7 days of the auction ending. Failure to pay within the allotted time frame may result in:
+
+- 
+
+Account suspension.
+
+- 
+
+A ban from future use of any Courtyard products.
+
+- 
+
+Drops & Vending Machine
+
+- 
+
+Random Card Purchase: Drops and the Vending Machine allow users to purchase a digital sealed pack containing a random card for a fixed price. The specific card received is determined randomly and cannot be chosen by the user.
+
+- 
+
+Digital sealed packs, pack opening and auto-reveal: when applicable, a sealed pack comes with opening rules that prevent the user from opening it before a certain time, and allow them to open on their own until a certain time. After the reveal period of a sealed pack has passed, Courtyard will automatically reveal that pack on behalf of its owner. These rules may include a mechanism to auto-reveal a pack as soon as it is purchased.
+
+- 
+
+Instant Sale (a.k.a "Buyback Offer"): Upon purchase of a card from the Vending Machine, the user will receive an offer from Courtyard at a percentage of the card's fair market value, as advertised on the product's page. Upon accepting that offer, the user will receive the funds in USDC on their Courtyard wallet/account, which can be used on the marketplace or to make purchases on the website.
+
+- 
+
+Fair Market Value Determination: The fair market value of the card is determined solely by Courtyard at its discretion and is not subject to negotiation or debate. Courtyard does not disclose its model for determining fair market value.
+
+- 
+
+Best-Effort Offer: The buyback offer is a best-effort offer from Courtyard to the user and is limited in duration. Courtyard makes no guarantee about the promptness of the offer or its availability.
+
+- 
+
+All Sales Are Final: All purchases made from the vending machine are final, and cannot be refunded. Once a purchase is made and the pack has been opened, a user will be able to accept a buyback offer from Courtyard, list it and sell it on the marketplace, transfer it to another account or redeem it.
+
+- 
+
+No Guarantees: Courtyard makes no guarantees regarding the specific card received from the Vending Machine, the fair market value assigned to the card, or the availability or timing of the buyback offer.
+
+## 9. Consent to Electronic Communication
+
+By contacting Courtyard via email or through a social media property, or by using the Service, you consent to receive electronic communications from Courtyard (e.g., via email or by posting notices to the Service or to Courtyard’s official accounts on social media properties). These communications may include notices about your use of the Service (e.g., transactional information) and are part of your relationship with us. You agree that any notices, agreements, disclosures or other communications that we send to you electronically will satisfy any legal communication requirements, including, but not limited to, that such communications be in writing. You should maintain copies of electronic communications from us by printing a paper copy or saving an electronic copy. We have no obligation to store for your later use or access any such electronic communications that we make to you.
+
+## 10. Ownership
+
+- 
+
+Unless otherwise indicated in writing by us, the Service and all content and other materials contained therein, including, without limitation, the Courtyard logo and all designs, text, graphics, pictures, information, data, software, sound files, other files and the selection and arrangement thereof (collectively, “Content”) are the proprietary property of Courtyard or our affiliates or licensors.
+
+- 
+
+The Courtyard logo and any Courtyard product or service names, logos or slogans that may appear on the Service are trademarks of Courtyard or our affiliates and may not be copied, imitated or used, in whole or in part, without our prior written permission. You may not use any metatags or other “hidden text” utilizing “Courtyard,” or any other name, trademark or product or service name of Courtyard or our affiliates without our prior written permission. In addition, the look and feel of the Service and Content, including, without limitation, all page headers, custom graphics, button icons and scripts, constitute the service mark, trademark or trade dress of Courtyard and may not be copied, imitated or used, in whole or in part, without our prior written permission. All other trademarks, registered trademarks, product names and other names or logos mentioned on the Service are the property of their respective owners and may not be copied, imitated or used, in whole or in part, without the permission of the applicable trademark holder. Reference to any products, Service, processes or other information by name, trademark, manufacturer, supplier or otherwise does not constitute or imply endorsement, sponsorship or recommendation by Courtyard.
+
+- 
+
+You agree that any submission of any ideas, suggestions, documents, and/or proposals to Courtyard (collectively, “Feedback”) is at your own risk and that Courtyard has no obligations (including without limitation obligations of confidentiality) with respect to such Feedback. You represent and warrant that you have all rights necessary to submit the Feedback. You hereby grant to Courtyard a fully paid, royalty-free, perpetual, irrevocable, worldwide, non-exclusive, and fully sublicensable right and license to use, reproduce, perform, display, distribute, adapt, modify, re-format, create derivative works of, and otherwise commercially or non-commercially exploit in any manner, any and all Feedback, and to sublicense the foregoing rights, in connection with the operation and maintenance of the Service and Courtyard’s other products and Service.
+
+## 11. License to Our Service and Content
+
+- 
+
+You are hereby granted a limited, revocable, non-exclusive, non-transferable, non-assignable, non-sublicensable, “as-is” license to access and use the Service and Content for your own personal, non-commercial use; provided, however, that such license is subject to this Agreement and does not include any right to (i) sell, resell, or use commercially the Service or Content; (ii) distribute, publicly perform, or publicly display any Content except as expressly permitted by us; (iii) modify or otherwise make any derivative uses of the Service or Content, or any portion thereof, except as expressly permitted by us; (iv) use any data mining, robots, or similar data gathering or extraction methods; (v) download (other than page caching) any portion of the Service or Content, except as expressly permitted by us; and (vi) use the Service or Content other than for their intended purposes. This license is subject to your compliance with the Acceptable Use Policy set forth in Section 14 below.
+
+- 
+
+You are granted a limited, non-exclusive, non-transferable right to create a text hyperlink to the Service for non-commercial purposes, provided that such link does not portray Courtyard or our affiliates or any of our Service, Content, products or Service in a false, misleading, derogatory or otherwise defamatory manner, and provided further that the linking site does not contain any adult or illegal material or any material that is offensive, harassing or otherwise objectionable in Courtyard’s sole discretion. This limited right may be revoked at any time. You may not use a logo or other proprietary graphic of Courtyard to link to the Service or Content without our express written permission. Further, you may not use, frame or utilize framing techniques to enclose any Courtyard trademark, logo or other proprietary information, including the images found on the Service, the content of any text or the layout or design of any page, or form contained on a page, on the Service without our express written consent.
+
+- 
+
+Courtyard may from time-to-time change or discontinue any or all aspects or features of the Service, including by (i) altering the smart contracts which are included in the applicable blockchain pursuant to upgrades, forks, security incident responses or chain migrations, (ii) deactivating or deleting Content that Courtyard in its sole discretion determines has been abandoned; or (iii) repossessing any Courtyard NFTs that Courtyard in its sole discretion determines have been (y) abandoned or (z) used or acquired in violation of this Agreement. In such events, you may no longer be able to access, interact with or, read the data from the Service.
+
+## 12. User Content
+
+Certain Content may be made available by a User on or through the Service, including without limitation in connection with the listing of a Courtyard NFT by an Initial Seller and through Courtyard’s third-party social media accounts or pages (“User Content”). If you choose to make User Content available on or through the Service, you hereby grant Courtyard a fully paid, royalty-free, worldwide, non-exclusive right (including any moral rights) and license to use, sublicense, distribute, reproduce, modify, adapt, and display, such User Content (in whole or in part) for the purposes of (i) providing the Service, including making User Content available to other Users in accordance with your elections on the Service, (ii) improving the Service, and (iii) advertising and promoting Courtyard and its products and Service. You also hereby grant each other User of the Service a non-exclusive license to access your User Content through the Service, and to use, reproduce, distribute, display and perform such User Content solely as permitted through the functionality of the Service and under this Agreement. You are solely responsible for any User Content you provide. You represent and warrant that you have, or have obtained, all rights, licenses, consents, permissions, power and/or authority necessary to grant the rights granted herein for any User Content that you submit, post or display on or through the Service. You agree that such User Content will not contain material subject to copyright or other proprietary rights, unless you have necessary permission or are otherwise legally entitled to post the material and to grant the licenses described above. We take no responsibility for the User Content posted or listed via the Service, although we reserve the right to remove any User Content that is in violation of this Agreement.
+
+## 13. Third-Party Service; Third-Party Terms
+
+The Service may contain links to third-party properties, Service and applications (collectively, “Third-Party Service”), When you click on a link to a Third-Party Service, such as a bridge extension, you are subject to the terms and conditions (including privacy policies) of another property or application. Such Third-Party Service are not under the control of Courtyard. Courtyard is not responsible for any Third-Party Service. Courtyard provides links to these Third-Party Service only as a convenience and does not review, approve, monitor, endorse, warrant, or make any representations with respect to Third-Party Service, or their products or services. You use all links in Third-Party Service at your own risk. When you leave our Service, our terms and policies no longer govern. You should review all applicable agreements and policies, including privacy and data gathering practices, of any Third-Party Service, and should make whatever investigation you feel necessary or appropriate before proceeding with any transaction with any third party.
+
+## 14. Acceptable Use Policy
+
+You agree that you are solely responsible for your conduct in connection with the Service. You agree that you will abide by this Agreement and will not (and will not attempt to):
+
+- 
+
+Provide false or misleading information to Courtyard;
+
+- 
+
+Use or attempt to use another User’s linked Wallet without authorization from such User and Courtyard;
+
+- 
+
+Create, list, or otherwise make available through or in connection with the Service any counterfeit Courtyard NFTs;
+
+- 
+
+Pose as another person or entity;
+
+- 
+
+Use the Service in any manner that could interfere with, disrupt, negatively affect or inhibit other Users from fully enjoying the Service, or that could damage, disable, overburden or impair the functioning of the Service in any manner;Develop, utilize, or disseminate any software, or interact with any API in any manner, that could damage, harm, or impair the Service;
+
+- 
+
+Reverse engineer any aspect of the Service, or do anything that might discover source code or bypass or circumvent measures employed to prevent or limit access to any service, area, or code of the Service;
+
+- 
+
+Attempt to circumvent any content-filtering techniques we employ, or attempt to access any feature or area of the Service that you are not authorized to access;
+
+- 
+
+Use any robot, spider, crawler, scraper, script, browser extension, offline reader, or other automated means or interface not authorized by us to access the Service, extract data or otherwise interfere with or modify the rendering of Service pages or functionality;
+
+- 
+
+Collect or harvest data from our Service that would allow you to contact individuals, companies, or other persons or entities, or use any such data to contact such entities;
+
+- 
+
+Use data collected from our Service for any direct marketing activity (including without limitation, email marketing, SMS marketing, telemarketing, and direct marketing);
+
+- 
+
+Bypass or ignore instructions that control all automated access to the Service;
+
+- 
+
+Use the Service for any illegal or unauthorized purpose, or engage in, encourage, or promote any activity that violates any applicable law or this Agreement;
+
+- 
+
+Use the applicable blockchain to carry out any illegal activities in connection with or in any way related to your access to and use of the Service, including but not limited to money laundering, terrorist financing or deliberately engaging in activities designed to adversely affect the performance of such blockchain, or the Service;
+
+- 
+
+Engage in or knowingly facilitate any “front-running,” “wash trading,” “pump and dump trading,” “ramping,” “cornering” or fraudulent, deceptive or manipulative trading activities, including:
+
+- 
+
+trading a Courtyard NFT at successively lower or higher prices for the purpose of creating or inducing a false, misleading or artificial appearance of activity in such Courtyard NFT, unduly or improperly influencing the market price for such Courtyard NFT trading on the Service or establishing a price which does not reflect the true state of the market in such Courtyard NFT;
+
+- 
+
+for the purpose of creating or inducing a false or misleading appearance of activity in a Courtyard NFT or creating or inducing a false or misleading appearance with respect to the market in a Courtyard NFT: (A) executing or causing the execution of any transaction in a Courtyard NFT which involves no material change in the beneficial ownership thereof; or (B) entering any order for the purchase or sale of a Courtyard NFT with the knowledge that an order of substantially the same size, and at substantially the same price, for the sale of such Courtyard NFT, has been or will be entered by or for the same or different parties; or
+
+- 
+
+participating in, facilitating, assisting or knowingly transacting with any pool, syndicate or joint account organized for the purpose of unfairly or deceptively influencing the market price of a Courtyard NFT;
+
+- 
+
+Use the Service to carry out any financial activities subject to registration or licensing, including but not limited to using the Service to transact in securities, debt financings, equity financings or other similar transactions; or
+
+- 
+
+Use the Service to participate in fundraising for a business, protocol, or platform, including but not limited to creating, listing, or buying assets that (i) are redeemable for financial instruments, (ii) give owners rights to participate in an ICO or any securities offering, or (iii) entitle owners to financial rewards, including but not limited to, DeFi yield bonuses, staking bonuses, and burn discounts.
+
+## 15. Copyright
+
+Courtyard retains the absolute right to terminate access to the Service for and remove the User Content of any User who violates or infringes our rights or the rights of any third party. Without limiting the foregoing, if you believe that your intellectual property has been used on the Service in a way that constitutes infringement, please provide our Copyright Agent with the following information:
+
+- 
+
+an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest;
+
+- 
+
+a description of the copyrighted work that you claim has been infringed; a description of the location on the Service of the material that you claim is infringing;
+
+- 
+
+your address, telephone number and e-mail address;
+
+- 
+
+a written statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent or the law; and
+
+- 
+
+a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner’s behalf.
+
+Contact information for Courtyard’s Copyright Agent for notice of claims of copyright infringement is as follows: [email protected], SUBJ: Copyright Agent.
+
+## 16. Investigations
+
+If Courtyard becomes aware of any possible violations by you of this Agreement, Courtyard reserves the right, but Courtyard will not have any obligation, to investigate such violations. If, as a result of the investigation, Courtyard believes that criminal activity may have occurred, Courtyard reserves the right, but Courtyard will not have any obligation, to refer the matter to, and to cooperate with, any and all applicable legal authorities. Courtyard is entitled, except to the extent prohibited by applicable law, to disclose any information or materials on or in the Service, including your Content, in Courtyard’s possession in connection with your use of the Service, (i) to comply with applicable laws, legal process or governmental request; (ii) to enforce this Agreement, (iii) to respond to any claims that User Content violates the rights of third parties, (iv) to respond to your requests for customer service, or (v) to protect the rights, property or personal safety of Courtyard, its Users, or the public, and all law enforcement or other government officials, as Courtyard in its sole discretion believes to be necessary or appropriate. By agreeing to this Agreement, you hereby provide your irrevocable consent to the foregoing. You acknowledge and agree that you have no expectation of privacy concerning your use of the Service, including without limitation text, voice, or video communications.
+
+## 17. Release
+
+You hereby release and forever discharge Courtyard and our officers, employees, agents, successors, and assigns (the “Courtyard Entities”) from, and hereby waive and relinquish, each and every past, present and future dispute, claim, controversy, demand, right, obligation, liability, action and cause of action of every kind and nature (including personal injuries, death, and property damage), that has arisen or arises directly or indirectly out of, or that relates directly or indirectly to, the Service (including any interactions with, or act or omission of, other Users of the Service or any Third-Party Service). YOU HEREBY WAIVE CALIFORNIA CIVIL CODE SECTION 1542, OR ANY SIMILAR LAW OR RULE OF ANY OTHER JURISDICTION, WHICH STATES IN SUBSTANCE: “A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS THAT THE CREDITOR OR RELEASING PARTY DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE AND THAT, IF KNOWN BY HIM OR HER, WOULD HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR OR RELEASED PARTY.”
+
+## 18. Assumption of Risk Related To Courtyard NFTs
+
+You acknowledge and agree that:
+
+- 
+
+You are solely responsible for determining what, if any, taxes apply to your transactions involving Courtyard NFTs. Neither Courtyard nor any other Courtyard Entity is responsible for determining the taxes that may apply to transactions involving Courtyard NFTs.
+
+- 
+
+Courtyard NFTs exist and can be transferred only by virtue of the ownership record maintained on the blockchain supporting such Courtyard NFTs.
+
+- 
+
+There are risks associated with using digital currency and digital assets, including but not limited to, the risk of hardware, software and Internet connections, the risk of malicious software introduction, and the risk that third parties may obtain unauthorized access to your information.
+
+- 
+
+The legal and regulatory regime governing blockchain technologies, cryptocurrencies, and NFTs is evolving, and new regulations or policies may materially adversely affect the same.
+
+- 
+
+There are risks associated with purchasing user-generated content, including but not limited to, the risk of purchasing counterfeit assets, mislabeled assets, assets that are vulnerable to metadata decay, assets on smart contracts with bugs, and assets that may become untransferable.
+
+- 
+
+Courtyard reserves the right to hide collections, contracts, and assets that Courtyard suspects or believes may violate this Agreement. Courtyard NFTs you purchase may become inaccessible on the Service. Under no circumstances shall the inability to access or view your assets on the Service serve as grounds for a claim against Courtyard.
+
+- 
+
+Courtyard has no responsibility for any Courtyard NFTs after the initial offering or sale of such Courtyard NFTs. Courtyard does not investigate and cannot guarantee or warrant the authenticity, originality, uniqueness, marketability, legality or value of any Courtyard NFT.
+
+## 19. Indemnification
+
+To the fullest extent permitted by applicable law, you agree to indemnify, defend, and hold harmless Courtyard and the Courtyard Entities from and against all actual or alleged third party claims, damages, awards, judgments, losses, liabilities, obligations, penalties, interest, fees, expenses (including, without limitation, attorneys’ fees and expenses) and costs (including, without limitation, court costs, costs of settlement, and costs of or associated with pursuing indemnification and insurance), of every kind and nature whatsoever arising out of or related to this Agreement or your use of the Service, whether known or unknown, foreseen or unforeseen, matured or unmatured, or suspected or unsuspected, in law or equity, whether in tort, contract or otherwise (collectively, “Claims”), including, but not limited to, damages to property or personal injury, that are caused by, arise out of or are related to (a) your use or misuse of the Service, Content or Courtyard NFTs, including, without limitation, any act or omission involving any third party in connection with the minting, listing, buying, selling, or trading of any Courtyard NFTs hereunder; (b) any Feedback you provide; (c) your violation of this Agreement; (d) your violation of the rights of any third party, including another User; (e) any breach or non-performance of any covenant or agreement made by you; (f) your Content or the minting, listing, buying, selling, or trading of any Courtyard NFTs; or (g) any Assets (including the furnishing, or any failure to furnish, or any acts or omissions of or attributable to you or any third party in respect of the same). You agree to promptly notify Courtyard of any third-party Claims and cooperate with the Courtyard Entities in defending such Claims. You further agree that the Courtyard Entities shall have control of the defense or settlement of any third-party Claims. THIS INDEMNITY IS IN ADDITION TO, AND NOT IN LIEU OF, ANY OTHER INDEMNITIES SET FORTH IN A SEPARATE WRITTEN AGREEMENT BETWEEN YOU AND COURTYARD.
+
+## 20. Tax Compliance and Prohibited Transactions
+
+Users are strictly prohibited from engaging in any form of tax avoidance or evasion on our marketplace. This includes, but is not limited to, creating multiple accounts to artificially lower the taxable value of goods by transferring them between accounts at unreasonably low prices before requesting shipment. Any attempt to manipulate transactions for the purpose of reducing tax obligations will be considered a violation of our Terms of Service and may result in account suspension, termination, and potential legal action. We reserve the right to investigate and report any suspicious activity to the appropriate tax authorities.
+
+## 21. Disclaimers
+
+THE SERVICE, CONTENT CONTAINED THEREIN, AND COURTYARD NFTS LISTED THEREIN ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED. COURTYARD (AND ITS SUPPLIERS) MAKE NO WARRANTY THAT THE SERVICE: (A) WILL MEET YOUR REQUIREMENTS; (B) WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE BASIS; OR (C) WILL BE ACCURATE, RELIABLE, COMPLETE, LEGAL, OR SAFE. COURTYARD DISCLAIMS ALL OTHER WARRANTIES OR CONDITIONS, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT AS TO THE SERVICE OR ANY CONTENT CONTAINED THEREIN. COURTYARD DOES NOT REPRESENT OR WARRANT THAT CONTENT ON THE SERVICE IS ACCURATE, COMPLETE, RELIABLE, CURRENT, OR ERROR-FREE. WE WILL NOT BE LIABLE FOR ANY LOSS OF ANY KIND FROM ANY ACTION TAKEN OR TAKEN IN RELIANCE ON MATERIAL OR INFORMATION, CONTAINED ON THE SERVICE. WHILE COURTYARD ATTEMPTS TO MAKE YOUR ACCESS TO AND USE OF THE SERVICE AND CONTENT SAFE, COURTYARD CANNOT AND DOES NOT REPRESENT OR WARRANT THAT THE SERVICE, CONTENT, OR ANY COURTYARD NFTS LISTED ON OUR SERVICE OR OUR SERVERS ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. WE CANNOT GUARANTEE THE SECURITY OF ANY DATA THAT YOU DISCLOSE ONLINE. YOU ACCEPT THE INHERENT SECURITY RISKS OF PROVIDING INFORMATION AND DEALING ONLINE OVER THE INTERNET AND WILL NOT HOLD US RESPONSIBLE FOR ANY BREACH OF SECURITY UNLESS IT IS DUE TO OUR GROSS NEGLIGENCE.
+
+WE WILL NOT BE RESPONSIBLE OR LIABLE TO YOU FOR ANY LOSSES YOU SUSTAIN AS A RESULT OF YOUR USE OF THE SERVICE, INCLUDING IN CONNECTION WITH ANY RECOMMENDATION. WE TAKE NO RESPONSIBILITY FOR, AND WILL NOT BE LIABLE TO YOU FOR, ANY PURCHASE OR USE OF COURTYARD NFTS, INCLUDING BUT NOT LIMITED TO ANY LOSSES, DAMAGES OR CLAIMS ARISING FROM: (I) USER ERROR SUCH AS FORGOTTEN PASSWORDS, INCORRECTLY CONSTRUCTED TRANSACTIONS, OR MISTYPED ADDRESSES; (II) SERVER FAILURE OR DATA LOSS; (III) CORRUPTED DIGITAL WALLET FILES; (IV) UNAUTHORIZED ACCESS TO APPLICATIONS; OR (V) ANY UNAUTHORIZED THIRD PARTY ACTIVITIES, INCLUDING WITHOUT LIMITATION THE USE OF VIRUSES, PHISHING, BRUTEFORCING OR OTHER MEANS OF ATTACK AGAINST THE SERVICE, COURTYARD NFTS OR DIGITAL WALLETS.
+
+COURTYARD NFTS ARE INTANGIBLE DIGITAL ASSETS. THEY EXIST ONLY BY VIRTUE OF THE OWNERSHIP RECORD MAINTAINED IN THE BLOCKCHAIN NETWORK. ANY TRANSFER OF TITLE THAT MIGHT OCCUR IN ANY UNIQUE DIGITAL ASSET OCCURS ON THE COURTYARDRALIZED LEDGER WITHIN THE BLOCKCHAIN PLATFORM. WE DO NOT GUARANTEE THAT COURTYARD OR ANY COURTYARD ENTITY CAN EFFECT THE TRANSFER OF TITLE OR RIGHT IN ANY COURTYARD NFTS. WE CANNOT AND DO NOT GUARANTEE THAT ANY COURTYARD NFT WILL HAVE OR RETAIN ANY INHERENT VALUE, OR THAT YOU WILL BE ABLE TO SELL OR RESELL ANY COURTYARD NFT PURCHASED THROUGH THE SERVICE.
+
+Courtyard is not responsible for any losses or harms sustained by you due to vulnerability or any kind of failure, abnormal behavior of software (e.g., smart contract), blockchains, or any other features of or inherent to the Courtyard NFTs. Courtyard is not responsible for any delay or failure to report any issues with any blockchain supporting Courtyard NFTs, including without limitation forks, technical node issues, or any other issues that result in losses of any sort.
+
+YOU ACKNOWLEDGE AND AGREE THAT COURTYARD IS NOT LIABLE, AND YOU AGREE NOT TO SEEK TO HOLD COURTYARD LIABLE, FOR THE CONDUCT OF THIRD PARTIES, INCLUDING ANY SELLERS OF ASSETS OR COURTYARD NFTS OR ANY THIRD-PARTY OFFERORS OF COURTYARD NFTS OR OFFEROR NFTS, AND THAT THE RISK OF INJURY FROM SUCH THIRD PARTIES RESTS ENTIRELY WITH YOU. YOU ARE SOLELY RESPONSIBLE FOR ALL OF YOUR COMMUNICATIONS AND INTERACTIONS WITH OTHER USERS OF THE SERVICE. YOU UNDERSTAND THAT COURTYARD DOES NOT MAKE ANY ATTEMPT TO VERIFY THE STATEMENTS OF USERS OF THE SERVICE OR THIRD-PARTY SELLERS OF COURTYARD NFTS. COURTYARD MAKES NO WARRANTY THAT ANY GOODS OR SERVICE PROVIDED BY THIRD PARTIES WILL MEET YOUR REQUIREMENTS OR BE AVAILABLE ON AN UNINTERRUPTED, SECURE, OR ERROR-FREE BASIS.
+
+EXCEPT WHERE COURTYARD IS THE BUYER OR SELLER, COURTYARD IS NOT INVOLVED IN THE ACTUAL TRANSACTION BETWEEN BUYERS AND SELLERS. WHILE WE MAY HELP FACILITATE THE RESOLUTION OF DISPUTES THROUGH VARIOUS PROGRAMS, WE HAVE NO CONTROL OVER AND DO NOT GUARANTEE THE QUALITY, SAFETY OR LEGALITY OF ASSETS ADVERTISED, THE TRUTH OR ACCURACY OF USER CONTENT OR LISTINGS, THE ABILITY OF SELLERS TO SELL ASSETS, THE ABILITY OF BUYERS TO PAY FOR ASSETS, OR THAT BUYER OR SELLER WILL ACTUALLY COMPLETE A TRANSACTION.
+
+We do not transfer legal ownership of Assets from the Seller to the Buyer. California Commercial Code § 2401(2) and Uniform Commercial Code § 2-401(2) apply to the transfer of ownership between the Buyer and the Seller, unless the Buyer and the Seller agree otherwise. Further, we cannot guarantee continuous or secure access to the Service and operation of the Service may be interfered with by numerous factors outside of our control. Accordingly, to the extent legally permitted, we exclude all implied warranties, terms and conditions.
+
+Nothing in this Agreement shall exclude or limit liability of either party for fraud, death or bodily injury caused by negligence, violation of laws, or any other activity that cannot be limited or excluded under the laws applicable to your jurisdiction. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES IN CONTRACTS WITH CONSUMERS, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU.
+
+## 22. Limitation of Liability
+
+TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL COURTYARD BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY LOST PROFIT OR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES ARISING FROM THIS AGREEMENT, THE SERVICE, ANY COURTYARD NFTS, OR FOR ANY DAMAGES RELATED TO LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, OR LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT, OR OTHERWISE, EVEN IF FORESEEABLE AND EVEN IF COURTYARD HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. ACCESS TO, AND USE OF, THE SERVICE IS UNDERTAKEN BY YOU AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR MOBILE DEVICE OR LOSS OF DATA RESULTING THEREFROM.
+
+NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, IN NO EVENT SHALL THE MAXIMUM AGGREGATE LIABILITY OF COURTYARD ARISING OUT OF OR IN ANY WAY RELATED TO THIS AGREEMENT, YOUR ACCESS TO AND USE OF THE SERVICE, CONTENT (INCLUDING YOUR CONTENT), THE ASSET MANAGEMENT SERVICES, OR ANY COURTYARD NFTS MINTED, PURCHASED, OR SOLD THROUGH THE SERVICE EXCEED THE GREATER OF (A) $100 OR (B) THE AMOUNT RETAINED BY COURTYARD IN THE TRANSACTION OR INCIDENT THAT IS THE SUBJECT OF THE CLAIM.
+
+Some jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation or exclusion may not apply to you.
+
+## 23. Dispute Resolution
+
+Please read carefully the following arbitration agreement (“Arbitration Agreement”). It requires you to arbitrate disputes with Courtyard and limits the manner in which you can seek relief from us.
+
+- 
+
+Applicability of Arbitration Agreement. You agree that any dispute, claim, or request for relief relating in any way to your access or use of the Service, to any products sold or distributed through the Service, or to any aspect of your relationship with Courtyard, will be resolved by binding arbitration, rather than in court, except that (a) you may assert claims or seek relief in small claims court if your claims qualify; and (b) you or Courtyard may seek equitable relief in court for infringement or other misuse of intellectual property rights (such as trademarks, trade dress, domain names, trade secrets, copyrights, and patents). This Arbitration Agreement shall apply, without limitation, to all disputes or claims and requests for relief that arose or were asserted before the effective date of this Agreement or any prior version of this Agreement.
+
+- 
+
+Arbitration Rules and Forum. The Federal Arbitration Act governs the interpretation and enforcement of this Arbitration Agreement. To begin an arbitration proceeding, you must send a letter requesting arbitration and describing your dispute or claim or request for relief to us at [email protected]. The arbitration will be conducted by JAMS, an established alternative dispute resolution provider. Disputes involving claims, counterclaims, or request for relief under $250,000, not inclusive of attorneys’ fees and interest, shall be subject to JAMS’s most current version of the Streamlined Arbitration Rules and procedures available at http://www.jamsadr.com/rules-streamlined-arbitration/; all other disputes shall be subject to JAMS’s most current version of the Comprehensive Arbitration Rules and Procedures, available at http://www.jamsadr.com/rules-comprehensive-arbitration/. JAMS’s rules are also available at www.jamsadr.com or by calling JAMS at 800-352-5267. If JAMS is not available to arbitrate, the parties will select an alternative arbitral forum. If the arbitrator finds that you cannot afford to pay JAMS’s filing, administrative, hearing and/or other fees and cannot obtain a waiver from JAMS, Courtyard will pay them for you. In addition, we will reimburse all such JAMS’s filing, administrative, hearing and/or other fees for disputes, claims, or requests for relief totaling less than $10,000 unless the arbitrator determines the claims are frivolous. You may choose to have the arbitration conducted by telephone, based on written submissions, or in person in the country where you live or at another mutually agreed location. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction.
+
+- 
+
+Authority of Arbitrator. The arbitrator shall have exclusive authority to (a) determine the scope and enforceability of this Arbitration Agreement and (b) resolve any dispute related to the interpretation, applicability, enforceability or formation of this Arbitration Agreement including, but not limited to, any assertion that all or any part of this Arbitration Agreement is void or voidable. The arbitrator will decide the rights and liabilities, if any, of you and us. The arbitration proceeding will not be consolidated with any other matters or joined with any other cases or parties. The arbitrator shall have the authority to grant motions dispositive of all or part of any claim. The arbitrator shall have the authority to award monetary damages and to grant any non-monetary remedy or relief available to an individual under applicable law, the arbitral forum’s rules, and this Agreement (including the Arbitration Agreement). The arbitrator shall issue a written award and statement of decision describing the essential findings and conclusions on which the award is based, including the calculation of any damages awarded. The arbitrator has the same authority to award relief on an individual basis that a judge in a court of law would have. The award of the arbitrator is final and binding upon you and us.
+
+- 
+
+Waiver of Jury Trial. YOU AND COURTYARD HEREBY WAIVE ANY CONSTITUTIONAL AND STATUTORY RIGHTS TO SUE IN COURT AND HAVE A TRIAL IN FRONT OF A JUDGE OR A JURY. You and we are instead electing that all disputes, claims, or requests for relief shall be resolved by arbitration under this Arbitration Agreement, except as specified in Section 22(a) (Applicability of Arbitration Agreement) above. An arbitrator can award on an individual basis the same damages and relief as a court and must follow this Agreement as a court would. However, there is no judge or jury in arbitration, and court review of an arbitration award is subject to very limited review.
+
+- 
+
+Waiver of Class or Other Non-Individualized Relief. ALL DISPUTES, CLAIMS, AND REQUESTS FOR RELIEF WITHIN THE SCOPE OF THIS ARBITRATION AGREEMENT MUST BE ARBITRATED ON AN INDIVIDUAL BASIS AND NOT ON A CLASS OR COLLECTIVE BASIS, ONLY INDIVIDUAL RELIEF IS AVAILABLE, AND CLAIMS OF MORE THAN ONE CUSTOMER OR USER CANNOT BE ARBITRATED OR CONSOLIDATED WITH THOSE OF ANY OTHER CUSTOMER OR USER. If a decision is issued stating that applicable law precludes enforcement of any of this section’s limitations as to a given dispute, claim, or request for relief, then such aspect must be severed from the arbitration and brought into the State or Federal Courts located in San Francisco, California. All other disputes, claims, or requests for relief shall be arbitrated.
+
+- 
+
+30-Day Right to Opt Out. You have the right to opt out of the provisions of this Arbitration Agreement by sending written notice of your decision to opt out to [email protected] within thirty (30) days after first becoming subject to this Arbitration Agreement. Your notice must include your name and address, your username (if any), the Wallet address used to connect to the Service (if you have one), and an unequivocal statement that you want to opt out of this Arbitration Agreement. If you opt out of this Arbitration Agreement, all other parts of this Agreement will continue to apply to you. Opting out of this Arbitration Agreement has no effect on any other arbitration agreements that you may currently have, or may enter in the future, with us.
+
+- 
+
+Severability. Except as provided in Section 22(e) (Waiver of Class or Other Non-Individualized Relief), if any part or parts of this Arbitration Agreement are found under the law to be invalid or unenforceable, then such specific part or parts shall be of no force and effect and shall be severed and the remainder of the Arbitration Agreement shall continue in full force and effect. Survival of Agreement. This Arbitration Agreement will survive the termination of your relationship with us.
+
+- 
+
+Modification. Notwithstanding any provision in this Agreement to the contrary, we agree that if we make any future material change to this Arbitration Agreement, you may reject that change within thirty (30) days of such change becoming effective by writing us at [email protected] and expressly opting out of this Arbitration Agreement.
+
+## 24. General
+
+The Service may be subject to U.S. export control laws and may be subject to export or import regulations in other countries. You agree not to use, export, reexport, or transfer, directly or indirectly, any U.S. technical data acquired from Courtyard, or any products utilizing such data, in violation of the United States export laws or regulations. You may not use, export, import, or transfer the Service except as authorized by U.S. law, the laws of the jurisdiction in which you obtained the Service, and any other applicable laws. You acknowledge and agree that products, services or technology provided by Courtyard are subject to the export control laws and regulations of the United States. You shall comply with these laws and regulations and shall not, without prior U.S. government authorization, export, re-export, or transfer Courtyard products, services or technology, either directly or indirectly, to any country in violation of such laws and regulations. This Agreement, and your access to and use of the Service, shall be governed by and construed and enforced in accordance with the laws of the State of California, without regard to any conflict of law rules or principles that would cause the application of the laws of any other jurisdiction. Any dispute between the parties that is not subject to arbitration or cannot be heard in small claims court, shall be resolved in the state or federal courts of San Francisco, California. If you are a California resident, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Product of the California Department of Consumer Affairs by contacting them in writing at 1625 North Market Blvd, Suite N 112, Sacramento, CA 95834, or by telephone at (800) 952-5210. We reserve the right in our sole discretion to (i) modify, suspend, or discontinue the Service, or any features or parts thereof, whether temporarily or permanently, at any time with or without notice to you; and (ii) terminate your right to access or use the Service at any time and for any or no reason. You acknowledge and agree that we shall have no liability or obligation to you in connection with any such event as described in the foregoing sentence and that you will not be entitled to a refund of any amounts that you have already paid to us, to the fullest extent permitted by applicable law. If any term, clause or provision of this Agreement is held invalid or unenforceable, then that term, clause or provision will be severable from this Agreement and will not affect the validity or enforceability of any remaining part of that term, clause or provision, or any other term, clause or provision of this Agreement. This Agreement, and any rights and licenses granted hereunder, may not be transferred or assigned by you without the prior written consent of Courtyard. Courtyard’s failure to assert any right or provision under this Agreement shall not constitute a waiver of such right or provision. Except as otherwise provided herein, this Agreement is intended solely for the benefit of Courtyard and you and shall not confer third party beneficiary rights upon any other person or entity.
+
+## 25. Giveaways and Sweepstakes
+
+Effective Date: 12/1/24
+
+1. Overview: From time to time, Courtyard.io (“Company,” “we,” “us,” or “our”) may offer promotional giveaways, sweepstakes, contests, or similar incentive programs (collectively, “Promotions”) to eligible users. These Promotions are subject to the terms and conditions of this Amendment, our general Terms of Service (“TOS”), and any additional Official Rules provided for each Promotion. In the event of any conflict, the Official Rules shall govern over this Amendment, and this Amendment shall govern over the TOS.
+
+2. Eligibility: Participation in any Promotion is void where prohibited by law. To be eligible, you must meet all requirements described in the Official Rules, including any age, residency, and account status criteria. Certain Promotions may require you to have a registered Courtyard.io account in good standing.
+
+3. No Purchase Necessary: Unless otherwise stated in the Official Rules, no purchase or payment is required to enter or win a Promotion. As an Alternate Method of Entry (“AMOE”), eligible users may enter by completing the following steps:
+
+• Creating a Courtyard.io account, if they do not already have one.
+
+• Logging into their account daily to claim points as specified in the applicable Promotion’s Official Rules.
+
+• Clicking the designated link provided on the Promotion page to submit an entry without requiring any purchase or payment. This link will be made available at https://courtyard.io/?intercom_checklist_id=44313438.
+
+Specific details, such as the number of points awarded per daily check-in and the exact entry procedures, will be outlined in the Promotion’s Official Rules. All AMOE entries must be received during the Promotion Period, as stated in the Official Rules.
+
+4. Odds and Prizes: The odds of winning depend on the number of eligible entries received. Prizes, their approximate retail values, and all relevant restrictions or limitations will be described in the Official Rules. Any applicable taxes, fees, or expenses not specifically stated as included in the prize are the sole responsibility of the winner.
+
+5. Winner Selection and Notification: Winners will be selected at random (or by such other criteria as set forth in the Official Rules) from among all eligible entries received. Winners will be notified using the contact information associated with their Courtyard.io account. It is your responsibility to ensure that your contact information is accurate and up to date.
+
+6. Compliance and Disqualification: We reserve the right to disqualify any participant who tampers with the entry process, attempts to circumvent the AMOE or any Promotion rules, violates our TOS, or engages in fraudulent or unethical behavior. We further reserve the right to cancel, suspend, or modify any Promotion due to force majeure or other factors beyond our reasonable control, as permitted by law.
+
+7. Limitation of Liability: By participating in any Promotion, you acknowledge and agree that Company, its affiliates, subsidiaries, partners, and their respective officers, directors, employees, and agents will not be liable for any claims, losses, or damages arising out of or related to your participation, including but not limited to technical failures, unauthorized tampering, or non-delivery of any communication.
+
+8. Governing Law and Venue: Unless otherwise specified, all Promotions shall be governed by and construed in accordance with the laws specified in the TOS, without regard to conflict of law principles, and all disputes shall be handled in accordance with the dispute resolution provisions set forth in the TOS.
+
+By continuing to use the Services or participate in any Promotion, you agree to be bound by this Amendment, our TOS, and all applicable Official Rules.
+
+## 26. Contact Information
+
+Email: [email protected]
+
+Did this answer your question?
+Disappointed Reaction😞Neutral Reaction😐Smiley Reaction😃
+
+Table of contents
+
+Help Center

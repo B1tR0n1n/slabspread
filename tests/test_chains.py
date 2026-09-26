@@ -57,3 +57,13 @@ def test_solana_ignores_failed_and_unrelated_tx():
     assert solana.parse_usdc_flows(tx, {"SomeoneElse"}) == []
     failed = {**tx, "meta": {**tx["meta"], "err": {"InstructionError": [0, "Custom"]}}}
     assert solana.parse_usdc_flows(failed, {"GachaNgyXTU3zFogQ8Z5jR2BLXs8215X2AtEH18VxJq3"}) == []
+
+
+def test_solana_plain_transfer_resolves_mint_from_balances_and_core_asset():
+    raw = load("rpc/solana_phygitals_flows.json")
+    wallet = {"62Q9eeDY3eM8A5CnprBGYMPShdBjAzdpBdr71QHsS8dS"}
+    opened = solana.parse_usdc_flows(raw["transactions"][0], wallet)
+    back = solana.parse_usdc_flows(raw["transactions"][1], wallet)
+    assert opened[0].direction == "in" and opened[0].amount == Decimal("10") and opened[0].memo is None
+    assert back[0].direction == "out" and back[0].amount == Decimal("8.5")
+    assert back[0].nft_mints == ("6sRw5SiUSNu79Nvv2XFjVSJuHJE26X8HTDerV6TWJvQ",)  # from the Core instruction

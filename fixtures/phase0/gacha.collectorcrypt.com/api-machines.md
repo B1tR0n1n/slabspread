@@ -1,0 +1,5230 @@
+---
+url: https://gacha.collectorcrypt.com/api/machines
+fetched_at: 2026-09-26T00:22:44Z
+status: 200 (JSON, live odds per machine)
+---
+
+{
+ "machines": [
+  {
+   "code": "pokemon_3000",
+   "name": "Pok\u00e9mon 3000 Boss Battle Gacha",
+   "shortName": "PKMN 3000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_3000/thumb-KNJ4tW7H0vt2e3cedNhsWgeNGZnylR.jpg",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_3000/video-4k025sYHXWxFGwIkg3qLRbIX1nJbRl.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_3000/hevc-rudhzMC1GButi2ATxfwT2ILbSKF0Fu.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 1,
+   "menuCategory": "Pokemon",
+   "price": 3000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 60,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 1500,
+     "end": 3000
+    },
+    "uncommon": {
+     "start": 3000,
+     "end": 6000
+    },
+    "rare": {
+     "start": 6000,
+     "end": 15000
+    },
+    "epic": {
+     "start": 15000,
+     "end": 303001
+    }
+   },
+   "stock": {
+    "common": 440,
+    "uncommon": 148,
+    "rare": 42,
+    "epic": 23
+   },
+   "ev": 3031.81773833051
+  },
+  {
+   "code": "pokemon_300",
+   "name": "Pok\u00e9mon 300 Boss Battle Gacha",
+   "shortName": "PKMN 300",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_300/thumb-ybf2xKwo4QqqKJ1G0fqAIHHlNAgzR7.jpg",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_300/video-6JTruiqzMd5suc9jAIDOUs1rtyHbGZ.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_300/hevc-XQFQo7LIkW8ySDrDV9wLOpMMFmWmoJ.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 2,
+   "menuCategory": "Pokemon",
+   "price": 300,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 6,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 300
+    },
+    "uncommon": {
+     "start": 300,
+     "end": 600
+    },
+    "rare": {
+     "start": 600,
+     "end": 2500
+    },
+    "epic": {
+     "start": 2500,
+     "end": 30301
+    }
+   },
+   "stock": {
+    "common": 877,
+    "uncommon": 1056,
+    "rare": 1112,
+    "epic": 224
+   },
+   "ev": 309.92398983467643
+  },
+  {
+   "code": "pokemon_30",
+   "name": "Pok\u00e9mon 30 Boss Battle Gacha",
+   "shortName": "PKMN 30",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_30/thumb-8S1eYtFAEHis4ieTbRlu1RL7RfRTh1.jpg",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_30/video-QB8dVwpG0zraLElsJC2Rq5nfGOLjQs.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_30/hevc-tlPIIEKIG8koTriGEgJRx9zKh9AkJF.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 3,
+   "menuCategory": "Pokemon",
+   "price": 30,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.6,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 15,
+     "end": 30
+    },
+    "uncommon": {
+     "start": 30,
+     "end": 60
+    },
+    "rare": {
+     "start": 60,
+     "end": 150
+    },
+    "epic": {
+     "start": 150,
+     "end": 3031
+    }
+   },
+   "stock": {
+    "common": 1355,
+    "uncommon": 2062,
+    "rare": 1586,
+    "epic": 355
+   },
+   "ev": 32.32614477641658
+  },
+  {
+   "code": "pokemon_50",
+   "name": "Elite Pok\u00e9mon Gacha Pack",
+   "shortName": "PKMN 50",
+   "mobile_name": "ELITE",
+   "image": "",
+   "thumbnailUrl": "/pokemon_50.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_50/video-79QRYsZ79eFUafMuqw9Soxgv6ge6t0.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_50/hevc-mBjNSKFsjSbUF3Yk3dW5MpmxnhsWOq.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_50/videoNobgWeb-qP0gMmmjOcKDjVJ40ggoAlFPPU5Gks.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_50/videoNobgIos-8Dom2XfCl00l8vxs8m87poRcqh5vbA.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_50/videoNobgAndroid-2lUDieOs6X8fkYO6QOoytpOhjYaoig.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_50/imageNobg-XvuRTLlLQdHWJc8wG7EIYmOITBIjQC.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 4,
+   "menuCategory": "Pokemon",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 30,
+     "end": 60
+    },
+    "uncommon": {
+     "start": 60,
+     "end": 110
+    },
+    "rare": {
+     "start": 110,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 4273,
+    "uncommon": 3383,
+    "rare": 3224,
+    "epic": 199
+   },
+   "ev": 55.09150492117885
+  },
+  {
+   "code": "pokemon_5000",
+   "name": "Celestial Pok\u00e9mon Gacha Pack",
+   "shortName": "PKMN 5000",
+   "mobile_name": "CELESTIAL",
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_5000/thumb-tDYyrGyQhgv7b7ui9YEHvH5Suabie3.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_5000/video-CmkTKZoxurKotWjGYiyr49g3ic9zn6.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_5000/hevc-TFmJMDNHNeDzeZT81iPDyONALAuVQ1.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_5000/videoNobgWeb-vukmmQyfpJpOt31jNxPwg7xmHw9Yd0.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_5000/videoNobgIos-9pFL5i1dMl253NW98FgFlzXsQAWIXx.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_5000/videoNobgAndroid-Mxc94fVclc7r2FhsOUvQKlCGtXUbFM.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_5000/imageNobg-hOKS7rlAYVfsRuFiza7BOrgxA10yLu.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 5,
+   "menuCategory": "Pokemon",
+   "price": 5000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 100,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 2500,
+     "end": 5000
+    },
+    "uncommon": {
+     "start": 5000,
+     "end": 10000
+    },
+    "rare": {
+     "start": 10000,
+     "end": 20000
+    },
+    "epic": {
+     "start": 20000,
+     "end": 280001
+    }
+   },
+   "stock": {
+    "common": 132,
+    "uncommon": 41,
+    "rare": 23,
+    "epic": 24
+   },
+   "ev": 5055.292078392622
+  },
+  {
+   "code": "pokemon_2500",
+   "name": "Mythic Pok\u00e9mon Gacha Pack",
+   "shortName": "PKMN 2500",
+   "mobile_name": "MYTHIC",
+   "image": "",
+   "thumbnailUrl": "/pokemon_2500.png",
+   "videoSrc": "/pokemon_2500.webm",
+   "videoHevc": "/pokemon_2500.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_2500/videoNobgWeb-8Zm1DfyNYFaHjUoqRFBKHHeGhQnVQt.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_2500/videoNobgIos-FS3EHandCOUjiPGNPrPqoiMc13ElUY.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_2500/videoNobgAndroid-lwpAP6SlLDAjRdDqjDbLr4OPQDllJv.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_2500/imageNobg-bqUqTUDRrQUnZYsH48deXC5mg4P65m.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 6,
+   "menuCategory": "Pokemon",
+   "price": 2500,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 50,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 1250,
+     "end": 2500
+    },
+    "uncommon": {
+     "start": 2500,
+     "end": 5000
+    },
+    "rare": {
+     "start": 5000,
+     "end": 10000
+    },
+    "epic": {
+     "start": 10000,
+     "end": 150000
+    }
+   },
+   "stock": {
+    "common": 554,
+    "uncommon": 84,
+    "rare": 27,
+    "epic": 28
+   },
+   "ev": 2528.1399361068134
+  },
+  {
+   "code": "pokemon_1000",
+   "name": "Grail Pok\u00e9mon Gacha Pack",
+   "shortName": "PKMN 1000",
+   "mobile_name": "GRAIL",
+   "image": "",
+   "thumbnailUrl": "/pokemon_1000.png",
+   "videoSrc": "/pokemon_1000.webm",
+   "videoHevc": "/pokemon_1000.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_1000/videoNobgWeb-yzv74zFGeMAOkZzCnY2JY0P50KBtYN.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_1000/videoNobgIos-y0eh4Y0RaatjZR048xwDYXIacV2qLa.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_1000/videoNobgAndroid-XiOuUZurIHnvMT4H00QkY4sKzkuyOx.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_1000/imageNobg-5PfiPmxBdVMCOJxbQIkdFFZWid5A5t.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 7,
+   "menuCategory": "Pokemon",
+   "price": 1000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 20,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 600,
+     "end": 1000
+    },
+    "uncommon": {
+     "start": 1000,
+     "end": 1600
+    },
+    "rare": {
+     "start": 1600,
+     "end": 8000
+    },
+    "epic": {
+     "start": 8000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 623,
+    "uncommon": 292,
+    "rare": 616,
+    "epic": 47
+   },
+   "ev": 1019.9522520060802
+  },
+  {
+   "code": "pokemon_500",
+   "name": "Hyper Pok\u00e9mon Gacha",
+   "shortName": "PKMN 500",
+   "mobile_name": "HYPER",
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_500/thumb-LMUZ2Qvweg6274nDWr8PHZ0v97I6dV.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_500/video-7Z0dipZE68c9Q3Vy77Qx0VsalADlJ0.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_500/hevc-OhDaSTl1wQIL7NbuEgGYPOcNTodPIK.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_500/videoNobgWeb-H6z78gkMbRHTBaRBuKVdZeILr0VZKX.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_500/videoNobgIos-uV2beZXlYzepKZ6Oh0Zm2mPLTUzE1j.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_500/videoNobgAndroid-nf2alg3VWFwwaJXYziGz61XpTYtL2K.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_500/imageNobg-cnJnyq388yGZiEgFCGT6mw10wLT1Is.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 8,
+   "menuCategory": "Pokemon",
+   "price": 500,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 10,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 250,
+     "end": 500
+    },
+    "uncommon": {
+     "start": 500,
+     "end": 1000
+    },
+    "rare": {
+     "start": 1000,
+     "end": 2500
+    },
+    "epic": {
+     "start": 2500,
+     "end": 50001
+    }
+   },
+   "stock": {
+    "common": 1197,
+    "uncommon": 1249,
+    "rare": 530,
+    "epic": 264
+   },
+   "ev": 524.6840435891025
+  },
+  {
+   "code": "pokemon_250",
+   "name": "Legendary Pok\u00e9mon Gacha Pack",
+   "shortName": "PKMN 250",
+   "mobile_name": "LEGENDARY",
+   "image": "",
+   "thumbnailUrl": "/pokemon_250.png",
+   "videoSrc": "/pokemon_250.webm",
+   "videoHevc": "/pokemon_250.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_250/videoNobgWeb-sX9xQIIKI5WnCsnJK40jDQGdXBkPms.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_250/videoNobgIos-OhPs0YMavbzt2NPLv6HaGZBOSE6KDL.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_250/videoNobgAndroid-ZWPEDw8Z9c6snYgbtJAi4VN9WQlzer.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_250/imageNobg-UmbYRxNV47XgNSLrhFmdG1OjTA7l26.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 9,
+   "menuCategory": "Pokemon",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 400
+    },
+    "rare": {
+     "start": 400,
+     "end": 2000
+    },
+    "epic": {
+     "start": 2000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 1056,
+    "uncommon": 409,
+    "rare": 2659,
+    "epic": 200
+   },
+   "ev": 262.2313834811626
+  },
+  {
+   "code": "pokemon_151",
+   "name": "151 & Friends",
+   "shortName": "PKMN 151",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/pokemon_151.png",
+   "videoSrc": "/pokemon_151.webm",
+   "videoHevc": "/pokemon_151.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 10,
+   "menuCategory": "Pokemon",
+   "price": 151,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 3.02,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 75,
+     "end": 150
+    },
+    "uncommon": {
+     "start": 150,
+     "end": 300
+    },
+    "rare": {
+     "start": 300,
+     "end": 750
+    },
+    "epic": {
+     "start": 750,
+     "end": 15001
+    }
+   },
+   "stock": {
+    "common": 63,
+    "uncommon": 23,
+    "rare": 161,
+    "epic": 162
+   },
+   "ev": 156.05613066482633
+  },
+  {
+   "code": "pokemon_100",
+   "name": "Bronze Pok\u00e9mon Gacha Pack",
+   "shortName": "PKMN 100",
+   "mobile_name": "BRONZE",
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_100/thumb-CPy5rhsjDUQxTFbTiODRWjmDSGueSO.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_100/video-UhgdUKfYiG4hgkL2jp2gHhbHLG8Xjt.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_100/hevc-AkyZIFf2dxInvXDZIMDo6bwRSuC566.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_100/videoNobgWeb-SSB7UvgyDqO8y6Kd2sahSjHD0XeVFD.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_100/videoNobgIos-NnodTqve0sHAOA1u9uYeEQgta5h0lz.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_100/videoNobgAndroid-hrqPwfFSyjBHJrcTMvbHRxhmwSnzdF.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_100/imageNobg-o8nCQD50o0yg7rc4r6iYSrJuJMDnZ2.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 11,
+   "menuCategory": "Pokemon",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 3409,
+    "uncommon": 2342,
+    "rare": 1191,
+    "epic": 2258
+   },
+   "ev": 105.02510183753418
+  },
+  {
+   "code": "sealed_80",
+   "name": "Sealed Gacha Pack",
+   "shortName": "SEALED 80",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/sealed_80.png",
+   "videoSrc": "/sealed_80.webm",
+   "videoHevc": "/sealed_80.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sealed_80/videoNobgWeb-UjKZbsAm0glxIBtu9aTK7Un1zwVu7c.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sealed_80/videoNobgIos-gUNrkuUwobR9pCBscIn7GI6WTGfCuM.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sealed_80/videoNobgAndroid-nbIzJ4rqbi5IWlEhHEw5JTbsfS4Ypv.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sealed_80/imageNobg-0mxGfbwxgREZHyv9NlAAXJhakS4Vnt.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 12,
+   "menuCategory": "Pokemon",
+   "price": 80,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1.6,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 40,
+     "end": 80
+    },
+    "uncommon": {
+     "start": 80,
+     "end": 160
+    },
+    "rare": {
+     "start": 160,
+     "end": 400
+    },
+    "epic": {
+     "start": 400,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 297,
+    "uncommon": 231,
+    "rare": 196,
+    "epic": 155
+   },
+   "ev": 83.27528046317909
+  },
+  {
+   "code": "pokemon_25",
+   "name": "Starter Pok\u00e9mon Gacha Pack",
+   "shortName": "PKMN 25",
+   "mobile_name": "STARTER",
+   "image": "",
+   "thumbnailUrl": "/pokemon_25.png",
+   "videoSrc": "/pokemon_25.webm",
+   "videoHevc": "/pokemon_25.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_25/videoNobgWeb-pEGYheLsqdcFYhO9xE1Lh9JdpS2wrh.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_25/videoNobgIos-MdhrK5rN24ha0xYfR9GdDBUPPid1bc.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_25/videoNobgAndroid-oQcjZtJ7gLLcLgthHOkja8bmiNfnZu.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/pokemon_25/imageNobg-hXc299AMhcvlcvBfPRk5dnueUYcZTG.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 13,
+   "menuCategory": "Pokemon",
+   "price": 25,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 13,
+     "end": 30
+    },
+    "uncommon": {
+     "start": 30,
+     "end": 55
+    },
+    "rare": {
+     "start": 55,
+     "end": 125
+    },
+    "epic": {
+     "start": 125,
+     "end": 500
+    }
+   },
+   "stock": {
+    "common": 3802,
+    "uncommon": 4742,
+    "rare": 6163,
+    "epic": 2875
+   },
+   "ev": 27.483836577678897
+  },
+  {
+   "code": "riftbound_250",
+   "name": "Riftbound 250",
+   "shortName": "RFTBND 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_250/thumb-n6dp2A7YxXdhvh7jrgffrUcnpcFRXA.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_250/video-GgOamUK5BjMFtyeNRoYetJKGo8u3Xk.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_250/hevc-pNz9BXwN1MVoHPSx90UplSmjaKiQ4v.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_250/videoNobgWeb-czVeOltnbWEEWCVN2d5CGHGMeN9B3f.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_250/videoNobgIos-WsdoybnjU8ulY5C6TyWineSyMtFMDD.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_250/videoNobgAndroid-35uu1TcEGvJi5HFTIJFs4WVzXnfkAk.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_250/imageNobg-GDqmhuNn43uNjoIPV0M1rzP4sjw8JN.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 14,
+   "menuCategory": "Others",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 125,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 500
+    },
+    "rare": {
+     "start": 500,
+     "end": 1250
+    },
+    "epic": {
+     "start": 1250,
+     "end": 25001
+    }
+   },
+   "stock": {
+    "common": 333,
+    "uncommon": 137,
+    "rare": 129,
+    "epic": 77
+   },
+   "ev": 252.14818987810162
+  },
+  {
+   "code": "riftbound_100",
+   "name": "Riftbound 100",
+   "shortName": "RFTBND 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_100/thumb-LhI9jC4hl8m0UXatFaaXan4U0gEHp9.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_100/video-WBRqJnVQbmmPCTkNsNkB6AbTyYNp5Q.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_100/hevc-FAfS77gTcGmeFoyWRwMWTI2e30SkDd.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_100/videoNobgWeb-skQFJpVSKXbNYNjWP9HCJpy7gbR7sq.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_100/videoNobgIos-Y7EZEZynjmlAWiJTFcM2kqRLaIBE8o.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_100/videoNobgAndroid-jHJxKa2QjLIy31opOWsKrz7g24EwBy.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/riftbound_100/imageNobg-m1DbTuoj8AE6jHryiHzHWlP2t1GSKq.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 15,
+   "menuCategory": "Others",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 263,
+    "uncommon": 436,
+    "rare": 367,
+    "epic": 235
+   },
+   "ev": 101.90387629723985
+  },
+  {
+   "code": "dragonball_50",
+   "name": "Dragonball $50",
+   "shortName": "DRGNBLL 50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_50/thumb-3MUCemyLGYrxMZSOrZ0YsWjExoQSwh.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_50/video-jrCj4jxhutqAIDbSaziRbC6TTeEilD.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_50/hevc-HWNO71B46fCdNAfPpKSP6OfnnBfvHB.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_50/videoNobgWeb-XRM06Xwo7pFbmnymDbWMXWi0SqDjuu.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_50/videoNobgIos-3DOushj080NxbhcOAhg6n0lbYDZ4ru.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_50/videoNobgAndroid-kN1Fmiff4uRtHnGXJbx6lBTIqf3xXF.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_50/imageNobg-JfEttqWaHQSEi7PSoi7L80QQSaBQlp.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 16,
+   "menuCategory": "Others",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 106,
+    "uncommon": 209,
+    "rare": 270,
+    "epic": 252
+   },
+   "ev": 50.8970915379262
+  },
+  {
+   "code": "dragonball_100",
+   "name": "Dragonball $100",
+   "shortName": "DRGNBLL 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_100/thumb-5xuD7VkfY7fy4BCe51ev8igf8VA6jk.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_100/video-Unc6meFqNH9MkkkBEY43UxFNcWDzr3.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_100/hevc-pDjIb3sZazjOXJF7363gPCT1GIh4Fy.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_100/videoNobgWeb-nqJhbe4dvq5V80roAftr9JNS8Vvzwy.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_100/videoNobgIos-xWFu05MfxDQ4ZT4eqYfuAIVuh2Dmac.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_100/videoNobgAndroid-7tW1q5Bn6ZSJh7a5IrzEgSFSk1jgo2.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_100/imageNobg-l4V1pRfZl1ejJMP7OA7mlr1vWsxp6N.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 17,
+   "menuCategory": "Others",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 150,
+    "uncommon": 214,
+    "rare": 115,
+    "epic": 34
+   },
+   "ev": 104.3820316227263
+  },
+  {
+   "code": "dragonball_250",
+   "name": "Dragonball $250",
+   "shortName": "DRGNBLL 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/dragonball_250.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_250/video-279JjILXsxYrGEvceHBD713P5ZDden.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/dragonball_250/hevc-hPGigdRlxIKnItnh04zLTU0jUnqVRF.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 18,
+   "menuCategory": "Others",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 125,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 500
+    },
+    "rare": {
+     "start": 500,
+     "end": 1250
+    },
+    "epic": {
+     "start": 1250,
+     "end": 25001
+    }
+   },
+   "stock": {
+    "common": 172,
+    "uncommon": 109,
+    "rare": 8,
+    "epic": 20
+   },
+   "ev": 264.50324674631963
+  },
+  {
+   "code": "ewatch_500",
+   "name": "WATCH 500",
+   "shortName": "WATCH 500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_500/thumb-YbM16Xdp1E0cUGGCzNXi0o1RUJxpjW.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_500/video-qaC7nwq4nZOoF6My0MHyTpUFdjK6xJ.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_500/hevc-XMfGqdiNjnbFnBYdjoszDUqfg9rCCZ.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_500/videoNobgWeb-vlhNNmw8FtXECP4BfSPaAr8i4fyblr.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_500/videoNobgIos-EPnEG3Ty1hTca5PjH3eCXlenql75WB.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_500/videoNobgAndroid-473Rot9zgv4ogbkUJCkb8C40HDEPwH.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_500/imageNobg-MZQ83lYmSJBkIko0Xd1Hpj8VADBnQy.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 19,
+   "menuCategory": "Others",
+   "price": 500,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 10,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 250,
+     "end": 500
+    },
+    "uncommon": {
+     "start": 500,
+     "end": 1000
+    },
+    "rare": {
+     "start": 1000,
+     "end": 2500
+    },
+    "epic": {
+     "start": 2500,
+     "end": 50001
+    }
+   },
+   "stock": {
+    "common": 378,
+    "uncommon": 605,
+    "rare": 323,
+    "epic": 87
+   },
+   "ev": 515.7845013777886
+  },
+  {
+   "code": "ewatch_250",
+   "name": "WATCH 250",
+   "shortName": "WATCH 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_250/thumb-KdFnUu5HLX0Qk7htJccxkEV7MPSVcI.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_250/video-DQqyPSHUu6fA7CvEmIpT2X0vAywXHX.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_250/hevc-HWtQJQP5NXBLychQoUrOROYUMaYrUZ.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_250/videoNobgWeb-xtl8AOHBCbZGh2nZTPR9XF8IvPsG4I.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_250/videoNobgIos-IrEIAs7tBVTjtWYIr1UwqNg3EK0TLX.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_250/videoNobgAndroid-1QnokuGY1dQJPtc1wXoognQbKZqtJl.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/ewatch_250/imageNobg-zMqM3YA9JYQl4T0TIUuc1v1DyRpX0o.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 20,
+   "menuCategory": "Others",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 125,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 500
+    },
+    "rare": {
+     "start": 500,
+     "end": 1250
+    },
+    "epic": {
+     "start": 1250,
+     "end": 25001
+    }
+   },
+   "stock": {
+    "common": 386,
+    "uncommon": 339,
+    "rare": 799,
+    "epic": 380
+   },
+   "ev": 255.98333229344374
+  },
+  {
+   "code": "onepiece_50",
+   "name": "One Piece Ocean Blue Pack",
+   "shortName": "ONEPIECE 50",
+   "mobile_name": "ONE PIECE BLUE",
+   "image": "",
+   "thumbnailUrl": "/onepiece_50.png",
+   "videoSrc": "/onepiece_50.webm",
+   "videoHevc": "/onepiece_50.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_50/videoNobgWeb-UgP9viG3zUweSF0L473KMwaZEjbg2Q.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_50/videoNobgIos-oBBO6Oq3UOuQz3cRrFRfpvJISzwqKO.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_50/videoNobgAndroid-T59OcgHZGQDzsb9jH8mQAuX0dNJGTz.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_50/imageNobg-WqpFbuPIsLeAiOwTB3ozezhVgNgSrq.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 21,
+   "menuCategory": "One Piece",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 30,
+     "end": 60
+    },
+    "uncommon": {
+     "start": 60,
+     "end": 110
+    },
+    "rare": {
+     "start": 110,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 786,
+    "uncommon": 2147,
+    "rare": 2541,
+    "epic": 2614
+   },
+   "ev": 55.064819151561956
+  },
+  {
+   "code": "onepiece_1000",
+   "name": "One Piece Emperor Pack",
+   "shortName": "ONEPIECE 1000",
+   "mobile_name": "ONE PIECE EMPEROR",
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_1000/thumb-hrmntM0ubDTgjSTEXw9TIAhRiBAOhW.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_1000/video-FDUI1f71iUuiH5RxKD1sJ4C3mTWVGo.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_1000/hevc-4nAd0lO8fAuq53rGY5n6DGdmhkNj7I.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_1000/videoNobgWeb-qNg4VJjPd2gXNHCPJQUrzEqUI5Nylk.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_1000/videoNobgIos-rDk09dUnP5aoBCsaQduhIUynRN3MKg.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_1000/videoNobgAndroid-BnjuBqdzLueqXmFK7KWQp5arUCCBEl.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_1000/imageNobg-FWUMCQYn73l1Q387kCYjHxGyE5VMJL.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 22,
+   "menuCategory": "One Piece",
+   "price": 1000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 20,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 600,
+     "end": 1000
+    },
+    "uncommon": {
+     "start": 1000,
+     "end": 1600
+    },
+    "rare": {
+     "start": 1600,
+     "end": 8000
+    },
+    "epic": {
+     "start": 8000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 472,
+    "uncommon": 178,
+    "rare": 825,
+    "epic": 110
+   },
+   "ev": 1019.8624917623195
+  },
+  {
+   "code": "onepiece_250",
+   "name": "One Piece Crew Pack",
+   "shortName": "ONEPIECE 250",
+   "mobile_name": "ONE PIECE CREW",
+   "image": "",
+   "thumbnailUrl": "/onepiece_250.png",
+   "videoSrc": "/onepiece_250.webm",
+   "videoHevc": "/onepiece_250.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_250/videoNobgWeb-DCQTthCMyYhg4pLiJj05HBDsUE6wwV.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_250/videoNobgIos-ar9pJHPXWPOdOWMe1gme4hDMf7LRrY.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_250/videoNobgAndroid-RvcMUvU7YnJmaYijxqDMcPKXFtqAML.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/onepiece_250/imageNobg-QPWTjWwto5HGY6oDm7dWgJuxac1HsI.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 23,
+   "menuCategory": "One Piece",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 400
+    },
+    "rare": {
+     "start": 400,
+     "end": 2000
+    },
+    "epic": {
+     "start": 2000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 1296,
+    "uncommon": 767,
+    "rare": 1901,
+    "epic": 494
+   },
+   "ev": 262.4425193844508
+  },
+  {
+   "code": "anime_75",
+   "name": "Anime Pop Culture Gacha",
+   "shortName": "ANIME 75",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/anime_75.png",
+   "videoSrc": "/anime_75.webm",
+   "videoHevc": "/anime_75.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/anime_75/videoNobgWeb-SQwwINzehwyQCNnN3eCatZDZoK1OKI.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/anime_75/videoNobgIos-58x6E97pIzT4WkMO4vomJPujX6tQYX.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/anime_75/videoNobgAndroid-lvR7BeP24FpPdWeniggen6ulaSugK3.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/anime_75/imageNobg-SSFMM5xnjcbIMIqfPa42R2iGRCiMIT.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 24,
+   "menuCategory": "Others",
+   "price": 75,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1.5,
+   "lowThreshold": 49,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 40,
+     "end": 80
+    },
+    "uncommon": {
+     "start": 80,
+     "end": 150
+    },
+    "rare": {
+     "start": 150,
+     "end": 375
+    },
+    "epic": {
+     "start": 375,
+     "end": 7001
+    }
+   },
+   "stock": {
+    "common": 428,
+    "uncommon": 1019,
+    "rare": 479,
+    "epic": 518
+   },
+   "ev": 81.79018922088247
+  },
+  {
+   "code": "sports_100",
+   "name": "Sports Gacha Pack",
+   "shortName": "SPORTS 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/sports_100.png",
+   "videoSrc": "/sports_100.webm",
+   "videoHevc": "/sports_100.hevc.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_100/videoNobgWeb-w9wIvZJmvhhxSuu4V7iwq1HGDDBtfm.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_100/videoNobgIos-aWNDT33w0NRVdkyR9JZ3oP80FkRwIr.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_100/videoNobgAndroid-atytMMtWOvbyRTgsCNcJ7DnMmFeNQa.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_100/imageNobg-VYfE61IKI0DrRno2xsIUrSYawDqkn2.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 25,
+   "menuCategory": "Sports",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 1439,
+    "uncommon": 1376,
+    "rare": 504,
+    "epic": 901
+   },
+   "ev": 104.97607893015874
+  },
+  {
+   "code": "sports_500",
+   "name": "All-Star Sports Gacha Pack 500",
+   "shortName": "SPORTS 500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_500/thumb-w94BmwqkOizgT6Rdf0Ica8cscqAZX9.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_500/video-ycBDM2kdQUwCdDUSY4TLHivEpz9eYt.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_500/hevc-EBWCffL7jB31f5LexnQScB8OWQwjyw.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_500/videoNobgWeb-g58BIrWR8Isf662NELpZcuO92VsCd2.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_500/videoNobgIos-HOhF8Ew4GGBhXEvZkc9fNlaEk7W1Qd.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_500/videoNobgAndroid-ZOw1AFFDDv4Bp2TXifparUvmEQYvjI.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/sports_500/imageNobg-cnjCwF8nn1ARvpk19VBVsjdSGyvGG6.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 26,
+   "menuCategory": "Sports",
+   "price": 500,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 10,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 250,
+     "end": 500
+    },
+    "uncommon": {
+     "start": 500,
+     "end": 1000
+    },
+    "rare": {
+     "start": 1000,
+     "end": 2500
+    },
+    "epic": {
+     "start": 2500,
+     "end": 50001
+    }
+   },
+   "stock": {
+    "common": 775,
+    "uncommon": 495,
+    "rare": 451,
+    "epic": 77
+   },
+   "ev": 509.89205781542523
+  },
+  {
+   "code": "comic_250",
+   "name": "Comic 250",
+   "shortName": "COMIC 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/comic_250.png",
+   "videoSrc": "/comic_250.webm",
+   "videoHevc": "/comic_250.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 27,
+   "menuCategory": "Others",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 5,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 400
+    },
+    "rare": {
+     "start": 400,
+     "end": 2000
+    },
+    "epic": {
+     "start": 2000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 205,
+    "uncommon": 77,
+    "rare": 118,
+    "epic": 32
+   },
+   "ev": 259.90002368458846
+  },
+  {
+   "code": "comic_50",
+   "name": "Comic 50",
+   "shortName": "COMIC 50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/comic_50.png",
+   "videoSrc": "/comic_50.webm",
+   "videoHevc": "/comic_50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 28,
+   "menuCategory": "Others",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 5,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 60
+    },
+    "uncommon": {
+     "start": 60,
+     "end": 110
+    },
+    "rare": {
+     "start": 110,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 108,
+    "uncommon": 37,
+    "rare": 159,
+    "epic": 139
+   },
+   "ev": 52.43111539121584
+  },
+  {
+   "code": "comic_25",
+   "name": "Comic 25",
+   "shortName": "COMIC 25",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/comic_25.png",
+   "videoSrc": "/comic_25.webm",
+   "videoHevc": "/comic_25.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 29,
+   "menuCategory": "Others",
+   "price": 25,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.5,
+   "lowThreshold": 5,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 13,
+     "end": 30
+    },
+    "uncommon": {
+     "start": 30,
+     "end": 55
+    },
+    "rare": {
+     "start": 55,
+     "end": 125
+    },
+    "epic": {
+     "start": 125,
+     "end": 500
+    }
+   },
+   "stock": {
+    "common": 56,
+    "uncommon": 42,
+    "rare": 66,
+    "epic": 17
+   },
+   "ev": 26.034974216959515
+  },
+  {
+   "code": "basketball_50",
+   "name": "Basketball Gacha Pack",
+   "shortName": "BASKETBALL 50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/basketball_50.png",
+   "videoSrc": "/basketball_50.webm",
+   "videoHevc": "/basketball_50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 30,
+   "menuCategory": "Sports",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 30,
+     "end": 60
+    },
+    "uncommon": {
+     "start": 60,
+     "end": 110
+    },
+    "rare": {
+     "start": 110,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 489,
+    "uncommon": 207,
+    "rare": 247,
+    "epic": 273
+   },
+   "ev": 54.99576880780444
+  },
+  {
+   "code": "basketball_250",
+   "name": "Basketball 250 Pack",
+   "shortName": "BASKETBALL 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_250/thumb-7CLMRuiHM17bp2YU5WoH0cWAu55sz9.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_250/video-9C2K4gYWUifSm5arcUB4nfve0RkXZs.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_250/hevc-UKEgipUac3vnZW0NnRKIz1LYlLOqx1.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_250/videoNobgWeb-S2ppR8hXc2ILk708RlZFrC4GLWgQbA.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_250/videoNobgIos-eRi0NlaqPxeFqIBi4buaaz2EenDL9h.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_250/videoNobgAndroid-L1oVbM5lRwUC6JryzDatHju2biYvAB.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_250/imageNobg-BTlLRoiUguoAarLgHbQz4rvJCRIHq6.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 31,
+   "menuCategory": "Sports",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 400
+    },
+    "rare": {
+     "start": 400,
+     "end": 2000
+    },
+    "epic": {
+     "start": 2000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 66,
+    "uncommon": 148,
+    "rare": 186,
+    "epic": 114
+   },
+   "ev": 262.4337927246586
+  },
+  {
+   "code": "basketball_100",
+   "name": "Basketball 100 Gacha Pack",
+   "shortName": "BASKETBALL 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_100/thumb-5divHRJyxwHQHQ0uHc5E995CIziZS8.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_100/video-dq4tGtApfugQKvAQt56q1L6c5zUybI.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_100/hevc-KwEssHten1hWumErEQtKv7UzUxGpgj.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_100/videoNobgWeb-3a1XJ35onVwk4E9eNx9EjU8DZEfsYn.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_100/videoNobgIos-qLieWn38fD51e3zRmS3jVJQoFVtKcz.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_100/videoNobgAndroid-063IDJgd43bJMlQxl54X7MgYjFZPSr.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/basketball_100/imageNobg-y2tmaNtjPcOq3UDe67obpwPJG0NWKN.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 32,
+   "menuCategory": "Sports",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 307,
+    "uncommon": 266,
+    "rare": 275,
+    "epic": 254
+   },
+   "ev": 104.94591572617875
+  },
+  {
+   "code": "baseball_50",
+   "name": "Baseball Gacha Pack",
+   "shortName": "BASEBALL 50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/baseball_50.png",
+   "videoSrc": "/baseball_50.webm",
+   "videoHevc": "/baseball_50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 33,
+   "menuCategory": "Sports",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 30,
+     "end": 60
+    },
+    "uncommon": {
+     "start": 60,
+     "end": 110
+    },
+    "rare": {
+     "start": 110,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 611,
+    "uncommon": 315,
+    "rare": 571,
+    "epic": 444
+   },
+   "ev": 54.99881863299356
+  },
+  {
+   "code": "baseball_250",
+   "name": "Baseball 250 Gacha Pack",
+   "shortName": "BASEBALL 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_250/thumb-06VI043dKW3OMPlvH4nFR9XGbzZfol.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_250/video-xNFKMNdwiiQKYdJNrS30mVIzZ2hxtb.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_250/hevc-fVtBcJ698e9BDfmA9IGEuLo44aqECQ.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_250/videoNobgWeb-8PPf6T4MMhvtY9pqPQe7pKyZYW3jaR.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_250/videoNobgIos-JrWmGl3L6Fepxa7BzUQIexkOBWzXhL.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_250/videoNobgAndroid-25KO8FGpqGt58rh0mkwf3yp8l3UVr2.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_250/imageNobg-5khp6YGs0lGy8s5XOpL9hjgD6mwGwf.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 34,
+   "menuCategory": "Sports",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 400
+    },
+    "rare": {
+     "start": 400,
+     "end": 2000
+    },
+    "epic": {
+     "start": 2000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 322,
+    "uncommon": 199,
+    "rare": 193,
+    "epic": 87
+   },
+   "ev": 262.45323012491986
+  },
+  {
+   "code": "baseball_100",
+   "name": "Baseball 100 Gacha Pack",
+   "shortName": "BASEBALL 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_100/thumb-Vf4W8Uail9gORl3lOfp9mkD30dInuj.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_100/video-g9wmKKK4oF6INwZw6aEZGZXavHDVJw.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_100/hevc-M8v33HcFsqk9nkXenYHNqYW3bGGChy.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_100/videoNobgWeb-vpd0tFJaL5jRSaILZNSZlWu9UcscdO.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_100/videoNobgIos-B78ohSmP0IaqFYchQ2GJ1oeutteuS8.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_100/videoNobgAndroid-IAp3XRs70Kry3yD8nm1Pl7bFFN3bXs.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/baseball_100/imageNobg-vm5AyoCAwe8MOuDNpdqPtYfNi2nwgw.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 35,
+   "menuCategory": "Sports",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 635,
+    "uncommon": 618,
+    "rare": 365,
+    "epic": 219
+   },
+   "ev": 105.00317284401825
+  },
+  {
+   "code": "football_50",
+   "name": "Football Gacha Pack",
+   "shortName": "FOOTBALL 50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/football_50.png",
+   "videoSrc": "/football_50.webm",
+   "videoHevc": "/football_50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 36,
+   "menuCategory": "Sports",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 30,
+     "end": 60
+    },
+    "uncommon": {
+     "start": 60,
+     "end": 110
+    },
+    "rare": {
+     "start": 110,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 182,
+    "uncommon": 189,
+    "rare": 158,
+    "epic": 360
+   },
+   "ev": 54.97450146829261
+  },
+  {
+   "code": "football_250",
+   "name": "Football 250 Pack",
+   "shortName": "FOOTBALL 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_250/thumb-YmwITh0ot3iMTTbmiqszZi7fF3XDKb.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_250/video-7yNmQC64BPZltlvbfxElLcFF4X6Z6v.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_250/hevc-uokhAB6kSSvVCRXSaXGo2dOBqOu299.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_250/videoNobgWeb-9BoR2NhlX5IPe3CikdydZPPI2e9cef.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_250/videoNobgIos-1MrvOVMwf5fKE6Cs3Y2Tk2jtjXgwiD.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_250/videoNobgAndroid-CmIUBv3q9ozVQmnO6IV5lwoVTDc2wN.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_250/imageNobg-jmD1m3YF1gpo5yfW7mWXxdceMjqMTy.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 37,
+   "menuCategory": "Sports",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": true,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 18,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 400
+    },
+    "rare": {
+     "start": 400,
+     "end": 2000
+    },
+    "epic": {
+     "start": 2000,
+     "end": 50000
+    }
+   },
+   "stock": {
+    "common": 202,
+    "uncommon": 156,
+    "rare": 194,
+    "epic": 79
+   },
+   "ev": 262.5006746584023
+  },
+  {
+   "code": "football_100",
+   "name": "Football 100 Gacha Pack",
+   "shortName": "FOOTBALL 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_100/thumb-11fGZbP7sfaxFp4orWQGjYeDqFGxcQ.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_100/video-2fTKqsTWJcuT4gotrPAjQbDKpVuplC.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_100/hevc-O00TuiE9LMEflhCj19DbAsjwRo5LbF.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_100/videoNobgWeb-WNVY8eX8sIIQGLv4OGKAzvNxkmqT7j.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_100/videoNobgIos-E5JM1N5oS4ZbMIHe4odoh2xLbb4TCD.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_100/videoNobgAndroid-HHFnrD4yRwwThaQ77Zn7fPyr050mJb.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/football_100/imageNobg-HujIaHfiBJ2UOJpjZlj749Xb9t8yuA.png",
+   "public": true,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 38,
+   "menuCategory": "Sports",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 266,
+    "uncommon": 271,
+    "rare": 336,
+    "epic": 256
+   },
+   "ev": 104.93260251210361
+  },
+  {
+   "code": "soccer_50",
+   "name": "Soccer $50 Pack",
+   "shortName": "SOCCER 50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_50/thumb-fcjG9AnDiMIy7DltIvE0HcOCJYAsI8.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_50/video-1zjrHpVUna2yTHqSMyxYSmadlxcpQd.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_50/hevc-smoSC5vhlRPT0ZMu3BKfP1VRq1GiCq.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_50/videoNobgWeb-KAoeyuGBLIzeEuGLsaSlYQ6ALKS3Xb.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_50/videoNobgIos-C3ct3YJkeyFHrrmjxkxIIJ0KRvT2PL.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_50/videoNobgAndroid-YDDuwE0sOozBtGRhum2F0w178sFJ8U.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_50/imageNobg-VgQXetx0Q4JmBBV7sjATrMkEAW8CUt.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 39,
+   "menuCategory": "Sports",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 89,
+    "uncommon": 158,
+    "rare": 200,
+    "epic": 267
+   },
+   "ev": 52.651822614137394
+  },
+  {
+   "code": "soccer_250",
+   "name": "Soccer $250 Pack",
+   "shortName": "SOCCER 250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_250/thumb-t6o5RGna5ubfK9GnsUw6mAgbgYYUIS.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_250/video-TbcML1tgbRTigyLzW7XHFGEjw9taAv.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_250/hevc-7pI8I3uYPsh30tb49wQOneFBJCV6cn.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_250/videoNobgWeb-ZtQG8M2H8BTHAlIxtNa5x8uCwwm1it.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_250/videoNobgIos-eayAMUfYGHRbOyymUcpYKkplan9x05.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_250/videoNobgAndroid-I0s6yFrYWTV4UQX498o3BnhTW6pIGU.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_250/imageNobg-rAVSPPkUXm5VlBgkLJ9lsRaMGWSgOT.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 40,
+   "menuCategory": "Sports",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 125,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 500
+    },
+    "rare": {
+     "start": 500,
+     "end": 1250
+    },
+    "epic": {
+     "start": 1250,
+     "end": 25001
+    }
+   },
+   "stock": {
+    "common": 127,
+    "uncommon": 108,
+    "rare": 111,
+    "epic": 61
+   },
+   "ev": 262.4987679973765
+  },
+  {
+   "code": "soccer_100",
+   "name": "Soccer $100 Pack",
+   "shortName": "SOCCER 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_100/thumb-9XFQrYvpkFf4Qt0C6oDny6o4MO8AWC.png",
+   "videoSrc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_100/video-9urISKgx0lL6lYRrXJsDqi7LerZVCV.webm",
+   "videoHevc": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_100/hevc-nqKA0S4MyaIuHHrHGCvppWNV5YqNoA.mp4",
+   "videoNobgWeb": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_100/videoNobgWeb-UYO3ypA1wqwGIp4YiHleSKRZjgKyMw.webm",
+   "videoNobgIos": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_100/videoNobgIos-fv7rj0aTTOj1v3q28JAOLLZDp6qn8j.mp4",
+   "videoNobgAndroid": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_100/videoNobgAndroid-riWK5LGZ9sPOcMBFJkUnu7D4ODCcZy.mp4",
+   "imageNobg": "https://degwuxynwtb2zaso.public.blob.vercel-storage.com/machines/soccer_100/imageNobg-AGTxpY7UUoF6ylV3oVp5051wOnctFK.png",
+   "public": true,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 41,
+   "menuCategory": "Sports",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 158,
+    "uncommon": 151,
+    "rare": 145,
+    "epic": 155
+   },
+   "ev": 104.84223480285794
+  },
+  {
+   "code": "espider_25",
+   "name": "CB Spider-Man 25",
+   "shortName": "CB Spider-Man 25",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/espider_25.png",
+   "videoSrc": "/espider_25.webm",
+   "videoHevc": "/espider_25.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 42,
+   "menuCategory": "Others",
+   "price": 25,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.5,
+   "lowThreshold": 5,
+   "odds": {
+    "common": 0.8,
+    "uncommon": 0.15,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 12.5,
+     "end": 25
+    },
+    "uncommon": {
+     "start": 25,
+     "end": 50
+    },
+    "rare": {
+     "start": 50,
+     "end": 125
+    },
+    "epic": {
+     "start": 125,
+     "end": 2501
+    }
+   },
+   "stock": {
+    "common": 56,
+    "uncommon": 74,
+    "rare": 45,
+    "epic": 130
+   },
+   "ev": 25.431724350724352
+  },
+  {
+   "code": "espider_50",
+   "name": "CB Spider-Man 50",
+   "shortName": "CB Spider-Man 50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/espider_50.png",
+   "videoSrc": "/espider_50.webm",
+   "videoHevc": "/espider_50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 43,
+   "menuCategory": "Others",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 7,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 99,
+    "uncommon": 45,
+    "rare": 75,
+    "epic": 88
+   },
+   "ev": 52.66256666666666
+  },
+  {
+   "code": "elowevhighwin_75",
+   "name": "exclusive  low ev, high potential win",
+   "shortName": "exclusive  low ev, high potential win",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/elowevhighwin_75.png",
+   "videoSrc": "/elowevhighwin_75.webm",
+   "videoHevc": "/elowevhighwin_75.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 44,
+   "menuCategory": null,
+   "price": 75,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1.5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 37.5,
+     "end": 75
+    },
+    "uncommon": {
+     "start": 75,
+     "end": 150
+    },
+    "rare": {
+     "start": 150,
+     "end": 375
+    },
+    "epic": {
+     "start": 375,
+     "end": 7501
+    }
+   },
+   "stock": {
+    "common": 0,
+    "uncommon": 0,
+    "rare": 0,
+    "epic": 0
+   },
+   "ev": 0
+  },
+  {
+   "code": "eanime_150",
+   "name": "exclusive anime 150",
+   "shortName": "exclusive anime 150",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eanime_150.png",
+   "videoSrc": "/eanime_150.webm",
+   "videoHevc": "/eanime_150.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 45,
+   "menuCategory": null,
+   "price": 150,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 3,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 75,
+     "end": 150
+    },
+    "uncommon": {
+     "start": 150,
+     "end": 300
+    },
+    "rare": {
+     "start": 300,
+     "end": 750
+    },
+    "epic": {
+     "start": 750,
+     "end": 15001
+    }
+   },
+   "stock": {
+    "common": 116,
+    "uncommon": 20,
+    "rare": 109,
+    "epic": 204
+   },
+   "ev": 148.79588027491923
+  },
+  {
+   "code": "echarizard_250",
+   "name": "echarizard_250",
+   "shortName": "echarizard_250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/echarizard_250.png",
+   "videoSrc": "/echarizard_250.webm",
+   "videoHevc": "/echarizard_250.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 46,
+   "menuCategory": null,
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 125,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 500
+    },
+    "rare": {
+     "start": 500,
+     "end": 1250
+    },
+    "epic": {
+     "start": 1250,
+     "end": 25001
+    }
+   },
+   "stock": {
+    "common": 155,
+    "uncommon": 239,
+    "rare": 542,
+    "epic": 118
+   },
+   "ev": 253.91027275614417
+  },
+  {
+   "code": "epinkblue150",
+   "name": "Exclusive Pink/Blue (water/ice/poison/psychic)",
+   "shortName": "Exclusive Pink/Blue (water/ice/poison/psychic)",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/epinkblue150.png",
+   "videoSrc": "/epinkblue150.webm",
+   "videoHevc": "/epinkblue150.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 47,
+   "menuCategory": null,
+   "price": 150,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 3,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 75,
+     "end": 150
+    },
+    "uncommon": {
+     "start": 150,
+     "end": 300
+    },
+    "rare": {
+     "start": 300,
+     "end": 750
+    },
+    "epic": {
+     "start": 750,
+     "end": 15001
+    }
+   },
+   "stock": {
+    "common": 316,
+    "uncommon": 36,
+    "rare": 89,
+    "epic": 331
+   },
+   "ev": 157.782768068343
+  },
+  {
+   "code": "efire_420",
+   "name": "Exclusive Fire $420",
+   "shortName": "Exclusive Fire $420",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/efire_420.png",
+   "videoSrc": "/efire_420.webm",
+   "videoHevc": "/efire_420.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 48,
+   "menuCategory": null,
+   "price": 420,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 8.4,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 210,
+     "end": 420
+    },
+    "uncommon": {
+     "start": 420,
+     "end": 840
+    },
+    "rare": {
+     "start": 840,
+     "end": 2100
+    },
+    "epic": {
+     "start": 2100,
+     "end": 42001
+    }
+   },
+   "stock": {
+    "common": 37,
+    "uncommon": 116,
+    "rare": 151,
+    "epic": 19
+   },
+   "ev": 447.8741861113286
+  },
+  {
+   "code": "ev90s_500",
+   "name": "exclusive vintange 90's 500",
+   "shortName": "exclusive vintange 90's 500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/ev90s_500.png",
+   "videoSrc": "/ev90s_500.webm",
+   "videoHevc": "/ev90s_500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 49,
+   "menuCategory": null,
+   "price": 500,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 10,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 250,
+     "end": 500
+    },
+    "uncommon": {
+     "start": 500,
+     "end": 1000
+    },
+    "rare": {
+     "start": 1000,
+     "end": 2500
+    },
+    "epic": {
+     "start": 2500,
+     "end": 50001
+    }
+   },
+   "stock": {
+    "common": 23,
+    "uncommon": 72,
+    "rare": 82,
+    "epic": 13
+   },
+   "ev": 519.3086382340412
+  },
+  {
+   "code": "esnorlax_2500",
+   "name": "exclusive snorlax",
+   "shortName": "exclusive snorlax",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esnorlax_2500.png",
+   "videoSrc": "/esnorlax_2500.webm",
+   "videoHevc": "/esnorlax_2500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 50,
+   "menuCategory": null,
+   "price": 2500,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 50,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 1250,
+     "end": 2500
+    },
+    "uncommon": {
+     "start": 2500,
+     "end": 5000
+    },
+    "rare": {
+     "start": 5000,
+     "end": 12500
+    },
+    "epic": {
+     "start": 12500,
+     "end": 250001
+    }
+   },
+   "stock": {
+    "common": 203,
+    "uncommon": 91,
+    "rare": 33,
+    "epic": 32
+   },
+   "ev": 2530.5252081252083
+  },
+  {
+   "code": "esf_2500",
+   "name": "Exclusive - SF 2500",
+   "shortName": "Exclusive - SF 2500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esf_2500.png",
+   "videoSrc": "/esf_2500.webm",
+   "videoHevc": "/esf_2500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 51,
+   "menuCategory": "Solflare",
+   "price": 2500,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 50,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 1250,
+     "end": 2500
+    },
+    "uncommon": {
+     "start": 2500,
+     "end": 5000
+    },
+    "rare": {
+     "start": 5000,
+     "end": 12500
+    },
+    "epic": {
+     "start": 12500,
+     "end": 250001
+    }
+   },
+   "stock": {
+    "common": 167,
+    "uncommon": 83,
+    "rare": 32,
+    "epic": 23
+   },
+   "ev": 2526.9641354535556
+  },
+  {
+   "code": "degen_100",
+   "name": "exclusive low ev, high potential win",
+   "shortName": "exclusive low ev, high potential win",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/degen_100.png",
+   "videoSrc": "/degen_100.webm",
+   "videoHevc": "/degen_100.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 52,
+   "menuCategory": null,
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 378,
+    "uncommon": 837,
+    "rare": 423,
+    "epic": 1071
+   },
+   "ev": 99.89924190952978
+  },
+  {
+   "code": "esolana_75",
+   "name": "Exclusive Solana $75",
+   "shortName": "Exclusive Solana $75",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esolana_75.png",
+   "videoSrc": "/esolana_75.webm",
+   "videoHevc": "/esolana_75.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 53,
+   "menuCategory": null,
+   "price": 75,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1.5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 37.5,
+     "end": 75
+    },
+    "uncommon": {
+     "start": 75,
+     "end": 150
+    },
+    "rare": {
+     "start": 150,
+     "end": 375
+    },
+    "epic": {
+     "start": 375,
+     "end": 7501
+    }
+   },
+   "stock": {
+    "common": 68,
+    "uncommon": 284,
+    "rare": 37,
+    "epic": 170
+   },
+   "ev": 80.36366908126021
+  },
+  {
+   "code": "eprimate_100",
+   "name": "Primate 100",
+   "shortName": "Primate 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eprimate_100.png",
+   "videoSrc": "/eprimate_100.webm",
+   "videoHevc": "/eprimate_100.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 54,
+   "menuCategory": null,
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 0,
+    "uncommon": 0,
+    "rare": 0,
+    "epic": 0
+   },
+   "ev": 0
+  },
+  {
+   "code": "epokemon_200",
+   "name": "Infinex Pokemon 200",
+   "shortName": "Infinex Pokemon 200",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/epokemon_200.png",
+   "videoSrc": "/epokemon_200.webm",
+   "videoHevc": "/epokemon_200.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 55,
+   "menuCategory": null,
+   "price": 200,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 4,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 100,
+     "end": 200
+    },
+    "uncommon": {
+     "start": 200,
+     "end": 400
+    },
+    "rare": {
+     "start": 400,
+     "end": 1000
+    },
+    "epic": {
+     "start": 1000,
+     "end": 20001
+    }
+   },
+   "stock": {
+    "common": 424,
+    "uncommon": 135,
+    "rare": 530,
+    "epic": 474
+   },
+   "ev": 196.97671492892462
+  },
+  {
+   "code": "epokemon_1000",
+   "name": "Solflare Pokemon 1000",
+   "shortName": "Solflare Pokemon 1000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/epokemon_1000.png",
+   "videoSrc": "/epokemon_1000.webm",
+   "videoHevc": "/epokemon_1000.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 56,
+   "menuCategory": "Solflare",
+   "price": 1000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 20,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 500,
+     "end": 1000
+    },
+    "uncommon": {
+     "start": 1000,
+     "end": 2000
+    },
+    "rare": {
+     "start": 2000,
+     "end": 5000
+    },
+    "epic": {
+     "start": 5000,
+     "end": 100001
+    }
+   },
+   "stock": {
+    "common": 719,
+    "uncommon": 472,
+    "rare": 199,
+    "epic": 67
+   },
+   "ev": 1022.2187809347353
+  },
+  {
+   "code": "eopoke_25",
+   "name": "eo Poke 25",
+   "shortName": "eo Poke 25",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_25.png",
+   "videoSrc": "/eopoke_25.webm",
+   "videoHevc": "/eopoke_25.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 57,
+   "menuCategory": "Pokemon",
+   "price": 25,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 12.5,
+     "end": 25
+    },
+    "uncommon": {
+     "start": 25,
+     "end": 50
+    },
+    "rare": {
+     "start": 50,
+     "end": 125
+    },
+    "epic": {
+     "start": 125,
+     "end": 2501
+    }
+   },
+   "stock": {
+    "common": 2234,
+    "uncommon": 5519,
+    "rare": 6407,
+    "epic": 3169
+   },
+   "ev": 25.072046955615747
+  },
+  {
+   "code": "eopoke_50",
+   "name": "eo poke $50",
+   "shortName": "eo poke $50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_50.png",
+   "videoSrc": "/eopoke_50.webm",
+   "videoHevc": "/eopoke_50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 58,
+   "menuCategory": "Pokemon",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 5412,
+    "uncommon": 4645,
+    "rare": 3759,
+    "epic": 2453
+   },
+   "ev": 50.059220741004225
+  },
+  {
+   "code": "evintage_80",
+   "name": "exclusive vintage 90",
+   "shortName": "exclusive vintage 90",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/evintage_80.png",
+   "videoSrc": "/evintage_80.webm",
+   "videoHevc": "/evintage_80.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 59,
+   "menuCategory": null,
+   "price": 80,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1.6,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 40,
+     "end": 80
+    },
+    "uncommon": {
+     "start": 80,
+     "end": 160
+    },
+    "rare": {
+     "start": 160,
+     "end": 400
+    },
+    "epic": {
+     "start": 400,
+     "end": 8001
+    }
+   },
+   "stock": {
+    "common": 89,
+    "uncommon": 58,
+    "rare": 70,
+    "epic": 21
+   },
+   "ev": 82.36506389181012
+  },
+  {
+   "code": "eopoke_100",
+   "name": "eo Poke $100",
+   "shortName": "eo Poke $100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_100.png",
+   "videoSrc": "/eopoke_100.webm",
+   "videoHevc": "/eopoke_100.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 60,
+   "menuCategory": "Pokemon",
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 4372,
+    "uncommon": 3177,
+    "rare": 1971,
+    "epic": 2045
+   },
+   "ev": 100.0018329975818
+  },
+  {
+   "code": "epokemon9699_100",
+   "name": "Exclusive 96-99",
+   "shortName": "Exclusive 96-99",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/epokemon9699_100.png",
+   "videoSrc": "/epokemon9699_100.webm",
+   "videoHevc": "/epokemon9699_100.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 61,
+   "menuCategory": null,
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 40,
+    "uncommon": 48,
+    "rare": 19,
+    "epic": 120
+   },
+   "ev": 100.79621929824562
+  },
+  {
+   "code": "eopoke_250",
+   "name": "eo Poke $250",
+   "shortName": "eo Poke $250",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_250.png",
+   "videoSrc": "/eopoke_250.webm",
+   "videoHevc": "/eopoke_250.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 62,
+   "menuCategory": "Pokemon",
+   "price": 250,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 125,
+     "end": 250
+    },
+    "uncommon": {
+     "start": 250,
+     "end": 500
+    },
+    "rare": {
+     "start": 500,
+     "end": 1250
+    },
+    "epic": {
+     "start": 1250,
+     "end": 25001
+    }
+   },
+   "stock": {
+    "common": 1925,
+    "uncommon": 1381,
+    "rare": 1587,
+    "epic": 800
+   },
+   "ev": 249.9012670146156
+  },
+  {
+   "code": "eopoke_500",
+   "name": "eo Poke $500",
+   "shortName": "eo Poke $500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_500.png",
+   "videoSrc": "/eopoke_500.webm",
+   "videoHevc": "/eopoke_500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 63,
+   "menuCategory": "Pokemon",
+   "price": 500,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 10,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 250,
+     "end": 500
+    },
+    "uncommon": {
+     "start": 500,
+     "end": 1000
+    },
+    "rare": {
+     "start": 1000,
+     "end": 2500
+    },
+    "epic": {
+     "start": 2500,
+     "end": 50001
+    }
+   },
+   "stock": {
+    "common": 1357,
+    "uncommon": 1305,
+    "rare": 715,
+    "epic": 213
+   },
+   "ev": 499.42878675159375
+  },
+  {
+   "code": "eopoke_1000",
+   "name": "eo Poke $1000",
+   "shortName": "eo Poke $1000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_1000.png",
+   "videoSrc": "/eopoke_1000.webm",
+   "videoHevc": "/eopoke_1000.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 64,
+   "menuCategory": "Pokemon",
+   "price": 1000,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 20,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 500,
+     "end": 1000
+    },
+    "uncommon": {
+     "start": 1000,
+     "end": 2000
+    },
+    "rare": {
+     "start": 2000,
+     "end": 5000
+    },
+    "epic": {
+     "start": 5000,
+     "end": 100001
+    }
+   },
+   "stock": {
+    "common": 1150,
+    "uncommon": 756,
+    "rare": 360,
+    "epic": 60
+   },
+   "ev": 998.543068553025
+  },
+  {
+   "code": "eopoke_2500",
+   "name": "eo Poke $2500",
+   "shortName": "eo Poke $2500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_2500.png",
+   "videoSrc": "/eopoke_2500.webm",
+   "videoHevc": "/eopoke_2500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 65,
+   "menuCategory": "Pokemon",
+   "price": 2500,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 50,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 1250,
+     "end": 2500
+    },
+    "uncommon": {
+     "start": 2500,
+     "end": 5000
+    },
+    "rare": {
+     "start": 5000,
+     "end": 12500
+    },
+    "epic": {
+     "start": 12500,
+     "end": 250001
+    }
+   },
+   "stock": {
+    "common": 470,
+    "uncommon": 215,
+    "rare": 64,
+    "epic": 41
+   },
+   "ev": 2496.2882935880575
+  },
+  {
+   "code": "eopoke_5000",
+   "name": "eo Poke $5000",
+   "shortName": "eo Poke $5000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eopoke_5000.png",
+   "videoSrc": "/eopoke_5000.webm",
+   "videoHevc": "/eopoke_5000.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 66,
+   "menuCategory": "Pokemon",
+   "price": 5000,
+   "contains": 1,
+   "instantBuyback": 94,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 100,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 2500,
+     "end": 5000
+    },
+    "uncommon": {
+     "start": 5000,
+     "end": 10000
+    },
+    "rare": {
+     "start": 10000,
+     "end": 25000
+    },
+    "epic": {
+     "start": 25000,
+     "end": 500001
+    }
+   },
+   "stock": {
+    "common": 176,
+    "uncommon": 53,
+    "rare": 45,
+    "epic": 22
+   },
+   "ev": 4996.54123010768
+  },
+  {
+   "code": "ehhpoke_69",
+   "name": "Hotheads Pokemon",
+   "shortName": "Hotheads Pokemon",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/ehhpoke_69.png",
+   "videoSrc": "/ehhpoke_69.webm",
+   "videoHevc": "/ehhpoke_69.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 67,
+   "menuCategory": null,
+   "price": 69,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1.38,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 34.5,
+     "end": 69
+    },
+    "uncommon": {
+     "start": 69,
+     "end": 138
+    },
+    "rare": {
+     "start": 138,
+     "end": 345
+    },
+    "epic": {
+     "start": 345,
+     "end": 10350
+    }
+   },
+   "stock": {
+    "common": 95,
+    "uncommon": 19,
+    "rare": 27,
+    "epic": 29
+   },
+   "ev": 70.93201183034215
+  },
+  {
+   "code": "sns_25",
+   "name": "Sns 25",
+   "shortName": "SNS 25",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/sns_25.png",
+   "videoSrc": "/sns_25.webm",
+   "videoHevc": "/sns_25.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": null,
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 68,
+   "menuCategory": null,
+   "price": 25,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.5,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 13,
+     "end": 30
+    },
+    "uncommon": {
+     "start": 30,
+     "end": 55
+    },
+    "rare": {
+     "start": 55,
+     "end": 125
+    },
+    "epic": {
+     "start": 125,
+     "end": 500
+    }
+   },
+   "stock": {
+    "common": 0,
+    "uncommon": 0,
+    "rare": 0,
+    "epic": 0
+   },
+   "ev": 0
+  },
+  {
+   "code": "esfpoke_30",
+   "name": "Solflare Pokemon 30",
+   "shortName": "Solflare Pokemon 30",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esfpoke_30.png",
+   "videoSrc": "/esfpoke_30.webm",
+   "videoHevc": "/esfpoke_30.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 69,
+   "menuCategory": "Solflare",
+   "price": 30,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.6,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 15,
+     "end": 30
+    },
+    "uncommon": {
+     "start": 30,
+     "end": 60
+    },
+    "rare": {
+     "start": 60,
+     "end": 150
+    },
+    "epic": {
+     "start": 150,
+     "end": 1201
+    }
+   },
+   "stock": {
+    "common": 576,
+    "uncommon": 40,
+    "rare": 275,
+    "epic": 83
+   },
+   "ev": 29.5651487609529
+  },
+  {
+   "code": "esfpoke_60",
+   "name": "Solflare Pokemon 60",
+   "shortName": "Solflare Pokemon 60",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esfpoke_60.png",
+   "videoSrc": "/esfpoke_60.webm",
+   "videoHevc": "/esfpoke_60.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 70,
+   "menuCategory": "Solflare",
+   "price": 60,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1.2,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 30,
+     "end": 60
+    },
+    "uncommon": {
+     "start": 60,
+     "end": 120
+    },
+    "rare": {
+     "start": 120,
+     "end": 300
+    },
+    "epic": {
+     "start": 300,
+     "end": 6001
+    }
+   },
+   "stock": {
+    "common": 78,
+    "uncommon": 198,
+    "rare": 160,
+    "epic": 392
+   },
+   "ev": 59.205761615368765
+  },
+  {
+   "code": "esfpoke_150",
+   "name": "Solflare Pokemon 150",
+   "shortName": "Solflare Pokemon 150",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esfpoke_150.png",
+   "videoSrc": "/esfpoke_150.webm",
+   "videoHevc": "/esfpoke_150.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 71,
+   "menuCategory": "Solflare",
+   "price": 150,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 3,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 75,
+     "end": 150
+    },
+    "uncommon": {
+     "start": 150,
+     "end": 300
+    },
+    "rare": {
+     "start": 300,
+     "end": 750
+    },
+    "epic": {
+     "start": 750,
+     "end": 15001
+    }
+   },
+   "stock": {
+    "common": 122,
+    "uncommon": 33,
+    "rare": 31,
+    "epic": 155
+   },
+   "ev": 147.17373462814288
+  },
+  {
+   "code": "esfpoke_300",
+   "name": "Solflare Pokemon 300",
+   "shortName": "Solflare Pokemon 300",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esfpoke_300.png",
+   "videoSrc": "/esfpoke_300.webm",
+   "videoHevc": "/esfpoke_300.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 72,
+   "menuCategory": "Solflare",
+   "price": 300,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 6,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 150,
+     "end": 300
+    },
+    "uncommon": {
+     "start": 300,
+     "end": 600
+    },
+    "rare": {
+     "start": 600,
+     "end": 1500
+    },
+    "epic": {
+     "start": 1500,
+     "end": 30001
+    }
+   },
+   "stock": {
+    "common": 151,
+    "uncommon": 46,
+    "rare": 53,
+    "epic": 58
+   },
+   "ev": 296.28238859453194
+  },
+  {
+   "code": "ewatches_500",
+   "name": "Watch $500",
+   "shortName": "Watch $500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/ewatches_500.png",
+   "videoSrc": "/ewatches_500.webm",
+   "videoHevc": "/ewatches_500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 73,
+   "menuCategory": "Others",
+   "price": 500,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 10,
+   "lowThreshold": 20,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 250,
+     "end": 500
+    },
+    "uncommon": {
+     "start": 500,
+     "end": 1000
+    },
+    "rare": {
+     "start": 1000,
+     "end": 2500
+    },
+    "epic": {
+     "start": 2500,
+     "end": 55001
+    }
+   },
+   "stock": {
+    "common": 165,
+    "uncommon": 57,
+    "rare": 34,
+    "epic": 67
+   },
+   "ev": 502.19056261053305
+  },
+  {
+   "code": "esfpoke_600",
+   "name": "Solflare Pokemon 600",
+   "shortName": "Solflare Pokemon 600",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esfpoke_600.png",
+   "videoSrc": "/esfpoke_600.webm",
+   "videoHevc": "/esfpoke_600.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 74,
+   "menuCategory": "Solflare",
+   "price": 600,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 12,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 300,
+     "end": 600
+    },
+    "uncommon": {
+     "start": 600,
+     "end": 1200
+    },
+    "rare": {
+     "start": 1200,
+     "end": 3000
+    },
+    "epic": {
+     "start": 3000,
+     "end": 60001
+    }
+   },
+   "stock": {
+    "common": 374,
+    "uncommon": 93,
+    "rare": 26,
+    "epic": 27
+   },
+   "ev": 605.9005537101174
+  },
+  {
+   "code": "esfpoke_1500",
+   "name": "Solflare Pokemon 1500",
+   "shortName": "Solflare Pokemon 1500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esfpoke_1500.png",
+   "videoSrc": "/esfpoke_1500.webm",
+   "videoHevc": "/esfpoke_1500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 75,
+   "menuCategory": "Solflare",
+   "price": 1500,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 30,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 750,
+     "end": 1500
+    },
+    "uncommon": {
+     "start": 1500,
+     "end": 3000
+    },
+    "rare": {
+     "start": 3000,
+     "end": 7500
+    },
+    "epic": {
+     "start": 7500,
+     "end": 150001
+    }
+   },
+   "stock": {
+    "common": 80,
+    "uncommon": 176,
+    "rare": 35,
+    "epic": 47
+   },
+   "ev": 1486.121310548494
+  },
+  {
+   "code": "esfpoke_3000",
+   "name": "Solflare Pokemon 3000",
+   "shortName": "Solflare Pokemon 3000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esfpoke_3000.png",
+   "videoSrc": "/esfpoke_3000.webm",
+   "videoHevc": "/esfpoke_3000.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": 76,
+   "menuCategory": "Solflare",
+   "price": 3000,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 60,
+   "lowThreshold": 25,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 1500,
+     "end": 3000
+    },
+    "uncommon": {
+     "start": 3000,
+     "end": 6000
+    },
+    "rare": {
+     "start": 6000,
+     "end": 15000
+    },
+    "epic": {
+     "start": 15000,
+     "end": 300001
+    }
+   },
+   "stock": {
+    "common": 114,
+    "uncommon": 96,
+    "rare": 14,
+    "epic": 26
+   },
+   "ev": 3068.177117071525
+  },
+  {
+   "code": "edc_25",
+   "name": "DC $25",
+   "shortName": "DC $25",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/edc_25.png",
+   "videoSrc": "/edc_25.webm",
+   "videoHevc": "/edc_25.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": "Others",
+   "price": 25,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 0.5,
+   "lowThreshold": 10,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 12.5,
+     "end": 25
+    },
+    "uncommon": {
+     "start": 25,
+     "end": 50
+    },
+    "rare": {
+     "start": 50,
+     "end": 125
+    },
+    "epic": {
+     "start": 125,
+     "end": 3001
+    }
+   },
+   "stock": {
+    "common": 58,
+    "uncommon": 81,
+    "rare": 145,
+    "epic": 111
+   },
+   "ev": 25.69099850425138
+  },
+  {
+   "code": "fb_poke50",
+   "name": "FB Pokemon $50",
+   "shortName": "FB Pokemon $50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/fb_poke50.png",
+   "videoSrc": "/fb_poke50.webm",
+   "videoHevc": "/fb_poke50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": null,
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 5480,
+    "uncommon": 5000,
+    "rare": 3896,
+    "epic": 4391
+   },
+   "ev": 54.25758908800547
+  },
+  {
+   "code": "edc_50",
+   "name": "DC $50",
+   "shortName": "DC $50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/edc_50.png",
+   "videoSrc": "/edc_50.webm",
+   "videoHevc": "/edc_50.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": "Others",
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 85,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 1,
+   "lowThreshold": 10,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 39,
+    "uncommon": 95,
+    "rare": 103,
+    "epic": 43
+   },
+   "ev": 51.0828259730905
+  },
+  {
+   "code": "fb_poke100",
+   "name": "Pokemon $50",
+   "shortName": "Pokemon $50",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/fb_poke100.png",
+   "videoSrc": "/fb_poke100.webm",
+   "videoHevc": "/fb_poke100.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": null,
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": true,
+   "pointsMultiplier": 1,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 0,
+    "uncommon": 0,
+    "rare": 0,
+    "epic": 0
+   },
+   "ev": 51
+  },
+  {
+   "code": "fb_poke50_1",
+   "name": "fb_poke50_1",
+   "shortName": "fb_poke50_1",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/fb_poke50_1.png",
+   "videoSrc": "/fb_poke50_1.webm",
+   "videoHevc": "/fb_poke50_1.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": true,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": null,
+   "price": 50,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": true,
+   "pointsMultiplier": 1,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 25,
+     "end": 50
+    },
+    "uncommon": {
+     "start": 50,
+     "end": 100
+    },
+    "rare": {
+     "start": 100,
+     "end": 250
+    },
+    "epic": {
+     "start": 250,
+     "end": 5001
+    }
+   },
+   "stock": {
+    "common": 935,
+    "uncommon": 829,
+    "rare": 695,
+    "epic": 498
+   },
+   "ev": 51
+  },
+  {
+   "code": "eelectric_100",
+   "name": "Rarible Electric 100",
+   "shortName": "Rarible Electric 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/eelectric_100.png",
+   "videoSrc": "/eelectric_100.webm",
+   "videoHevc": "/eelectric_100.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "Hv6RXaSPoZVm4tccVKJ5m4v1PyXujFr5w45N3t6T2Xjv",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": null,
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 87,
+    "uncommon": 46,
+    "rare": 28,
+    "epic": 44
+   },
+   "ev": 102.5617270098717
+  },
+  {
+   "code": "test_100",
+   "name": "test 100",
+   "shortName": "test 100",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/test_100.png",
+   "videoSrc": "/test_100.webm",
+   "videoHevc": "/test_100.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": true,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": null,
+   "price": 100,
+   "contains": 1,
+   "instantBuyback": 90,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": true,
+   "pointsMultiplier": 2,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 50,
+     "end": 100
+    },
+    "uncommon": {
+     "start": 100,
+     "end": 200
+    },
+    "rare": {
+     "start": 200,
+     "end": 500
+    },
+    "epic": {
+     "start": 500,
+     "end": 10001
+    }
+   },
+   "stock": {
+    "common": 1368,
+    "uncommon": 1018,
+    "rare": 646,
+    "epic": 326
+   },
+   "ev": 102
+  },
+  {
+   "code": "epokewatch_1000",
+   "name": "Pokewatch 1000",
+   "shortName": "Pokewatch 1000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/epokewatch_1000.png",
+   "videoSrc": "/epokewatch_1000.webm",
+   "videoHevc": "/epokewatch_1000.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": "Others",
+   "price": 1000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 20,
+   "lowThreshold": 10,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 500,
+     "end": 1000
+    },
+    "uncommon": {
+     "start": 1000,
+     "end": 2000
+    },
+    "rare": {
+     "start": 2000,
+     "end": 5000
+    },
+    "epic": {
+     "start": 5000,
+     "end": 100001
+    }
+   },
+   "stock": {
+    "common": 107,
+    "uncommon": 69,
+    "rare": 43,
+    "epic": 69
+   },
+   "ev": 1003.4629700852681
+  },
+  {
+   "code": "epokewatch_1500",
+   "name": "Pokewatch $1500",
+   "shortName": "Pokewatch $1500",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/epokewatch_1500.png",
+   "videoSrc": "/epokewatch_1500.webm",
+   "videoHevc": "/epokewatch_1500.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": "Others",
+   "price": 1500,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 30,
+   "lowThreshold": 10,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 750,
+     "end": 1500
+    },
+    "uncommon": {
+     "start": 1500,
+     "end": 3000
+    },
+    "rare": {
+     "start": 3000,
+     "end": 7500
+    },
+    "epic": {
+     "start": 7500,
+     "end": 150001
+    }
+   },
+   "stock": {
+    "common": 121,
+    "uncommon": 50,
+    "rare": 39,
+    "epic": 54
+   },
+   "ev": 1507.8865320100774
+  },
+  {
+   "code": "epokewatch_2000",
+   "name": "Pokewatch $2000",
+   "shortName": "Pokewatch $2000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/epokewatch_2000.png",
+   "videoSrc": "/epokewatch_2000.webm",
+   "videoHevc": "/epokewatch_2000.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": "Others",
+   "price": 2000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 40,
+   "lowThreshold": 10,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 1000,
+     "end": 2000
+    },
+    "uncommon": {
+     "start": 2000,
+     "end": 4000
+    },
+    "rare": {
+     "start": 4000,
+     "end": 10000
+    },
+    "epic": {
+     "start": 10000,
+     "end": 200001
+    }
+   },
+   "stock": {
+    "common": 145,
+    "uncommon": 46,
+    "rare": 37,
+    "epic": 48
+   },
+   "ev": 2004.7330171400783
+  },
+  {
+   "code": "esnorlax_5000",
+   "name": "Snorlax $5000",
+   "shortName": "Snorlax $5000",
+   "mobile_name": null,
+   "image": "",
+   "thumbnailUrl": "/esnorlax_5000.png",
+   "videoSrc": "/esnorlax_5000.webm",
+   "videoHevc": "/esnorlax_5000.hevc.mp4",
+   "videoNobgWeb": null,
+   "videoNobgIos": null,
+   "videoNobgAndroid": null,
+   "imageNobg": null,
+   "public": false,
+   "owner": "By8ZMDk9pt3sY2vuKiwcYhzrTTH8bw648iH8nmbnh5wY",
+   "isPartner": false,
+   "adoptable": false,
+   "parentCode": null,
+   "menuOrder": null,
+   "menuCategory": null,
+   "price": 5000,
+   "contains": 1,
+   "instantBuyback": 93,
+   "freeSpins": false,
+   "turboMode": true,
+   "fixedEv": false,
+   "pointsMultiplier": 100,
+   "lowThreshold": 50,
+   "odds": {
+    "common": 0.75,
+    "uncommon": 0.2,
+    "rare": 0.04,
+    "epic": 0.01
+   },
+   "tierRanges": {
+    "common": {
+     "start": 2500,
+     "end": 5000
+    },
+    "uncommon": {
+     "start": 5000,
+     "end": 10000
+    },
+    "rare": {
+     "start": 10000,
+     "end": 25000
+    },
+    "epic": {
+     "start": 25000,
+     "end": 750001
+    }
+   },
+   "stock": {
+    "common": 199,
+    "uncommon": 52,
+    "rare": 48,
+    "epic": 33
+   },
+   "ev": 5128.64364714013
+  }
+ ]
+}

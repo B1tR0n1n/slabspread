@@ -25,19 +25,29 @@ from models import IngestRun, OnchainEvent, RunStatus, Sale
 def _polygon_transport(fixture: dict) -> httpx.MockTransport:
     """Answer eth_blockNumber / eth_getLogs / eth_getBlockByNumber from the fixture."""
 
-    def handler(req: httpx.Request) -> httpx.Response:
-        body = json.loads(req.content)
+    def one(body: dict):
         m, p = body["method"], body["params"]
         if m == "eth_blockNumber":
             res = hex(fixture["to_block"])
         elif m == "eth_getLogs":
             lo, hi = int(p[0]["fromBlock"], 16), int(p[0]["toBlock"], 16)
+            assert p[0].get("address"), "public nodes require an address filter"
             res = [lg for lg in fixture["logs"] if lo <= int(lg["blockNumber"], 16) <= hi]
         elif m == "eth_getBlockByNumber":
             res = {"timestamp": hex(fixture["timestamps"][str(int(p[0], 16))])}
+        elif m == "eth_call":
+            # address[] with one member: the orderbook (offset, length, address)
+            ob = "5e4943373c2198625bd441ae0629e9e7b4fb4797".rjust(64, "0")
+            res = "0x" + f"{32:064x}" + f"{1:064x}" + ob
         else:
-            return httpx.Response(400)
-        return httpx.Response(200, json={"jsonrpc": "2.0", "id": body["id"], "result": res})
+            raise ValueError(m)
+        return {"jsonrpc": "2.0", "id": body["id"], "result": res}
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        body = json.loads(req.content)
+        if isinstance(body, list):
+            return httpx.Response(200, json=[one(b) for b in body])
+        return httpx.Response(200, json=one(body))
 
     return httpx.MockTransport(handler)
 
@@ -72,14 +82,14 @@ def _state(s):
 
 
 def test_courtyard_worker_live_then_replay_reproduces_state(session, tmp_path, monkeypatch):
-    monkeypatch.setattr("config.settings.polygon_start_block", 88_175_000)
+    monkeypatch.setattr("config.settings.polygon_backfill_blocks", 1_999)
     fx = load("rpc/polygon_courtyard_logs.json")
     store = RawStore(tmp_path)
     w = onchain_courtyard.CourtyardOnchainWorker(rpc_url="http://polygon.test")
     with httpx.Client(transport=_polygon_transport(fx)) as http:
         run = run_worker(w, session, raw_store=store, http=http)
     assert run.status == RunStatus.ok, run.error
-    assert (run.fetched, run.inserted) == (2, 2)
+    assert (run.fetched, run.inserted) == (2, 2) and run.notes["emitters"] == 1
     assert get_cursor(session, w.key) == str(fx["to_block"])
     assert run.raw_path and store.load(run.raw_path)["logs"] == fx["logs"]
     live = _state(session)

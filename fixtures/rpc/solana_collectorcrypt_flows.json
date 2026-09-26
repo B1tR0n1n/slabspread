@@ -246,11 +246,6 @@
      ],
      "instructions": [
       {
-       "programId": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
-       "program": "spl-memo",
-       "parsed": ""
-      },
-      {
        "program": "spl-token",
        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
        "parsed": {

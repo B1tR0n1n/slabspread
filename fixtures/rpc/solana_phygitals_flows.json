@@ -67,25 +67,15 @@
      ],
      "instructions": [
       {
-       "programId": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
-       "program": "spl-memo",
-       "parsed": ""
-      },
-      {
        "program": "spl-token",
        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
        "parsed": {
-        "type": "transferChecked",
+        "type": "transfer",
         "info": {
          "authority": "DNMKGBRxpsGoNjt8iycrB5G2UXWsnqhJdd4MQeV2KPoi",
          "source": "SrcUsdcAta1111111111111111111111111111111111",
          "destination": "DstUsdcAta1111111111111111111111111111111111",
-         "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-         "tokenAmount": {
-          "amount": "10000000",
-          "decimals": 6,
-          "uiAmount": 10.0
-         }
+         "amount": "10000000"
         }
        }
       }
@@ -145,44 +135,25 @@
      ],
      "instructions": [
       {
-       "programId": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
-       "program": "spl-memo",
-       "parsed": ""
-      },
-      {
        "program": "spl-token",
        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
        "parsed": {
-        "type": "transferChecked",
+        "type": "transfer",
         "info": {
          "authority": "62Q9eeDY3eM8A5CnprBGYMPShdBjAzdpBdr71QHsS8dS",
          "source": "SrcUsdcAta1111111111111111111111111111111111",
          "destination": "DstUsdcAta1111111111111111111111111111111111",
-         "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-         "tokenAmount": {
-          "amount": "8500000",
-          "decimals": 6,
-          "uiAmount": 8.5
-         }
+         "amount": "8500000"
         }
        }
       },
       {
-       "program": "spl-token",
-       "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-       "parsed": {
-        "type": "transferChecked",
-        "info": {
-         "authority": "DNMKGBRxpsGoNjt8iycrB5G2UXWsnqhJdd4MQeV2KPoi",
-         "source": "NftAta1",
-         "destination": "NftAta2",
-         "mint": "6sRw5SiUSNu79Nvv2XFjVSJuHJE26X8HTDerV6TWJvQ",
-         "tokenAmount": {
-          "amount": "1",
-          "decimals": 0
-         }
-        }
-       }
+       "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+       "accounts": [
+        "6sRw5SiUSNu79Nvv2XFjVSJuHJE26X8HTDerV6TWJvQ",
+        "DNMKGBRxpsGoNjt8iycrB5G2UXWsnqhJdd4MQeV2KPoi",
+        "62Q9eeDY3eM8A5CnprBGYMPShdBjAzdpBdr71QHsS8dS"
+       ]
       }
      ]
     }

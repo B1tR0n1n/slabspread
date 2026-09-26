@@ -50,13 +50,57 @@ class EvmRpc:
 
         return with_backoff(do)
 
+    def batch(self, calls: list[tuple[str, list]], *, chunk: int = 100) -> list:
+        """JSON-RPC batch: many calls per HTTP request, results in order."""
+        out: list = []
+        for i in range(0, len(calls), chunk):
+            part = calls[i : i + chunk]
+            payload = []
+            for method, params in part:
+                self._id += 1
+                payload.append({"jsonrpc": "2.0", "id": self._id, "method": method, "params": params})
+
+            def do(payload=payload):
+                self.limiter.acquire()
+                r = self.http.post(self.url, json=payload)
+                r.raise_for_status()
+                body = r.json()
+                by_id = {b["id"]: b for b in body}
+                res = []
+                for req in payload:
+                    b = by_id.get(req["id"], {})
+                    if "error" in b:
+                        raise RuntimeError(f"rpc {req['method']}: {b['error']}")
+                    res.append(b.get("result"))
+                return res
+
+            out.extend(with_backoff(do))
+        return out
+
+    def block_timestamps(self, blocks: list[int]) -> dict[int, int]:
+        res = self.batch([("eth_getBlockByNumber", [hex(b), False]) for b in blocks])
+        return {b: int(r["timestamp"], 16) for b, r in zip(blocks, res, strict=True) if r}
+
     def block_number(self) -> int:
         return int(self.call("eth_blockNumber", []), 16)
 
-    def get_logs(self, from_block: int, to_block: int, topics: list) -> list[dict]:
-        return self.call(
-            "eth_getLogs", [{"fromBlock": hex(from_block), "toBlock": hex(to_block), "topics": topics}]
-        )
+    def get_logs(
+        self, from_block: int, to_block: int, topics: list, *, addresses: list[str] | None = None
+    ) -> list[dict]:
+        flt: dict = {"fromBlock": hex(from_block), "toBlock": hex(to_block), "topics": topics}
+        if addresses:
+            flt["address"] = addresses
+        return self.call("eth_getLogs", [flt])
+
+    def call_address_list(self, to: str, fn_signature: str) -> list[str]:
+        """eth_call a view returning `address[]` and decode it."""
+        selector = keccak256(fn_signature.encode())[:10]
+        res = self.call("eth_call", [{"to": to, "data": selector}, "latest"])
+        data = _hexbytes(res)
+        if len(data) < 64:
+            return []
+        n = _uint(_word(data, 1))
+        return [_addr(_word(data, 2 + i)) for i in range(n)]
 
     def block_timestamp(self, block: int) -> int:
         b = self.call("eth_getBlockByNumber", [hex(block), False])

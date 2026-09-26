@@ -17,10 +17,11 @@ class Settings(BaseSettings):
 
     # --- Ingestion (plan §4) -------------------------------------------------------------
     raw_dir: str = "data/raw"  # compressed raw responses for replay; gitignored
-    polygon_rpc_url: str = "https://polygon-rpc.com"
+    polygon_rpc_url: str = "https://polygon-bor-rpc.publicnode.com"  # polygon-rpc.com went key-only
     solana_rpc_url: str = "https://api.mainnet-beta.solana.com"
     polygon_log_chunk_blocks: int = 2000  # eth_getLogs range per call; most public RPCs cap here
-    polygon_start_block: int = 88_000_000  # first block to scan when no cursor exists
+    polygon_address_chunk: int = 4  # public nodes block eth_getLogs with long address lists
+    polygon_backfill_blocks: int = 43_200  # ~1 day of Polygon blocks scanned on the very first run
     solana_sig_page: int = 1000
 
     # Per-source token buckets: requests per second and burst. JSON in env, e.g.

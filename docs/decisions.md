@@ -95,3 +95,12 @@ One entry per non-obvious choice: decision, reason, alternative rejected. Newest
 - **Decision:** `engines/fanout.py` picks at most `per_listing_cap` eligible subscribers starting at an offset hashed from the listing key, staggered by a fixed delay.
 - **Reason:** plan §8 asks that subscribers not all be pointed at one listing. A hash offset spreads different listings across the subscriber base without needing state, and makes the assignment reproducible for support questions.
 - **Alternative rejected:** random selection. Not reproducible; a subscriber who complains "I never get alerts" cannot be answered.
+
+## 2026-09-26 — Public Polygon node: address-filtered, chunked eth_getLogs; batched timestamps
+- **Decision:** `polygon-rpc.com` went key-only, so the default is `polygon-bor-rpc.publicnode.com`. It requires an `address` filter and blocks lists longer than ~4, so the worker resolves the registry's operator/forwarder/minter role members each run and queries in chunks of 4. Block timestamps are fetched as JSON-RPC batches of 100.
+- **Reason:** first live run showed ~1 Courtyard event per block (2,723 in 2,000 blocks); per-block timestamp calls would have cost ~1,500 requests per run.
+- **Alternative rejected:** a paid RPC key. Nothing here needs one yet; the public node serves 2,000-block windows in ~20 s.
+
+## 2026-09-26 — Solana parser resolves mints from token-balance metadata
+- **Decision:** plain `transfer` instructions (no inline mint) are classified by looking up the source/destination token account's mint in `pre/postTokenBalances`; Metaplex Core instructions contribute the asset address as the NFT reference.
+- **Reason:** Phygitals' real buybacks are plain transfers plus a Core move; the first live run found zero flows until this was fixed. Collector Crypt's `transferChecked` path was already correct on live data.

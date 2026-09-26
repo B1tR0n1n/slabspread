@@ -71,46 +71,63 @@ def _instructions(tx: dict) -> list[dict]:
     return out
 
 
-def _owner_map(tx: dict) -> dict[str, str]:
-    """token account → owner, from pre/post token balances (jsonParsed includes owner)."""
+CORE_PROGRAM = "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d"  # Metaplex Core (prefix match is enough)
+
+
+def _balance_maps(tx: dict) -> tuple[dict[str, str], dict[str, str]]:
+    """(token account → owner, token account → mint) from pre/post token balances."""
     keys = [k["pubkey"] if isinstance(k, dict) else k for k in tx["transaction"]["message"]["accountKeys"]]
-    m: dict[str, str] = {}
+    owners: dict[str, str] = {}
+    mints: dict[str, str] = {}
     meta = tx.get("meta") or {}
     for bal in (meta.get("preTokenBalances") or []) + (meta.get("postTokenBalances") or []):
-        idx, owner = bal.get("accountIndex"), bal.get("owner")
-        if idx is not None and owner and idx < len(keys):
-            m[keys[idx]] = owner
-    return m
+        idx = bal.get("accountIndex")
+        if idx is None or idx >= len(keys):
+            continue
+        if bal.get("owner"):
+            owners[keys[idx]] = bal["owner"]
+        if bal.get("mint"):
+            mints[keys[idx]] = bal["mint"]
+    return owners, mints
 
 
 def parse_usdc_flows(tx: dict, platform_wallets: set[str]) -> list[UsdcFlow]:
-    """All USDC transfers in a tx that touch a platform wallet, with memo and NFT mints."""
+    """All USDC transfers in a tx that touch a platform wallet, with memo and NFT refs.
+
+    Handles both `transferChecked` (mint inline) and plain `transfer` (mint resolved from the
+    token-balance metadata). NFT refs come from spl-token moves of non-USDC mints and from
+    Metaplex Core instructions, whose first account is the asset.
+    """
     if tx is None or (tx.get("meta") or {}).get("err"):
         return []
-    owners = _owner_map(tx)
+    owners, mints = _balance_maps(tx)
     memo = None
-    nft_mints: list[str] = []
-    transfers: list[tuple[str, str, int]] = []  # (src_owner, dst_owner, raw_amount)
+    nft_refs: list[str] = []
+    transfers: list[tuple[str | None, str | None, int]] = []
     for ins in _instructions(tx):
-        prog = ins.get("program") or ins.get("programId")
+        prog = ins.get("program") or ins.get("programId") or ""
+        pid = ins.get("programId") or ""
         parsed = ins.get("parsed")
-        if ins.get("programId") in MEMO_PROGRAMS or prog == "spl-memo":
+        if pid in MEMO_PROGRAMS or prog == "spl-memo":
             memo = parsed if isinstance(parsed, str) else (parsed or {}).get("memo") or memo
+            continue
+        if pid.startswith("CoREENxT"):
+            accts = ins.get("accounts") or []
+            if accts:
+                nft_refs.append(accts[0] if isinstance(accts[0], str) else str(accts[0]))
             continue
         if prog != "spl-token" or not isinstance(parsed, dict):
             continue
         info = parsed.get("info", {})
-        ptype = parsed.get("type")
-        if ptype not in ("transfer", "transferChecked"):
+        if parsed.get("type") not in ("transfer", "transferChecked"):
             continue
-        mint = info.get("mint")
         src, dst = info.get("source"), info.get("destination")
-        src_owner, dst_owner = owners.get(src, info.get("authority")), owners.get(dst, dst)
-        if mint == USDC_SOLANA or (mint is None and ptype == "transfer" and _looks_usdc(info)):
-            raw = int((info.get("tokenAmount") or {}).get("amount") or info.get("amount") or 0)
-            transfers.append((src_owner, dst_owner, raw))
+        mint = info.get("mint") or mints.get(src) or mints.get(dst)
+        raw = int((info.get("tokenAmount") or {}).get("amount") or info.get("amount") or 0)
+        if mint == USDC_SOLANA:
+            transfers.append((owners.get(src, info.get("authority")), owners.get(dst, dst), raw))
         elif mint:
-            nft_mints.append(mint)
+            nft_refs.append(mint)
     flows: list[UsdcFlow] = []
     for src_owner, dst_owner, raw in transfers:
         if dst_owner in platform_wallets:
@@ -128,13 +145,7 @@ def parse_usdc_flows(tx: dict, platform_wallets: set[str]) -> list[UsdcFlow]:
                 amount=Decimal(raw) / Decimal(10**6),
                 counterparty=cp,
                 memo=memo,
-                nft_mints=tuple(nft_mints),
+                nft_mints=tuple(dict.fromkeys(nft_refs)),
             )
         )
     return flows
-
-
-def _looks_usdc(info: dict) -> bool:
-    # A bare `transfer` carries no mint; we only accept it when the token amount carries 6 decimals.
-    ta = info.get("tokenAmount") or {}
-    return ta.get("decimals") == 6

@@ -28,6 +28,24 @@ from models import OnchainEvent, Sale
 KEY = "onchain_courtyard"
 SOURCE_KEY = "courtyard"
 CHAIN = "polygon"
+REGISTRY = "0x251BE3A17Af4892035C37ebf5890F4a4D889dcAD"
+
+
+ROLE_LISTS = (
+    "listTrustedOperatorRoleMembers()",
+    "listTrustedForwarderRoleMembers()",
+    "listMinterRoleMembers()",
+)
+
+
+def registry_role_members(rpc: EvmRpc) -> list[str]:
+    """Addresses that emit Courtyard's events: operators ∪ forwarders ∪ minters, read from the
+    registry's view functions (as DefiLlama does). Public nodes require an address filter on
+    eth_getLogs, and these are the only legitimate emitters."""
+    out: list[str] = []
+    for fn in ROLE_LISTS:
+        out.extend(rpc.call_address_list(REGISTRY, fn))
+    return sorted(set(out))
 
 
 class CourtyardOnchainWorker:
@@ -41,14 +59,25 @@ class CourtyardOnchainWorker:
     def fetch(self, ctx: Context) -> dict[str, Any]:
         rpc = EvmRpc(self.rpc_url, ctx.http, ctx.limiter)
         head = rpc.block_number()
-        start = int(ctx.cursor) + 1 if ctx.cursor else settings.polygon_start_block
+        start = int(ctx.cursor) + 1 if ctx.cursor else max(0, head - settings.polygon_backfill_blocks)
         end = min(head, start + settings.polygon_log_chunk_blocks - 1)
+        emitters = registry_role_members(rpc)
         logs: list[dict] = []
         if start <= end:
-            logs = rpc.get_logs(start, end, [[TRADE_EXECUTED, TOKEN_MINTED]])
+            # Public nodes reject long address lists ("Request blocked" above ~4); chunk and merge.
+            seen: set[tuple[str, str]] = set()
+            for i in range(0, len(emitters), settings.polygon_address_chunk):
+                for lg in rpc.get_logs(
+                    start, end, [[TRADE_EXECUTED, TOKEN_MINTED]],
+                    addresses=emitters[i : i + settings.polygon_address_chunk],
+                ):  # fmt: skip
+                    key = (lg["transactionHash"], lg["logIndex"])
+                    if key not in seen:
+                        seen.add(key)
+                        logs.append(lg)
         blocks = sorted({int(lg["blockNumber"], 16) for lg in logs})
-        timestamps = {b: rpc.block_timestamp(b) for b in blocks}
-        ctx.notes.update({"from_block": start, "to_block": end, "head": head})
+        timestamps = rpc.block_timestamps(blocks)
+        ctx.notes.update({"from_block": start, "to_block": end, "head": head, "emitters": len(emitters)})
         return {
             "from_block": start,
             "to_block": end,
