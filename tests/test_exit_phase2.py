@@ -83,6 +83,7 @@ def _state(s):
 
 def test_courtyard_worker_live_then_replay_reproduces_state(session, tmp_path, monkeypatch):
     monkeypatch.setattr("config.settings.polygon_backfill_blocks", 1_999)
+    monkeypatch.setattr("config.settings.polygon_head_lag", 0)
     fx = load("rpc/polygon_courtyard_logs.json")
     store = RawStore(tmp_path)
     w = onchain_courtyard.CourtyardOnchainWorker(rpc_url="http://polygon.test")

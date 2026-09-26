@@ -58,7 +58,7 @@ class CourtyardOnchainWorker:
     # fetch ------------------------------------------------------------------------------
     def fetch(self, ctx: Context) -> dict[str, Any]:
         rpc = EvmRpc(self.rpc_url, ctx.http, ctx.limiter)
-        head = rpc.block_number()
+        head = rpc.block_number() - settings.polygon_head_lag
         start = int(ctx.cursor) + 1 if ctx.cursor else max(0, head - settings.polygon_backfill_blocks)
         end = min(head, start + settings.polygon_log_chunk_blocks - 1)
         emitters = registry_role_members(rpc)

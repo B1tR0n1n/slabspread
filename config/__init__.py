@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     polygon_rpc_url: str = "https://polygon-bor-rpc.publicnode.com"  # polygon-rpc.com went key-only
     solana_rpc_url: str = "https://api.mainnet-beta.solana.com"
     polygon_log_chunk_blocks: int = 2000  # eth_getLogs range per call; most public RPCs cap here
+    polygon_head_lag: int = 5  # trail the head: load-balanced public nodes disagree by a few blocks
     polygon_address_chunk: int = 4  # public nodes block eth_getLogs with long address lists
     polygon_backfill_blocks: int = 43_200  # ~1 day of Polygon blocks scanned on the very first run
     solana_sig_page: int = 100  # getTransaction per signature; keep runs under the interval
